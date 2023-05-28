@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 27, 2023 at 06:22 PM
+-- Generation Time: May 28, 2023 at 05:02 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -84,6 +84,33 @@ INSERT INTO `subuser` (`id`, `email`, `password`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `tadeentry`
+--
+
+CREATE TABLE `tadeentry` (
+  `licence_no` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `father_husband` varchar(255) NOT NULL,
+  `mother_name` varchar(255) NOT NULL,
+  `word` varchar(255) NOT NULL,
+  `voterid` varchar(255) NOT NULL,
+  `kor` varchar(255) NOT NULL,
+  `messars` varchar(255) NOT NULL,
+  `babshardhoron` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `tadeentry`
+--
+
+INSERT INTO `tadeentry` (`licence_no`, `name`, `father_husband`, `mother_name`, `word`, `voterid`, `kor`, `messars`, `babshardhoron`) VALUES
+(1001, 'Emon', 'dfdf', 'rakha', '১', '3435687435843', '34', 'chuadanga', 'sodor'),
+(1002, 'rownokmahbub', 'mahsin', 'rakha', '৪', '3435687435843', '234', 'chuadanga', 'barishal'),
+(1003, 'reya', 'najmul', 'jannatul', '১', '3435687435841', '35', 'chuadanga', 'doulutdiar');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `taxentry`
 --
 
@@ -94,15 +121,17 @@ CREATE TABLE `taxentry` (
   `gram` varchar(255) NOT NULL,
   `ward` varchar(255) NOT NULL,
   `totaltax` varchar(255) NOT NULL,
-  `mobilenum` int(255) NOT NULL
+  `voterid` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `taxentry`
 --
 
-INSERT INTO `taxentry` (`holdingno`, `name`, `fatherhusband`, `gram`, `ward`, `totaltax`, `mobilenum`) VALUES
-(10023, 'rownokmahbub', 'mahsin', 'রোয়াকুলি', '১', '234', 2147483647);
+INSERT INTO `taxentry` (`holdingno`, `name`, `fatherhusband`, `gram`, `ward`, `totaltax`, `voterid`) VALUES
+(10023, 'rownokmahbub', 'mahsin', 'রোয়াকুলি', '১', '234', '2147483647'),
+(10024, 'Emon', 'mahsin', 'দক্ষিণ গোবিন্দপুর', '৬', '345', '2147483647'),
+(10025, 'rownokmahbub', 'mahsin', 'জেহালা', '১', '234', '016532234456');
 
 -- --------------------------------------------------------
 
@@ -141,6 +170,12 @@ ALTER TABLE `log`
 --
 ALTER TABLE `subuser`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tadeentry`
+--
+ALTER TABLE `tadeentry`
+  ADD PRIMARY KEY (`licence_no`);
 
 --
 -- Indexes for table `taxentry`
