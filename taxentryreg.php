@@ -21,7 +21,7 @@
          
          
      
-   $query=" INSERT INTO `taxentry`(`holdingno`, `name`, `fatherhusband`, `gram`, `ward`, `totaltax`, `mobilenum`) VALUES ('$var2','$var3','$var4','$var5','$var6','$var8','$var9')";
+   $query=" INSERT INTO `taxentry`(`holdingno`, `name`, `fatherhusband`, `gram`, `ward`, `totaltax`, `voterid`) VALUES ('$var2','$var3','$var4','$var5','$var6','$var8','$var9')";
 
 	if(mysqli_query($con, $query)){
     
