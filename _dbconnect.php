@@ -1,5 +1,6 @@
 
 <?php
+
 // Connect to the MySQL database
 $servername = "localhost";
 $username = "root";

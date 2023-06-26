@@ -1,3 +1,11 @@
+<?php
+ include '_dbconnect.php';
+
+$result="SELECT * FROM `unionporiciti`";
+
+
+
+?>
 <!doctype html>
 <html>
 <head>
@@ -213,7 +221,8 @@
 
 <div class="my-10">
   <p class="text-xl font-semibold text-center ">ইউনিয়ন পরিচিতি</p>
-  <p class="text-center text-gray-600">
+  <p class="text-justify text-gray-600">
+
     নবগঠিত গড়াইটুপি ইউনিয়ন প্রায় ৩০ বর্গ কিলোমিটার আয়তন বিশিষ্ট। 
     এ ইউনিয়ন পরিষদটি গড়াইটুপি মৌজার ৬৯৭ নং খতিয়ানের ১২৯০ ও ১২৯১ নং দাগে ০.৩৩০০ শতাংশ
      জমির উপর গড়াইটুপি ইউনিয়ন পরিষদ কমপ্লেক্স ভবন স্থাপিত হবে। ইউনিয়নের জনসংখ্যা গত ২০১১ সালের

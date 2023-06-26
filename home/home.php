@@ -76,11 +76,11 @@
             </defs>
             <rect fill="url(#192913ce-1f29-4abd-b545-0fbccfd2b0ec)" width="52" height="24"></rect>
           </svg>
-          Create Or Edit Your Up Porichiti Here
+          ইউনিয়ন পরিচিতি তথ্য যোগ করুন
       </h2>
-      <form method='POST' action='' class="space-y-5 flex flex-col items-start justify-start">
+      <form method='POST' action='upporicitireg.php' class="space-y-5 flex flex-col items-start justify-start">
      
-        <input class='bg-gray-50 border border-gray-300 text-sky-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5' type="text" name="carousal" id="" placeholder='Write details...'>
+        <input class='bg-gray-50 border border-gray-300 text-sky-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5' type="text" name="poriciti" id="" placeholder='ইউনিয়ন পরিচিতি তথ্য যোগ করুন....'>
         <div class="flex gap-3 justify-center items-center w-full">
         <button class='px-4 md:px-20 py-2.5 cursor-pointer rounded-xl text-white font-semibold text-base bg-sky-800 hover:bg-sky-600  duration-300 transition' type="submit">Create</button>
         <a href='createuser.php' class='px-4 md:px-20 py-2.5 cursor-pointer rounded-xl text-white font-semibold text-base bg-green-700 hover:bg-green-600  duration-300 transition flex items-center gap-1'>
@@ -115,11 +115,11 @@
             </defs>
             <rect fill="url(#192913ce-1f29-4abd-b545-0fbccfd2b0ec)" width="52" height="24"></rect>
           </svg>
-          Create Or Edit Your Khobor Here
+          ইউনিয়ন খবর যোগ করুন
       </h2>
-      <form method='POST' action='' class="space-y-5 flex flex-col items-start justify-start">
+      <form method='POST' action='khoborreg.php' class="space-y-5 flex flex-col items-start justify-start">
      
-        <input class='bg-gray-50 border border-gray-300 text-sky-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5' type="text" name="carousal" id="" placeholder='Write Khobor here ...'>
+        <input class='bg-gray-50 border border-gray-300 text-sky-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5' type="text" name="khobor" id="" placeholder=' ইউনিয়ন খবর যোগ করুন ...'>
         <div class="flex gap-3 justify-center items-center w-full">
         <button class='px-4 md:px-20 py-2.5 cursor-pointer rounded-xl text-white font-semibold text-base bg-sky-800 hover:bg-sky-600  duration-300 transition' type="submit">Create</button>
         <a href='createuser.php' class='px-4 md:px-20 py-2.5 cursor-pointer rounded-xl text-white font-semibold text-base bg-green-700 hover:bg-green-600  duration-300 transition flex items-center gap-1'>
@@ -154,11 +154,11 @@
             </defs>
             <rect fill="url(#192913ce-1f29-4abd-b545-0fbccfd2b0ec)" width="52" height="24"></rect>
           </svg>
-          Create Or Edit Your Notice Here
+          ইউনিয়ন এর নোটিশ যোগ করুন
       </h2>
-      <form method='POST' action='' class="space-y-5 flex flex-col items-start justify-start">
+      <form method='POST' action='noticereg.php' class="space-y-5 flex flex-col items-start justify-start">
      
-        <input class='bg-gray-50 border border-gray-300 text-sky-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5' type="text" name="carousal" id="" placeholder='Write Notice ...'>
+        <input class='bg-gray-50 border border-gray-300 text-sky-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5' type="text" name="notice" id="" placeholder='ইউনিয়ন এর নোটিশ যোগ করুন ...'>
         <div class="flex gap-3 justify-center items-center w-full">
         <button class='px-4 md:px-20 py-2.5 cursor-pointer rounded-xl text-white font-semibold text-base bg-sky-800 hover:bg-sky-600  duration-300 transition' type="submit">Create</button>
         <a href='createuser.php' class='px-4 md:px-20 py-2.5 cursor-pointer rounded-xl text-white font-semibold text-base bg-green-700 hover:bg-green-600  duration-300 transition flex items-center gap-1'>
@@ -193,18 +193,18 @@
             </defs>
             <rect fill="url(#192913ce-1f29-4abd-b545-0fbccfd2b0ec)" width="52" height="24"></rect>
           </svg>
-          Create Or Edit Your Sheba Here
+          ইউনিয়ন এর সেবার শর্ত ও মূল্য যোগ করুন
       </h2>
-      <form method='POST' action='' class="space-y-5 flex flex-col items-start justify-start gap-3">
-     
-        <input class='bg-gray-50 border border-gray-300 text-sky-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5' type="text" name="carousal" id="" placeholder='Write Sheba ...'>
+      <form method='POST' action='sebareg.php' class="space-y-5 flex flex-col items-start justify-start gap-3">
+      <input class='bg-gray-50 border border-gray-300 text-sky-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5' type="text" name="id" id="" placeholder='ক্রমিক নং যোগ করুন...'>
 
-<select id="countries" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 ">
-  <option selected>Choose a country</option>
-  <option value="US">United States</option>
-  <option value="CA">Canada</option>
-  <option value="FR">France</option>
-  <option value="DE">Germany</option>
+        <input class='bg-gray-50 border border-gray-300 text-sky-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5' type="text" name="seba" id="" placeholder='ইউনিয়ন এর সেবার শর্ত ও মূল্য যোগ করুন...'>
+
+<select id="countries" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 " name='sebardhoron'>
+  
+  <option value="সেবা পাওয়ার শর্ত সমূহ">সেবা পাওয়ার শর্ত সমূহ</option>
+  <option value="সেবা মূল্য সমূহ">সেবা মূল্য সমূহ</option>
+
 </select>
 
 <div class="flex gap-3 justify-center items-center w-full">
@@ -243,18 +243,20 @@
             </defs>
             <rect fill="url(#192913ce-1f29-4abd-b545-0fbccfd2b0ec)" width="52" height="24"></rect>
           </svg>
-          Create Or Edit Your Shikkha Protisthan Here
+          শিক্ষা প্রতিষ্ঠানের তথ্য  যোগ করুন
       </h2>
-      <form method='POST' action='' class="space-y-5 flex flex-col items-start justify-start gap-3">
+      <form method='POST' action='shikkhareg.php' class="space-y-5 flex flex-col items-start justify-start gap-3">
      
-        <input class='bg-gray-50 border border-gray-300 text-sky-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5' type="text" name="carousal" id="" placeholder='Write Sheba ...'>
+        <input class='bg-gray-50 border border-gray-300 text-sky-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5' type="text" name="shikkha" id="" placeholder='শিক্ষা প্রতিষ্ঠানের তথ্য যোগ করুন ...'>
 
-<select id="countries" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 ">
-  <option selected>Choose a country</option>
-  <option value="US">United States</option>
-  <option value="CA">Canada</option>
-  <option value="FR">France</option>
-  <option value="DE">Germany</option>
+<select id="countries" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 " name='shikkhardhoron'>
+  <option value='কলেজ'>কলেজ</option>
+  <option value="মাধ্যমিক বিদ্যালয়">মাধ্যমিক বিদ্যালয়</option>
+  <option value="নিম্ন মাধ্যমিক বিদ্যালয়">নিম্ন মাধ্যমিক বিদ্যালয়</option>
+  <option value="প্রাথমিক বিদ্যালয়">প্রাথমিক বিদ্যালয়</option>
+  <option value="মাদ্রাসা">মাদ্রাসা</option>
+  <option value="কমিউনিটি সেন্টার">কমিউনিটি সেন্টার</option>
+  <option value="শিক্ষার হার">শিক্ষার হার</option>
 </select>
 
 <div class="flex gap-3 justify-center items-center w-full">
@@ -292,18 +294,27 @@
             </defs>
             <rect fill="url(#192913ce-1f29-4abd-b545-0fbccfd2b0ec)" width="52" height="24"></rect>
           </svg>
-          Create Or Edit Your Union Protisthan Here
+          ইউনিয়ন এর তথ্য যোগ করুন
       </h2>
-      <form method='POST' action='' class="space-y-5 flex flex-col items-start justify-start gap-3">
+      <form method='POST' action='protisthan.php' class="space-y-5 flex flex-col items-start justify-start gap-3">
      
-        <input class='bg-gray-50 border border-gray-300 text-sky-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5' type="text" name="carousal" id="" placeholder='Write Sheba ...'>
+        <input class='bg-gray-50 border border-gray-300 text-sky-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5' type="text" name="protisthan" id="" placeholder='  ইউনিয়ন এর তথ্য যোগ করুন ...'>
 
-<select id="countries" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 ">
-  <option selected>Choose a country</option>
-  <option value="US">United States</option>
-  <option value="CA">Canada</option>
-  <option value="FR">France</option>
-  <option value="DE">Germany</option>
+<select id="countries" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 " name='protisthandhoron'>
+
+  <option value="ডাকঘর">ডাকঘর</option>
+  <option value="গ্রাম">গ্রাম</option>
+  <option value="মৌজা">মৌজা</option>
+  <option value="হাটবাজার">হাটবাজার</option>
+  <option value="পুলিশ ক্যাম্প">পুলিশ ক্যাম্প</option>
+  <option value="এনজিও সংস্থা">এনজিও সংস্থা</option>
+  <option value="ভূমি অফিস">ভূমি অফিস</option>
+  <option value="মসজিদ">মসজিদ</option>
+  <option value="কবরস্থান">কবরস্থান</option>
+  <option value="ঈদগাহ ময়দান">ঈদগাহ ময়দান</option>
+  <option value="মন্দির">মন্দির</option>
+  <option value="শ্মশান">শ্মশান</option>
+ 
 </select>
 
 <div class="flex gap-3 justify-center items-center w-full">
