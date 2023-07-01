@@ -1,8 +1,8 @@
 <?php
  include '_dbconnect.php';
 
-$result="SELECT * FROM `unionporiciti`";
-
+$query="SELECT * FROM `unionporiciti` limit 1";
+$result=mysqli_fetch_array(mysqli_query($con,$query))
 
 
 ?>
@@ -167,31 +167,19 @@ $result="SELECT * FROM `unionporiciti`";
   <div class="relative h-56 overflow-hidden  md:h-96">
        <!-- Item 1 -->
       <div class="hidden duration-1000 ease-in-out" data-carousel-item>
-          <img src="Assets/hero1.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-          <div class="relative top-500 top-1/2 px-4 py-2 opacity-100 ">
-            <h2 class="text-xl text-white font-bold text-center ">স্থানীয় সরকার প্রকৌশল অধিদপ্তর</h3>
-            <h2 class="text-xl text-white font-bold text-center ">গণপ্রজাতন্ত্রী বাংলাদেশ সরকার</h3>
-        
-          </div>   
+          <img src="Assets/2.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+       
       </div>
       <!-- Item 2 -->
       <div class="hidden duration-700 ease-in-out" data-carousel-item>
-          <img src="Assets/hero2.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-          <div class="relative top-500 top-1/2 px-4 py-2 opacity-100 ">
-            <h2 class="text-xl text-white font-bold text-center ">স্থানীয় সরকার প্রকৌশল অধিদপ্তর</h3>
-            <h2 class="text-xl text-white font-bold text-center ">গণপ্রজাতন্ত্রী বাংলাদেশ সরকার</h3>
+          <img src="Assets/1.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
         
-          </div> 
           
       </div>
       <!-- Item 3 -->
       <div class="hidden duration-700 ease-in-out" data-carousel-item>
-          <img src="Assets/hero3.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-          <div class="relative top-500 top-1/2 px-4 py-2 opacity-100 ">
-            <h2 class="text-xl text-white font-bold text-center ">স্থানীয় সরকার প্রকৌশল অধিদপ্তর</h3>
-            <h2 class="text-xl text-white font-bold text-center ">গণপ্রজাতন্ত্রী বাংলাদেশ সরকার</h3>
-        
-          </div> 
+          <img src="Assets/3.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+         
       </div>
    
   </div>
@@ -222,7 +210,9 @@ $result="SELECT * FROM `unionporiciti`";
 <div class="my-10">
   <p class="text-xl font-semibold text-center ">ইউনিয়ন পরিচিতি</p>
   <p class="text-justify text-gray-600">
-
+            <?php
+            echo $result['poriciti']
+            ?>
     নবগঠিত গড়াইটুপি ইউনিয়ন প্রায় ৩০ বর্গ কিলোমিটার আয়তন বিশিষ্ট। 
     এ ইউনিয়ন পরিষদটি গড়াইটুপি মৌজার ৬৯৭ নং খতিয়ানের ১২৯০ ও ১২৯১ নং দাগে ০.৩৩০০ শতাংশ
      জমির উপর গড়াইটুপি ইউনিয়ন পরিষদ কমপ্লেক্স ভবন স্থাপিত হবে। ইউনিয়নের জনসংখ্যা গত ২০১১ সালের
