@@ -104,7 +104,7 @@ $mullo=mysqli_query($con,$sebarmullo)
             <div id="dropdownNavbar5" class="z-50 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 ">
                 <ul class="py-2 text-sm text-gray-700 " aria-labelledby="dropdownLargeButton">
                   <li>
-                    <a href="porishodborgo.html" class="block px-4 py-2 hover:bg-primary hover:text-white ">পরিষদ বর্গ</a>
+                    <a href="porishodborgo.php" class="block px-4 py-2 hover:bg-primary hover:text-white ">পরিষদ বর্গ</a>
                   </li>
                   <li>
                     <a href="kormokortaborgo.html" class="block px-4 py-2 hover:bg-primary hover:text-white ">কর্মকর্তা বর্গ</a>
@@ -245,7 +245,8 @@ $mullo=mysqli_query($con,$sebarmullo)
     </div>
     <div class="overflow-x-hidden">
       <div class="py-5 animate-marquee  flex flex-col gap-10">
-          <div class="mx-4 text-xl"> <?php
+          <div class="mx-4 text-xl"> 
+            <?php
          $count=mysqli_num_rows($news);
             if($count>0){
               while ($row= mysqli_fetch_assoc($news)){

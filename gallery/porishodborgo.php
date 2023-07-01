@@ -1,6 +1,6 @@
 <?php
 error_reporting(0);
-include '_dbconnect.php';
+include '../_dbconnect.php';
 $msg = "";
 
 // If upload button is clicked ...
@@ -8,10 +8,10 @@ if (isset($_POST['upload'])) {
 
 	$filename = $_FILES["uploadfile"]["name"];
 	$tempname = $_FILES["uploadfile"]["tmp_name"];
-	$folder = "./img/" . $filename;
+	$folder = "../Assets/image/" . $filename;
 
 	// Get all the submitted data from the form
-	$sql = "INSERT INTO image (filename) VALUES ('$filename')";
+	$sql = "INSERT INTO porishodborgo (filename) VALUES ('$filename')";
 
 	// Execute query
 	mysqli_query($con, $sql);
@@ -31,7 +31,7 @@ if (isset($_POST['upload'])) {
 <head>
 	<title>Image Upload</title>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="style.css" />
+	
 </head>
 
 <body>
@@ -45,18 +45,8 @@ if (isset($_POST['upload'])) {
 			</div>
 		</form>
 	</div>
-	<div id="display-image">
-		<?php
-		$query = " SELECT * FROM image ";
-		$result = mysqli_query($con, $query);
-
-		while ($data = mysqli_fetch_assoc($result)) {
-		?>
-			<img src="./img/<?php echo $data['filename']; ?>">
-
-		<?php
-		}
-		?>
+	
+	
 	</div>
 </body>
 
