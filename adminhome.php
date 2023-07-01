@@ -39,7 +39,7 @@ if ($email == null) {
         </script>
         <div class="flex items-center gap-1 mt-3">
           <a href='home/home.php' class='px-4 py-2 cursor-pointer rounded-full text-white font-semibold text-base bg-sky-800 hover:bg-sky-600  duration-300 transition'>HomePage</a>
-          <a href='gallery/ghome.php' class='px-4 py-2 cursor-pointer rounded-full text-white font-semibold text-base bg-sky-800 hover:bg-sky-600  duration-300 transition'>Gallery</a>
+          <a href='image.php' class='px-4 py-2 cursor-pointer rounded-full text-white font-semibold text-base bg-sky-800 hover:bg-sky-600  duration-300 transition'>Gallery</a>
           <a href='home/gallery.php' class='px-4 py-2 cursor-pointer rounded-full text-white font-semibold text-base bg-sky-800 hover:bg-sky-600  duration-300 transition'>Protisthan</a>
 
         </div>

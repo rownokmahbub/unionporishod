@@ -50,9 +50,9 @@
   <option value="কমিউনিটি সেন্টার">কমিউনিটি সেন্টার</option>
   <option value="শিক্ষার হার">শিক্ষার হার</option>
 </select>
-      <input class='rounded-xl overflow-hidden px-2 py-2 border border-sky-800 w-full' type="file" name="uploadfile" id="uploadfile">
+      <input class='rounded-xl overflow-hidden px-2 py-2 border border-sky-800 w-full' type="file" name="upfile" id="uploadfile">
       <div class="flex gap-3 justify-center items-center w-full">
-        <button class='px-4 md:px-20 py-2.5 cursor-pointer rounded-xl text-white font-semibold text-base bg-sky-800 hover:bg-sky-600 duration-300 transition' type="submit">Create</button>
+        <button class='px-4 md:px-20 py-2.5 cursor-pointer rounded-xl text-white font-semibold text-base bg-sky-800 hover:bg-sky-600 duration-300 transition' value="upload" name="submit" type="submit">Create</button>
         <a href='createuser.php' class='px-4 md:px-20 py-2.5 cursor-pointer rounded-xl text-white font-semibold text-base bg-green-700 hover:bg-green-600  duration-300 transition flex items-center gap-1'>
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.66V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h5.34"></path><polygon points="18 2 22 6 12 16 8 16 8 12 18 2"></polygon></svg>    
         Edit</a>

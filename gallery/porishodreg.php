@@ -1,12 +1,13 @@
 
 <?php
-if (isset($_POST['upload'])) {
+if (isset($_POST['submit'])) {
     include '../_dbconnect.php';
     $borgotype = $_POST['borgotype'];
-    $filename = $_FILES["uploadfile"]["name"];
-    $tempname = $_FILES["uploadfile"]["tmp_name"];
+    $filename = $_FILES["upfile"]["name"];
+    $tempname = $_FILES["upfile"]["tmp_name"] ;
+    $filename=md5(time().$originalfilename);
     $folder = "../Assets/image/" . $filename;
- 
+    
  
     print_r(error_get_last());
     
@@ -14,20 +15,11 @@ if (isset($_POST['upload'])) {
     print_r(error_get_last());
     // Execute query
     mysqli_query($con, $sql);
-    print_r(error_get_last());
-    // Now let's move the uploaded image into the folder: image
-    if (move_uploaded_file($tempname, $folder)) {
-        print_r(error_get_last());
-        echo "<h3>  Image uploaded successfully!</h3>";
-    } else {
-        echo "<h3>  Failed to upload image!</h3>";
-    }
-    print_r(error_get_last());
-  
+   
     if(mysqli_query($con, $sql)){
- 
+        move_uploaded_file($tempname,$folder);
     
-     header("Location:home.php");
+     header("Location:ghome.php");
            
     } else{
         echo "ERROR: Hush! Sorry $sql. "

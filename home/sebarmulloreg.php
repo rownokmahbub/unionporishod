@@ -7,13 +7,13 @@
     include '../_dbconnect.php';
     $id = $_POST['id'];
     $seba = $_POST['seba'];
-    $sebardhoron = $_POST['sebardhoron'];
+    
            
    
 
 
      
-       $sql = "INSERT INTO `seba`(`id`, `seba`, `sebardhoron`) VALUES ('$id','$seba','$sebardhoron')";
+       $sql = "INSERT INTO `sebarmullo`(`id`, `mullo`) VALUES ('$id','$seba')";
        print_r(error_get_last());
   
    if(mysqli_query($con, $sql)){

@@ -1,9 +1,16 @@
 <?php
  include '_dbconnect.php';
 
-$query="SELECT * FROM `unionporiciti` limit 1";
-$result=mysqli_fetch_array(mysqli_query($con,$query))
-
+$query="SELECT * FROM `unionporiciti`";
+$poriciti=mysqli_query($con,$query);
+$khobor="SELECT * FROM `khobor`";
+$news=mysqli_query($con,$khobor);
+$notices="SELECT notice FROM `notice`";
+$notice=mysqli_query($con,$notices);
+$sebarsorto="SELECT * FROM `sebarsorto`";
+$sorto=mysqli_query($con,$sebarsorto);
+$sebarmullo="SELECT * FROM `sebarmullo`";
+$mullo=mysqli_query($con,$sebarmullo)
 
 ?>
 <!doctype html>
@@ -164,7 +171,7 @@ $result=mysqli_fetch_array(mysqli_query($con,$query))
 
 <div id="default-carousel" class="relative w-full mt-10 rounded-lg overflow-hidden" data-carousel="slide">
   <!-- Carousel wrapper -->
-  <div class="relative h-56 overflow-hidden  md:h-96">
+  <div class="relative h-56 overflow-hidden  md:h-[600px]">
        <!-- Item 1 -->
       <div class="hidden duration-1000 ease-in-out" data-carousel-item>
           <img src="Assets/2.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
@@ -210,15 +217,21 @@ $result=mysqli_fetch_array(mysqli_query($con,$query))
 <div class="my-10">
   <p class="text-xl font-semibold text-center ">ইউনিয়ন পরিচিতি</p>
   <p class="text-justify text-gray-600">
+  
             <?php
-            echo $result['poriciti']
+         $count=mysqli_num_rows($poriciti);
+            if($count>0){
+              while ($row= mysqli_fetch_assoc($poriciti)){
+                echo "{$row['poriciti']}";
+                 echo '<br>';
+              }
+             
+            }else{
+              echo "আপনার কোনো ডাটা নাই !";
+            }
+           
             ?>
-    নবগঠিত গড়াইটুপি ইউনিয়ন প্রায় ৩০ বর্গ কিলোমিটার আয়তন বিশিষ্ট। 
-    এ ইউনিয়ন পরিষদটি গড়াইটুপি মৌজার ৬৯৭ নং খতিয়ানের ১২৯০ ও ১২৯১ নং দাগে ০.৩৩০০ শতাংশ
-     জমির উপর গড়াইটুপি ইউনিয়ন পরিষদ কমপ্লেক্স ভবন স্থাপিত হবে। ইউনিয়নের জনসংখ্যা গত ২০১১ সালের
-      আদম শুমারী অনুযায়ী পুরুষ ১০৪২৭ জন ও মহিলা ১০৫০০০ জন মোট ২০৯২৭ জন । ইউনিয়নে মোট ১৬টি গ্রাম,
-       ১১টি মৌজা রয়েছে। ইউনিয়ন পরিষদের পূর্বে সাধুহাটি ইউনিয়ন, পশ্চিমে তিতুদহ ইউনিয়ন দক্ষিনে আন্দুলবাড়ীয়া ইউনিয়ন
-        এবং উত্তরে কুতুবপুর ইউনিয়ন পরিষদ। জেলা সদর থেকে এ ইউনিয়নটি ২০ কিলোমিটার দূরে অবস্থিত। 
+   
   </p>
 
 </div>
@@ -232,8 +245,22 @@ $result=mysqli_fetch_array(mysqli_query($con,$query))
     </div>
     <div class="overflow-x-hidden">
       <div class="py-5 animate-marquee  flex flex-col gap-10">
-          <span class="mx-4 text-xl">নবগঠিত গড়াইটুপি ইউনিয়ন প্রায় ৩০ বর্গ কিলোমিটার আয়তন বিশিষ্ট। এ ইউনিয়ন পরিষদটি গড়াইটুপি মৌজার ৬৯৭ নং খতিয়ানের ১২৯০ ও ১২৯১ নং দাগে ০.৩৩০০ শতাংশ জমির উপর গড়াইটুপি ইউনিয়ন পরিষদ কমপ্লেক্স ভবন স্থাপিত হবে।</span>
-          <span class="mx-4 text-xl">পশ্চিমে তিতুদহ ইউনিয়ন দক্ষিনে আন্দুলবাড়ীয়া ইউনিয়ন এবং উত্তরে কুতুবপুর ইউনিয়ন পরিষদ। জেলা সদর থেকে এ ইউনিয়নটি ২০ কিলোমিটার দূরে অবস্থিত।</span>
+          <div class="mx-4 text-xl"> <?php
+         $count=mysqli_num_rows($news);
+            if($count>0){
+              while ($row= mysqli_fetch_assoc($news)){
+                echo "{$row['khobor']}";
+                 echo '<br>';
+              }
+             
+            }else{
+              echo "আপনার কোনো খবর  নাই !";
+            }
+           
+            ?>
+          
+          </div>
+         
           
       </div>
   </div>
@@ -246,8 +273,22 @@ $result=mysqli_fetch_array(mysqli_query($con,$query))
       <img class="w-20 h-20 rounded-full flex-shrink-0" src="Assets/mogram.png" alt="mike">
     </div>
    <div class="flex flex-col gap-5">
-    <p>পশ্চিমে তিতুদহ ইউনিয়ন দক্ষিনে আন্দুলবাড়ীয়া ইউনিয়ন এবং উত্তরে কুতুবপুর ইউনিয়ন পরিষদ। জেলা সদর থেকে এ ইউনিয়নটি ২০ কিলোমিটার দূরে অবস্থিত।</p>
-    <p>নবগঠিত গড়াইটুপি ইউনিয়ন প্রায় ৩০ বর্গ কিলোমিটার আয়তন বিশিষ্ট। এ ইউনিয়ন পরিষদটি গড়াইটুপি মৌজার ৬৯৭ নং খতিয়ানের ১২৯০ ও ১২৯১ নং দাগে ০.৩৩০০ শতাংশ</p>
+    <p> 
+    <?php
+         $count=mysqli_num_rows($notice);
+            if($count>0){
+              while ($row= mysqli_fetch_assoc($notice)){
+                echo "{$row['notice']}";
+                 echo '<br>';
+              }
+             
+            }else{
+              echo "আপনার কোনো ডাটা নাই !";
+            }
+           
+            ?>
+      </p>
+   
    </div>
   </div>
 </div>
@@ -255,26 +296,48 @@ $result=mysqli_fetch_array(mysqli_query($con,$query))
 <div class="my-10 grid grid-cols-1 md:grid-cols-2 gap-10">
     <div class="flex flex-col gap-3 border-t-4 border-primary rounded-xl bg-white drop-shadow-xl px-5 py-5">
         <p class="text-2xl font-semibold text-center">সেবা পাওয়ার শর্ত সমূহ</p>
-        <p class="text-gray-600 ">১ ট্রেডলাইসেন্স বাদে সকল সেবা গ্রহণের ক্ষেত্রে আবদেনকারীকে ইউনিয়নের স্থায়ী বাসিন্দ হতে হবে।</p>
-        <p class="text-gray-600 ">২ হাল নাগাদ ট্যাক্স পরিশোধ থাকতে হবে।</p>
-        <p class="text-gray-600 ">৩ ভোটার ও জন্মনিবন্ধন কার্ড সঙ্গে আনতে হবে।</p>
-        <p class="text-gray-600 ">৪ ওয়ারেশ সনদপত্র গ্রহণের ক্ষেত্রে আবেদন পত্রে সংশ্লিষ্ঠ ওয়ার্ড সদ্যসের সুপারিশ থাকে হবে।</p>
+        <p class="text-gray-600">
+        <?php
+         $count=mysqli_num_rows($sorto);
+            if($count>0){
+              while ($row= mysqli_fetch_assoc($sorto)){
+                echo "{$row['id']}"; 
+                echo str_repeat('&nbsp;', 3);
+                echo "{$row['sorto']}";
+                 echo '<br>';
+              }
+             
+            }else{
+              echo "আপনার কোনো ডাটা নাই !";
+            }
+           
+            ?>
+        </p>
     </div>
     <div class="flex flex-col gap-3 border-t-4 border-primary rounded-xl bg-white drop-shadow-xl px-5 py-5">
       <p class="text-2xl font-semibold text-center">সেবা মূল্য সমূহ</p>
-      <p class="text-gray-600 ">১ ওয়ারিশ সনদ পত্র ১০০ টাকা</p>
-      <p class="text-gray-600 ">২ উত্তরাধিকারী সনদ পত্র ১০০ টাকা</p>
-      <p class="text-gray-600 ">৩ নাগরিক সনদ পত্র ২০ টাকা</p>
-      <p class="text-gray-600 ">৪ চারিত্রিক সনদ পত্র ৩০ টাকা</p>
-      <p class="text-gray-600 ">৫ ট্রেডলাইসেন্স ব্যবসার ধরন অনুযায়ীয়</p>
-      <p class="text-gray-600 ">৬ জন্ম-মৃত্যু নিবন্ধন ফি সরকারী বিধি মোতাবেকা</p>
+      <?php
+         $count=mysqli_num_rows($mullo);
+            if($count>0){
+              while ($row= mysqli_fetch_assoc($mullo)){
+                echo "{$row['id']}"; 
+                echo str_repeat('&nbsp;', 3);
+                echo "{$row['mullo']}";
+                 echo '<br>';
+              }
+             
+            }else{
+              echo "আপনার কোনো ডাটা নাই !";
+            }
+           
+            ?>
   </div>
 </div>
 
 <!-- table -->
 <p class="text-3xl text-center font-semibold px-5 mx-auto w-full my-5">শিক্ষা প্রতিষ্ঠানের  তথ্য সমূহ</p>
-<div class="table-wrapper">
-  <table class="fl-table">
+<div class="table-wrapper rounded-t-xl rounded-b-xl overflow-hidden">
+  <table class="fl-table ">
       <thead>
       <tr>
           <th>কলেজ</th>
@@ -306,7 +369,7 @@ $result=mysqli_fetch_array(mysqli_query($con,$query))
   </table>
 </div>
 <p class="text-3xl text-center font-semibold px-5 mx-auto w-full my-5">ইউনিয়ন এর বিভিন্ন তথ্য</p>
-<div class="table-wrapper">
+<div class="table-wrapper rounded-t-xl rounded-b-xl overflow-hidden">
    
   <table class="fl-table">
       <thead>
