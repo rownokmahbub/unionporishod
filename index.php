@@ -169,9 +169,9 @@ $mullo=mysqli_query($con,$sebarmullo)
   
 <!--hero section-->
 
-<div id="default-carousel" class="relative w-full mt-10 rounded-lg overflow-hidden" data-carousel="slide">
+<div id="default-carousel" class="relative w-full mt-2 rounded-lg overflow-hidden" data-carousel="slide">
   <!-- Carousel wrapper -->
-  <div class="relative h-56 overflow-hidden  md:h-[600px]">
+  <div class="relative h-56 overflow-hidden  md:h-[450px]">
        <!-- Item 1 -->
       <div class="hidden duration-1000 ease-in-out" data-carousel-item>
           <img src="Assets/2.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">

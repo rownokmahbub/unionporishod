@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jul 01, 2023 at 05:47 AM
+-- Generation Time: Jul 01, 2023 at 05:13 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -29,7 +29,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `khobor` (
   `id` int(11) NOT NULL,
-  `khobor` varchar(255) NOT NULL
+  `khobor` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -37,7 +37,8 @@ CREATE TABLE `khobor` (
 --
 
 INSERT INTO `khobor` (`id`, `khobor`) VALUES
-(1, 'khobor hobe joss');
+(2, 'সবাই কে ঈদ উল আজহা এর সুবেচ্ছা জানাই ঈদ মুবারক '),
+(4, 'ইউনিয়ন এর সব খবর আপনারা এখানে পাবজেন কোনো চিন্তা করার ডড়কের নাই ');
 
 -- --------------------------------------------------------
 
@@ -102,7 +103,21 @@ INSERT INTO `log` (`id`, `email`, `activity`, `time`) VALUES
 (62, 'rownok2001@gmail.com', 'Log Out', '2023-06-27 12:41:28'),
 (63, 'rownok2001@gmail.com', 'Log Out', '2023-06-27 12:55:05'),
 (64, 'rownok2001@gmail.com', 'Log Out', '2023-06-28 14:09:50'),
-(65, 'rownok2001@gmail.com', 'Log Out', '2023-06-28 14:26:11');
+(65, 'rownok2001@gmail.com', 'Log Out', '2023-06-28 14:26:11'),
+(66, 'rownok2001@gmail.com', 'Log Out', '2023-07-01 04:12:04'),
+(67, 'rownok2001@gmail.com', 'Log Out', '2023-07-01 04:17:45'),
+(68, 'rownok2001@gmail.com', 'Log Out', '2023-07-01 05:12:46'),
+(69, 'rownok2001@gmail.com', 'Log Out', '2023-07-01 05:20:15'),
+(70, 'rownok2001@gmail.com', 'Log Out', '2023-07-01 05:21:26'),
+(71, 'rownok2001@gmail.com', 'Log Out', '2023-07-01 05:25:17'),
+(72, 'rownok2001@gmail.com', 'Log Out', '2023-07-01 05:35:48'),
+(73, 'rownok2001@gmail.com', 'Log Out', '2023-07-01 05:46:17'),
+(74, 'rownok2001@gmail.com', 'Log Out', '2023-07-01 05:48:42'),
+(75, 'rownok2001@gmail.com', 'Log Out', '2023-07-01 09:47:50'),
+(76, 'rownok2001@gmail.com', 'Log Out', '2023-07-01 11:26:22'),
+(77, 'rownok2001@gmail.com', 'Log Out', '2023-07-01 11:27:20'),
+(78, 'rownok2001@gmail.com', 'Log Out', '2023-07-01 11:29:48'),
+(79, 'rownok2001@gmail.com', 'Log Out', '2023-07-01 14:57:18');
 
 -- --------------------------------------------------------
 
@@ -112,7 +127,7 @@ INSERT INTO `log` (`id`, `email`, `activity`, `time`) VALUES
 
 CREATE TABLE `notice` (
   `id` int(11) NOT NULL,
-  `notice` varchar(255) NOT NULL
+  `notice` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -120,7 +135,8 @@ CREATE TABLE `notice` (
 --
 
 INSERT INTO `notice` (`id`, `notice`) VALUES
-(1, 'akhane apni apner notice add korun');
+(2, 'নবগঠিত গড়াইটুপি ইউনিয়ন প্রায় ৩০ বর্গ কিলোমিটার আয়তন বিশিষ্ট। এ ইউনিয়ন পরিষদটি গড়াইটুপি মৌজার ৬৯৭ নং খতিয়ানের ১২৯০ ও ১২৯১ নং দাগে ০.৩৩০০ শতাংশ'),
+(3, 'হাল নাগাদ ট্যাক্স পরিশোধ থাকতে হবে।');
 
 -- --------------------------------------------------------
 
@@ -130,9 +146,15 @@ INSERT INTO `notice` (`id`, `notice`) VALUES
 
 CREATE TABLE `porishodborgo` (
   `id` int(11) NOT NULL,
-  `borgotype` varchar(255) NOT NULL,
-  `image` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+  `filename` varchar(100) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--
+-- Dumping data for table `porishodborgo`
+--
+
+INSERT INTO `porishodborgo` (`id`, `filename`) VALUES
+(9, 'Home Page.png');
 
 -- --------------------------------------------------------
 
@@ -156,21 +178,38 @@ INSERT INTO `protisthan` (`id`, `protisthan`, `protisthandhoron`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `seba`
+-- Table structure for table `sebarmullo`
 --
 
-CREATE TABLE `seba` (
+CREATE TABLE `sebarmullo` (
   `id` int(11) NOT NULL,
-  `seba` varchar(255) NOT NULL,
-  `sebardhoron` varchar(255) NOT NULL
+  `mullo` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `seba`
+-- Dumping data for table `sebarmullo`
 --
 
-INSERT INTO `seba` (`id`, `seba`, `sebardhoron`) VALUES
-(1, 'seba add korse akhane', 'সেবা মূল্য সমূহ');
+INSERT INTO `sebarmullo` (`id`, `mullo`) VALUES
+(1, 'সেবা আমরা এখানে অ্যাড করবো ');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `sebarsorto`
+--
+
+CREATE TABLE `sebarsorto` (
+  `id` int(11) NOT NULL,
+  `sorto` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `sebarsorto`
+--
+
+INSERT INTO `sebarsorto` (`id`, `sorto`) VALUES
+(1, 'সেবা আমরা এখানে অ্যাড করবো ');
 
 -- --------------------------------------------------------
 
@@ -283,8 +322,7 @@ CREATE TABLE `unionporiciti` (
 --
 
 INSERT INTO `unionporiciti` (`id`, `poriciti`) VALUES
-(3, 'gtjgsgjsjkgnksd'),
-(4, 'thisis the nortice test goes here');
+(8, 'আমাদের ইউনিয়ন অঙ্ক সুন্দর আমাদের ইউনিয়ন তিতুদহ ');
 
 -- --------------------------------------------------------
 
@@ -343,9 +381,15 @@ ALTER TABLE `protisthan`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `seba`
+-- Indexes for table `sebarmullo`
 --
-ALTER TABLE `seba`
+ALTER TABLE `sebarmullo`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `sebarsorto`
+--
+ALTER TABLE `sebarsorto`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -392,25 +436,25 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `khobor`
 --
 ALTER TABLE `khobor`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `log`
 --
 ALTER TABLE `log`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=66;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=80;
 
 --
 -- AUTO_INCREMENT for table `notice`
 --
 ALTER TABLE `notice`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `porishodborgo`
 --
 ALTER TABLE `porishodborgo`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `protisthan`
@@ -434,7 +478,7 @@ ALTER TABLE `subuser`
 -- AUTO_INCREMENT for table `unionporiciti`
 --
 ALTER TABLE `unionporiciti`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `user`
