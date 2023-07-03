@@ -6,11 +6,7 @@ while ($row = mysqli_fetch_assoc($poriciti)){
     $id= $row['id'];
     $upporiciti= $row['poriciti'];
 }
-if (isset($_REQUEST['submit'])) {
-    $id=$_REQUEST['hiddenid'];
-    $uporiciti=$_REQUEST['poriciti'];
-    $edit="UPDATE `unionporiciti` SET `poriciti`='$uporiciti' WHERE id='$id'";
-}
+
 ?>
 <!doctype html>
 <html>
