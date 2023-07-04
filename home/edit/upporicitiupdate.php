@@ -6,7 +6,7 @@ include '../../_dbconnect.php';
         $id = $_POST['hid'];
         $uporiciti=$_POST['poriciti'];
         
-        echo $id;
+        
         
         $edit="UPDATE `unionporiciti` SET `poriciti`='$uporiciti' WHERE `id`='$id'";
         $query=mysqli_query($con,$edit);
