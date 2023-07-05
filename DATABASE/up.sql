@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jul 01, 2023 at 05:13 PM
+-- Generation Time: Jul 05, 2023 at 03:59 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -37,8 +37,7 @@ CREATE TABLE `khobor` (
 --
 
 INSERT INTO `khobor` (`id`, `khobor`) VALUES
-(2, 'সবাই কে ঈদ উল আজহা এর সুবেচ্ছা জানাই ঈদ মুবারক '),
-(4, 'ইউনিয়ন এর সব খবর আপনারা এখানে পাবজেন কোনো চিন্তা করার ডড়কের নাই ');
+(7, 'এসডিএফকফস আর এফ এফ as');
 
 -- --------------------------------------------------------
 
@@ -117,7 +116,20 @@ INSERT INTO `log` (`id`, `email`, `activity`, `time`) VALUES
 (76, 'rownok2001@gmail.com', 'Log Out', '2023-07-01 11:26:22'),
 (77, 'rownok2001@gmail.com', 'Log Out', '2023-07-01 11:27:20'),
 (78, 'rownok2001@gmail.com', 'Log Out', '2023-07-01 11:29:48'),
-(79, 'rownok2001@gmail.com', 'Log Out', '2023-07-01 14:57:18');
+(79, 'rownok2001@gmail.com', 'Log Out', '2023-07-01 14:57:18'),
+(80, 'rownok2001@gmail.com', 'Log Out', '2023-07-02 14:22:16'),
+(81, 'rownok2001@gmail.com', 'Log Out', '2023-07-03 15:59:50'),
+(82, 'rownok2001@gmail.com', 'Log Out', '2023-07-03 16:30:38'),
+(83, 'rownok2001@gmail.com', 'Log Out', '2023-07-04 02:39:48'),
+(84, 'rownok2001@gmail.com', 'Log Out', '2023-07-04 03:43:02'),
+(85, 'rownok2001@gmail.com', 'Log Out', '2023-07-04 03:44:01'),
+(86, 'rownok2001@gmail.com', 'Log Out', '2023-07-04 15:25:36'),
+(87, 'rownok2001@gmail.com', 'Log Out', '2023-07-04 16:20:30'),
+(88, 'rownok2001@gmail.com', 'Log Out', '2023-07-04 16:20:50'),
+(89, 'rownok2001@gmail.com', 'Log Out', '2023-07-04 16:23:53'),
+(90, 'rownok2001@gmail.com', 'Log Out', '2023-07-05 09:18:33'),
+(91, 'rownok2001@gmail.com', 'Log Out', '2023-07-05 13:55:14'),
+(92, 'rownok2001@gmail.com', 'Log Out', '2023-07-05 13:57:55');
 
 -- --------------------------------------------------------
 
@@ -135,8 +147,7 @@ CREATE TABLE `notice` (
 --
 
 INSERT INTO `notice` (`id`, `notice`) VALUES
-(2, 'নবগঠিত গড়াইটুপি ইউনিয়ন প্রায় ৩০ বর্গ কিলোমিটার আয়তন বিশিষ্ট। এ ইউনিয়ন পরিষদটি গড়াইটুপি মৌজার ৬৯৭ নং খতিয়ানের ১২৯০ ও ১২৯১ নং দাগে ০.৩৩০০ শতাংশ'),
-(3, 'হাল নাগাদ ট্যাক্স পরিশোধ থাকতে হবে।');
+(2, 'নবগঠিত গড়াইটুপি ইউনিয়ন প্রায় ৩০ বর্গ কিলোমিটার আয়তন বিশিষ্ট। ');
 
 -- --------------------------------------------------------
 
@@ -209,7 +220,7 @@ CREATE TABLE `sebarsorto` (
 --
 
 INSERT INTO `sebarsorto` (`id`, `sorto`) VALUES
-(1, 'সেবা আমরা এখানে অ্যাড করবো ');
+(2, 'আমরা সেবা ভ্লো ভাবে গ্রহণ করব ');
 
 -- --------------------------------------------------------
 
@@ -219,17 +230,21 @@ INSERT INTO `sebarsorto` (`id`, `sorto`) VALUES
 
 CREATE TABLE `shikkha` (
   `id` int(11) NOT NULL,
-  `shikkha` varchar(255) NOT NULL,
-  `sshikkhardhoron` varchar(255) NOT NULL
+  `college` varchar(255) NOT NULL,
+  `maddhomik` varchar(255) NOT NULL,
+  `nimo` varchar(255) NOT NULL,
+  `prathomic` varchar(255) NOT NULL,
+  `madracha` varchar(255) NOT NULL,
+  `community` varchar(255) NOT NULL,
+  `shikkharhar` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `shikkha`
 --
 
-INSERT INTO `shikkha` (`id`, `shikkha`, `sshikkhardhoron`) VALUES
-(4, 'this is the test of shikkha', 'মাদ্রাসা'),
-(5, '1', 'প্রাথমিক বিদ্যালয়');
+INSERT INTO `shikkha` (`id`, `college`, `maddhomik`, `nimo`, `prathomic`, `madracha`, `community`, `shikkharhar`) VALUES
+(7, '1', '2', '3', '1', '2', '1', '23.34%');
 
 -- --------------------------------------------------------
 
@@ -322,7 +337,7 @@ CREATE TABLE `unionporiciti` (
 --
 
 INSERT INTO `unionporiciti` (`id`, `poriciti`) VALUES
-(8, 'আমাদের ইউনিয়ন অঙ্ক সুন্দর আমাদের ইউনিয়ন তিতুদহ ');
+(14, 'তিতুদহ ইউনিয়ন প্রাই ৩০ বর্গ কিলোমিটার আয়তন বিশিষ্ট এই ইউনিয়ন পরিষদটি তিতুদহ মৌজা ৬৯৭ নাগ খতিয়ানের ১২৯০ ও ১২৯৭ নো দাগে ');
 
 -- --------------------------------------------------------
 
@@ -436,13 +451,13 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `khobor`
 --
 ALTER TABLE `khobor`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `log`
 --
 ALTER TABLE `log`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=80;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=93;
 
 --
 -- AUTO_INCREMENT for table `notice`
@@ -466,7 +481,7 @@ ALTER TABLE `protisthan`
 -- AUTO_INCREMENT for table `shikkha`
 --
 ALTER TABLE `shikkha`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `subuser`
@@ -478,7 +493,7 @@ ALTER TABLE `subuser`
 -- AUTO_INCREMENT for table `unionporiciti`
 --
 ALTER TABLE `unionporiciti`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `user`

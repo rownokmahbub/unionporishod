@@ -6,13 +6,18 @@
    
     include '../_dbconnect.php';
     
-    $shikkha = $_POST['shikkha'];
-    $shikkhardhoron = $_POST['shikkhardhoron'];
-           
+    $college = $_POST['college'];
+    $maddhomik = $_POST['maddhomik'];
+    $nimno = $_POST['nimno'];
+    $prathomik = $_POST['prathomik'];
+    $madracha = $_POST['madracha'];
+    $community = $_POST['community'];
+    $shikkharhar = $_POST['shikkharhar'];
+        
    
 
      
-       $sql = "INSERT INTO `shikkha`(`shikkha`, `sshikkhardhoron`) VALUES ('$shikkha','$shikkhardhoron')
+       $sql = "INSERT INTO `shikkha`(`college`, `maddhomik`, `nimo`, `prathomic`, `madracha`, `community`, `shikkharhar`) VALUES ('$college','$maddhomik','$nimno','$prathomik','$madracha','$community','$shikkharhar')
        ";
        print_r(error_get_last());
   

@@ -282,17 +282,13 @@
       </h2>
       <form method='POST' action='shikkhareg.php' class="space-y-5 flex flex-col items-start justify-start gap-3">
      
-        <input class='bg-gray-50 border border-gray-300 text-sky-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5' type="text" name="shikkha" id="" placeholder='শিক্ষা প্রতিষ্ঠানের তথ্য যোগ করুন ...'>
-
-<select id="countries" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 " name='shikkhardhoron'>
-  <option value='কলেজ'>কলেজ</option>
-  <option value="মাধ্যমিক বিদ্যালয়">মাধ্যমিক বিদ্যালয়</option>
-  <option value="নিম্ন মাধ্যমিক বিদ্যালয়">নিম্ন মাধ্যমিক বিদ্যালয়</option>
-  <option value="প্রাথমিক বিদ্যালয়">প্রাথমিক বিদ্যালয়</option>
-  <option value="মাদ্রাসা">মাদ্রাসা</option>
-  <option value="কমিউনিটি সেন্টার">কমিউনিটি সেন্টার</option>
-  <option value="শিক্ষার হার">শিক্ষার হার</option>
-</select>
+        <input class='bg-gray-50 border border-gray-300 text-sky-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5' type="text" name="college" id="" placeholder='কলেজ'>
+        <input class='bg-gray-50 border border-gray-300 text-sky-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5' type="text" name="maddhomik" id="" placeholder='মাধ্যমিক বিদ্যালয়'>
+        <input class='bg-gray-50 border border-gray-300 text-sky-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5' type="text" name="nimno" id="" placeholder='নিম্ন মাধ্যমিক বিদ্যালয়'>
+        <input class='bg-gray-50 border border-gray-300 text-sky-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5' type="text" name="prathomik" id="" placeholder='প্রাথমিক বিদ্যালয়'>
+        <input class='bg-gray-50 border border-gray-300 text-sky-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5' type="text" name="madracha" id="" placeholder='মাদ্রাসা'>
+        <input class='bg-gray-50 border border-gray-300 text-sky-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5' type="text" name="community" id="" placeholder='কমিউনিটি সেন্টার'>
+        <input class='bg-gray-50 border border-gray-300 text-sky-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5' type="text" name="shikkharhar" id="" placeholder='শিক্ষার হার'>
 
 <div class="flex gap-3 justify-center items-center w-full">
         <button class='px-4 md:px-20 py-2.5 cursor-pointer rounded-xl text-white font-semibold text-base bg-sky-800 hover:bg-sky-600  duration-300 transition' type="submit">Create</button>

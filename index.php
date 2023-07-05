@@ -354,16 +354,32 @@ $mullo=mysqli_query($con,$sebarmullo)
       </tr>
       </thead>
       <tbody>
-      <tr>
-          <td>০</td>
-          <td>২</td>
-          <td>০</td>
-          <td>১৩</td>
-          <td>৪</td>
-          <td>৩</td>
-          <td>৭০%</td>
-         
-      </tr>
+      <?php
+                    
+                    $query = "SELECT * FROM `shikkha`";
+                    $poriciti = mysqli_query($con, $query);
+                    
+                    while ($row = mysqli_fetch_assoc($poriciti)) {
+                        $id=$row['id'];
+                    ?>
+                <tr class="">
+                    
+                    <td class=''><?= $row['college'] ?></td>
+                    <td class=''><?= $row['maddhomik'] ?></td>
+                    <td class=''><?= $row['nimo'] ?></td>
+                    <td class=''><?= $row['prathomic'] ?></td>
+                    <td class=''><?= $row['madracha'] ?></td>
+                    <td class=''><?= $row['community'] ?></td>
+                    <td class=''><?= $row['shikkharhar'] ?></td>
+                
+                    
+                   
+                </tr>
+            <?php
+                    }
+
+
+            ?>
      
      
       <tbody>

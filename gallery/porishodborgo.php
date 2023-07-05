@@ -30,12 +30,16 @@ if (isset($_POST['upload'])) {
 
 <head>
 	<title>Image Upload</title>
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+	<script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.6/flowbite.min.css"  rel="stylesheet" />
 	
 </head>
 
 <body>
-	<div id="content">
+	<div id="content" class='flex justify-between items-center'>
+		<div>
+			
+		</div>
 		<form method="POST" action="" enctype="multipart/form-data">
 			<div class="form-group">
 				<input class="form-control" type="file" name="uploadfile" value="" />
