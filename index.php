@@ -406,21 +406,38 @@ $mullo=mysqli_query($con,$sebarmullo)
       </tr>
       </thead>
       <tbody>
-      <tr>
-          <td>১</td>
-          <td>১৬</td>
-          <td>১১</td>
-          <td>৫</td>
-          <td>০</td>
-          <td>৭</td>
-          <td>০</td>
-          <td>৩৬</td>
-          <td>১৯</td>
-          <td>১৭</td>
-          <td>৭</td>
-          <td>৩</td>
-          
-      </tr>
+      <?php
+                    
+                    $query = "SELECT * FROM `uniondetails`";
+                    $poriciti = mysqli_query($con, $query);
+                    
+                    while ($row = mysqli_fetch_assoc($poriciti)) {
+                        $id=$row['id'];
+                    ?>
+                <tr class="">
+                    
+                <td class=''><?= $row['dakghor'] ?></td>
+                    <td class=''><?= $row['gram'] ?></td>
+                    <td class=''><?= $row['mouja'] ?></td>
+                    <td class=''><?= $row['hatbazar'] ?></td>
+                    <td class=''><?= $row['policecamp'] ?></td>
+                    <td class=''><?= $row['enjio'] ?></td>
+                    <td class=''><?= $row['vhumi'] ?></td>
+                    <td class=''><?= $row['mosjid'] ?></td>
+                    <td class=''><?= $row['koborsthan'] ?></td>
+                    <td class=''><?= $row['edgah'] ?></td>
+                    <td class=''><?= $row['mondir'] ?></td>
+                    <td class=''><?= $row['sosan'] ?></td>
+                   
+                   
+                </tr>
+            <?php
+                    }
+
+
+            ?>
+     
+     
      
      
       <tbody>

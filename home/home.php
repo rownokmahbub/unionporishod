@@ -280,16 +280,18 @@
           </svg>
           শিক্ষা প্রতিষ্ঠানের তথ্য  যোগ করুন
       </h2>
-      <form method='POST' action='shikkhareg.php' class="space-y-5 flex flex-col items-start justify-start gap-3">
-     
-        <input class='bg-gray-50 border border-gray-300 text-sky-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5' type="text" name="college" id="" placeholder='কলেজ'>
+      <form method='POST' action='shikkhareg.php' class="space-y-5 flex flex-col  gap-3">
+     <div class='grid grid-cols-1 md:grid-cols-2 gap-5 mx-auto'>
+     <input class='bg-gray-50 border border-gray-300 text-sky-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5' type="text" name="college" id="" placeholder='কলেজ'>
         <input class='bg-gray-50 border border-gray-300 text-sky-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5' type="text" name="maddhomik" id="" placeholder='মাধ্যমিক বিদ্যালয়'>
         <input class='bg-gray-50 border border-gray-300 text-sky-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5' type="text" name="nimno" id="" placeholder='নিম্ন মাধ্যমিক বিদ্যালয়'>
         <input class='bg-gray-50 border border-gray-300 text-sky-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5' type="text" name="prathomik" id="" placeholder='প্রাথমিক বিদ্যালয়'>
         <input class='bg-gray-50 border border-gray-300 text-sky-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5' type="text" name="madracha" id="" placeholder='মাদ্রাসা'>
-        <input class='bg-gray-50 border border-gray-300 text-sky-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5' type="text" name="community" id="" placeholder='কমিউনিটি সেন্টার'>
-        <input class='bg-gray-50 border border-gray-300 text-sky-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5' type="text" name="shikkharhar" id="" placeholder='শিক্ষার হার'>
+        <input class='bg-gray-50 border border-gray-300 text-sky-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block  p-2.5' type="text" name="community" id="" placeholder='কমিউনিটি সেন্টার'>
+    
 
+     </div>
+     <input class='bg-gray-50 border border-gray-300 text-sky-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5' type="text" name="shikkharhar" id="" placeholder='শিক্ষার হার'>
 <div class="flex gap-3 justify-center items-center w-full">
         <button class='px-4 md:px-20 py-2.5 cursor-pointer rounded-xl text-white font-semibold text-base bg-sky-800 hover:bg-sky-600  duration-300 transition' type="submit">Create</button>
         <a href='edit/homeedit.php' class='px-4 md:px-20 py-2.5 cursor-pointer rounded-xl text-white font-semibold text-base bg-green-700 hover:bg-green-600  duration-300 transition flex items-center gap-1'>
@@ -306,6 +308,7 @@
   </div>
   <img src="../Assets/shikkha.png" class="w-full max-w-screen-sm mx-auto rounded shadow-2xl md:w-auto lg:max-w-screen-md" alt="" />
 </div>
+
 
 <div class="flex flex-col items-center justify-center px-4 pt-16 mx-auto sm:max-w-xl md:max-w-full lg:pt-32 md:px-0">
   <div class="flex flex-col items-center max-w-2xl md:px-8">
@@ -327,27 +330,24 @@
           </svg>
           ইউনিয়ন এর তথ্য যোগ করুন
       </h2>
-      <form method='POST' action='protisthan.php' class="space-y-5 flex flex-col items-start justify-start gap-3">
+      <form method='POST' action='uniondetailsreg.php' class="space-y-5 flex flex-col  gap-3">
+     <div class='grid grid-cols-1 md:grid-cols-2 gap-5 mx-auto'>
+     <input class='bg-gray-50 border border-gray-300 text-sky-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5' type="text" name="dakghor" id="" placeholder='ডাকঘর'>
+     <input class='bg-gray-50 border border-gray-300 text-sky-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5' type="text" name="gram" id="" placeholder='গ্রাম'>
+     <input class='bg-gray-50 border border-gray-300 text-sky-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5' type="text" name="mouja" id="" placeholder='মৌজা'>
+     <input class='bg-gray-50 border border-gray-300 text-sky-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5' type="text" name="hatbazar" id="" placeholder='হাটবাজার'>
+     <input class='bg-gray-50 border border-gray-300 text-sky-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5' type="text" name="policecamp" id="" placeholder='পুলিশ ক্যাম্প'>
+     <input class='bg-gray-50 border border-gray-300 text-sky-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5' type="text" name="enjio" id="" placeholder='এনজিও সংস্থা'>
+     <input class='bg-gray-50 border border-gray-300 text-sky-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5' type="text" name="vhumi" id="" placeholder='ভূমি অফিস'>
+     <input class='bg-gray-50 border border-gray-300 text-sky-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5' type="text" name="mosjid" id="" placeholder='মসজিদ'>
+     <input class='bg-gray-50 border border-gray-300 text-sky-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5' type="text" name="koborsthan" id="" placeholder='কবরস্থান'>
+     <input class='bg-gray-50 border border-gray-300 text-sky-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5' type="text" name="edgah" id="" placeholder='ঈদগাহ ময়দান'>
+     <input class='bg-gray-50 border border-gray-300 text-sky-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5' type="text" name="mondir" id="" placeholder='মন্দির'>
+     <input class='bg-gray-50 border border-gray-300 text-sky-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5' type="text" name="sosan" id="" placeholder='শ্মশান'>
      
-        <input class='bg-gray-50 border border-gray-300 text-sky-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5' type="text" name="protisthan" id="" placeholder='  ইউনিয়ন এর তথ্য যোগ করুন ...'>
 
-<select id="countries" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 " name='protisthandhoron'>
-
-  <option value="ডাকঘর">ডাকঘর</option>
-  <option value="গ্রাম">গ্রাম</option>
-  <option value="মৌজা">মৌজা</option>
-  <option value="হাটবাজার">হাটবাজার</option>
-  <option value="পুলিশ ক্যাম্প">পুলিশ ক্যাম্প</option>
-  <option value="এনজিও সংস্থা">এনজিও সংস্থা</option>
-  <option value="ভূমি অফিস">ভূমি অফিস</option>
-  <option value="মসজিদ">মসজিদ</option>
-  <option value="কবরস্থান">কবরস্থান</option>
-  <option value="ঈদগাহ ময়দান">ঈদগাহ ময়দান</option>
-  <option value="মন্দির">মন্দির</option>
-  <option value="শ্মশান">শ্মশান</option>
- 
-</select>
-
+     </div>
+    
 <div class="flex gap-3 justify-center items-center w-full">
         <button class='px-4 md:px-20 py-2.5 cursor-pointer rounded-xl text-white font-semibold text-base bg-sky-800 hover:bg-sky-600  duration-300 transition' type="submit">Create</button>
         <a href='edit/homeedit.php' class='px-4 md:px-20 py-2.5 cursor-pointer rounded-xl text-white font-semibold text-base bg-green-700 hover:bg-green-600  duration-300 transition flex items-center gap-1'>
@@ -365,10 +365,6 @@
   <img src="../Assets/union.png" class="w-full max-w-screen-sm mx-auto rounded shadow-2xl md:w-auto lg:max-w-screen-md" alt="" />
 </div>
 
-
-
-  </div>
-  
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.6/flowbite.min.js"></script>

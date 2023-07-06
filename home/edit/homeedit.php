@@ -424,6 +424,158 @@
         </tbody></table>
        
     </div>
+
+           <!-- shikkhar  uodate -->
+
+           <p class="text-center font-semibold text-2xl md:text-3xl my-5">শিক্ষা প্রতিষ্ঠান এর তথ্য যোগ করুণ</p>
+    <div class="container mt-5">
+    <table id="example" class="display rounded-md overflow-hidden" style="width:100%">
+        <thead>
+            <tr  class="bg-sky-900 flex flex-col flex-no wrap sm:table-row rounded-l-lg sm:rounded-none mb-2 sm:mb-0 text-white">
+            <th>কলেজ</th>
+          <th>মাধ্যমিক বিদ্যালয়</th>
+          <th>নিম্ন মাধ্যমিক বিদ্যালয়</th>
+          <th>প্রাথমিক বিদ্যালয়</th>
+          <th>মাদ্রাসা</th>
+          <th>কমিউনিটি সেন্টার</th>
+          <th>শিক্ষার হার</th>
+          <th>অ্যাকশন</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+          
+        <?php
+                    include '../../_dbconnect.php';
+                    $query = "SELECT * FROM `shikkha`";
+                    $poriciti = mysqli_query($con, $query);
+                    
+                    while ($row = mysqli_fetch_assoc($poriciti)) {
+                        $id=$row['id'];
+                    ?>
+                <tr class="flex flex-col flex-no wrap sm:table-row mb-2 sm:mb-0">
+                    
+                <td class='border-grey-light border  p-3'><?= $row['college'] ?></td>
+                    <td class='border-grey-light border  p-3'><?= $row['maddhomik'] ?></td>
+                    <td class='border-grey-light border  p-3'><?= $row['nimo'] ?></td>
+                    <td class='border-grey-light border  p-3'><?= $row['prathomic'] ?></td>
+                    <td class='border-grey-light border  p-3'><?= $row['madracha'] ?></td>
+                    <td class='border-grey-light border  p-3'><?= $row['community'] ?></td>
+                    <td class='border-grey-light border  p-3'><?= $row['shikkharhar'] ?></td>
+                   
+                    <td class="border-grey-light border  p-3  cursor-pointer flex  gap-3 items-center">
+                <a class="flex items-center text-teal-900 hover:font-medium" href="shikkhaedit.php?id=<?php echo $id; ?>">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#115e59" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M20 14.66V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h5.34"></path>
+                        <polygon points="18 2 22 6 12 16 8 16 8 12 18 2"></polygon>
+                    </svg>
+                    Edit
+                </a>
+                <a class="flex items-center text-teal-900 hover:font-medium" href="../delete/shikkhadelete.php?id=<?php echo $id; ?>">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#991b1b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="3 6 5 6 21 6"></polyline>
+                        <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                        <line x1="10" y1="11" x2="10" y2="17"></line>
+                        <line x1="14" y1="11" x2="14" y2="17"></line>
+                    </svg>
+                    Delete
+                </a>
+            </td>
+
+
+
+
+
+                </tr>
+            <?php
+                    }
+
+
+            ?>
+        </tbody></table>
+       
+    </div>
+
+              <!-- union details  uodate -->
+
+              <p class="text-center font-semibold text-2xl md:text-3xl my-5">ইউনিয়ন এর তথ্য যোগ করুণ</p>
+    <div class="container mt-5">
+    <table id="example" class="display rounded-md overflow-hidden" style="width:100%">
+        <thead>
+            <tr  class="bg-sky-900 flex flex-col flex-no wrap sm:table-row rounded-l-lg sm:rounded-none mb-2 sm:mb-0 text-white">
+        <th>ডাকঘর</th>
+          <th>গ্রাম</th>
+          <th>মৌজা</th>
+          <th>হাট বাজার</th>
+          <th>পুলিশ ক্যাম্প</th>
+          <th>এনজিও সংস্থা</th>
+          <th>ভুমি অফিস</th>
+          <th>মসজিদ</th>
+          <th>কবরস্থান</th>
+          <th>ঈদগাহ ময়দান</th>
+          <th>মন্দির</th>
+          <th>শ্মশান</th>
+          <th>অ্যাকশন</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+          
+        <?php
+                    include '../../_dbconnect.php';
+                    $query = "SELECT * FROM `uniondetails`";
+                    $poriciti = mysqli_query($con, $query);
+                    
+                    while ($row = mysqli_fetch_assoc($poriciti)) {
+                        $id=$row['id'];
+                    ?>
+                <tr class="flex flex-col flex-no wrap sm:table-row mb-2 sm:mb-0">
+                    
+                <td class='border-grey-light border  p-3'><?= $row['dakghor'] ?></td>
+                    <td class='border-grey-light border  p-3'><?= $row['gram'] ?></td>
+                    <td class='border-grey-light border  p-3'><?= $row['mouja'] ?></td>
+                    <td class='border-grey-light border  p-3'><?= $row['hatbazar'] ?></td>
+                    <td class='border-grey-light border  p-3'><?= $row['policecamp'] ?></td>
+                    <td class='border-grey-light border  p-3'><?= $row['enjio'] ?></td>
+                    <td class='border-grey-light border  p-3'><?= $row['vhumi'] ?></td>
+                    <td class='border-grey-light border  p-3'><?= $row['mosjid'] ?></td>
+                    <td class='border-grey-light border  p-3'><?= $row['koborsthan'] ?></td>
+                    <td class='border-grey-light border  p-3'><?= $row['edgah'] ?></td>
+                    <td class='border-grey-light border  p-3'><?= $row['mondir'] ?></td>
+                    <td class='border-grey-light border  p-3'><?= $row['sosan'] ?></td>
+                   
+                    <td class="border-grey-light border  p-3  cursor-pointer flex  gap-3 items-center">
+                <a class="flex items-center text-teal-900 hover:font-medium" href="uniondetailsedit.php?id=<?php echo $id; ?>">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#115e59" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M20 14.66V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h5.34"></path>
+                        <polygon points="18 2 22 6 12 16 8 16 8 12 18 2"></polygon>
+                    </svg>
+                    Edit
+                </a>
+                <a class="flex items-center text-teal-900 hover:font-medium" href="../delete/uniondetailsdelete.php?id=<?php echo $id; ?>">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#991b1b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="3 6 5 6 21 6"></polyline>
+                        <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                        <line x1="10" y1="11" x2="10" y2="17"></line>
+                        <line x1="14" y1="11" x2="14" y2="17"></line>
+                    </svg>
+                    Delete
+                </a>
+            </td>
+
+
+
+
+
+                </tr>
+            <?php
+                    }
+
+
+            ?>
+        </tbody></table>
+       
+    </div>
 </body>
 
 
