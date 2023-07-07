@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jul 07, 2023 at 03:53 AM
+-- Generation Time: Jul 07, 2023 at 04:34 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -130,7 +130,9 @@ INSERT INTO `log` (`id`, `email`, `activity`, `time`) VALUES
 (90, 'rownok2001@gmail.com', 'Log Out', '2023-07-05 09:18:33'),
 (91, 'rownok2001@gmail.com', 'Log Out', '2023-07-05 13:55:14'),
 (92, 'rownok2001@gmail.com', 'Log Out', '2023-07-05 13:57:55'),
-(93, 'rownok2001@gmail.com', 'Log Out', '2023-07-06 08:06:02');
+(93, 'rownok2001@gmail.com', 'Log Out', '2023-07-06 08:06:02'),
+(94, 'rownok2001@gmail.com', 'Log Out', '2023-07-07 02:18:03'),
+(95, 'rownok2001@gmail.com', 'Log Out', '2023-07-07 02:23:24');
 
 -- --------------------------------------------------------
 
@@ -198,13 +200,6 @@ CREATE TABLE `sebarmullo` (
   `mullo` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Dumping data for table `sebarmullo`
---
-
-INSERT INTO `sebarmullo` (`id`, `mullo`) VALUES
-(1, 'সেবা আমরা এখানে অ্যাড করবো ');
-
 -- --------------------------------------------------------
 
 --
@@ -215,13 +210,6 @@ CREATE TABLE `sebarsorto` (
   `id` int(11) NOT NULL,
   `sorto` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `sebarsorto`
---
-
-INSERT INTO `sebarsorto` (`id`, `sorto`) VALUES
-(2, 'আমরা সেবা ভ্লো ভাবে গ্রহণ করব ');
 
 -- --------------------------------------------------------
 
@@ -493,7 +481,7 @@ ALTER TABLE `khobor`
 -- AUTO_INCREMENT for table `log`
 --
 ALTER TABLE `log`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=94;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=96;
 
 --
 -- AUTO_INCREMENT for table `notice`
@@ -512,6 +500,18 @@ ALTER TABLE `porishodborgo`
 --
 ALTER TABLE `protisthan`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `sebarmullo`
+--
+ALTER TABLE `sebarmullo`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `sebarsorto`
+--
+ALTER TABLE `sebarsorto`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `shikkha`
