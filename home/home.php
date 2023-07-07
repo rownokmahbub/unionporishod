@@ -20,6 +20,11 @@
  
 </head>
 <body class="md:px-32 mx-auto bg-gradient-to-r from-indigo-50 via-purple-50 to-pink-50">
+<a href="../adminhome.php" class="text-center font-semibold flex gap-3 items-center sticky top-0 left-0 w-full py-5 px-5">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 12H6M12 5l-7 7 7 7" />
+        </svg>
+        Back</a>
 <div class="flex flex-col items-center justify-center px-4 pt-16 mx-auto sm:max-w-xl md:max-w-full lg:pt-32 md:px-0">
   <div class="flex flex-col items-center max-w-2xl md:px-8">
     <div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
