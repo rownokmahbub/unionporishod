@@ -202,8 +202,7 @@ include './navbar.php'
          $count=mysqli_num_rows($sorto);
             if($count>0){
               while ($row= mysqli_fetch_assoc($sorto)){
-                echo "{$row['id']}"; 
-                echo str_repeat('&nbsp;', 3);
+               
                 echo "{$row['sorto']}";
                  echo '<br>';
               }
@@ -221,8 +220,7 @@ include './navbar.php'
          $count=mysqli_num_rows($mullo);
             if($count>0){
               while ($row= mysqli_fetch_assoc($mullo)){
-                echo "{$row['id']}"; 
-                echo str_repeat('&nbsp;', 3);
+               
                 echo "{$row['mullo']}";
                  echo '<br>';
               }
