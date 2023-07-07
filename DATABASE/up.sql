@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jul 05, 2023 at 03:59 PM
+-- Generation Time: Jul 07, 2023 at 03:53 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -129,7 +129,8 @@ INSERT INTO `log` (`id`, `email`, `activity`, `time`) VALUES
 (89, 'rownok2001@gmail.com', 'Log Out', '2023-07-04 16:23:53'),
 (90, 'rownok2001@gmail.com', 'Log Out', '2023-07-05 09:18:33'),
 (91, 'rownok2001@gmail.com', 'Log Out', '2023-07-05 13:55:14'),
-(92, 'rownok2001@gmail.com', 'Log Out', '2023-07-05 13:57:55');
+(92, 'rownok2001@gmail.com', 'Log Out', '2023-07-05 13:57:55'),
+(93, 'rownok2001@gmail.com', 'Log Out', '2023-07-06 08:06:02');
 
 -- --------------------------------------------------------
 
@@ -244,7 +245,7 @@ CREATE TABLE `shikkha` (
 --
 
 INSERT INTO `shikkha` (`id`, `college`, `maddhomik`, `nimo`, `prathomic`, `madracha`, `community`, `shikkharhar`) VALUES
-(7, '1', '2', '3', '1', '2', '1', '23.34%');
+(9, '1', '2', '3', '1', '2', '2', '75.34%');
 
 -- --------------------------------------------------------
 
@@ -320,6 +321,35 @@ INSERT INTO `taxentry` (`holdingno`, `name`, `fatherhusband`, `gram`, `ward`, `t
 (10024, 'Emon', 'mahsin', 'দক্ষিণ গোবিন্দপুর', '৬', '345', '2147483647'),
 (10025, 'rownokmahbub', 'mahsin', 'জেহালা', '১', '234', '016532234456'),
 (10027, 'emon', 'ramdnbf', 'রোয়াকুলি', '৫', '34', '344534324324543545');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `uniondetails`
+--
+
+CREATE TABLE `uniondetails` (
+  `id` int(11) NOT NULL,
+  `dakghor` varchar(255) NOT NULL,
+  `gram` varchar(255) NOT NULL,
+  `mouja` varchar(255) NOT NULL,
+  `hatbazar` varchar(255) NOT NULL,
+  `policecamp` varchar(255) NOT NULL,
+  `enjio` varchar(255) NOT NULL,
+  `vhumi` varchar(255) NOT NULL,
+  `mosjid` varchar(255) NOT NULL,
+  `koborsthan` varchar(255) NOT NULL,
+  `edgah` varchar(255) NOT NULL,
+  `mondir` varchar(255) NOT NULL,
+  `sosan` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `uniondetails`
+--
+
+INSERT INTO `uniondetails` (`id`, `dakghor`, `gram`, `mouja`, `hatbazar`, `policecamp`, `enjio`, `vhumi`, `mosjid`, `koborsthan`, `edgah`, `mondir`, `sosan`) VALUES
+(1, '2', '2', '3', '2', '1', '2', '3', '3', '1', '2', '4', '4');
 
 -- --------------------------------------------------------
 
@@ -432,6 +462,12 @@ ALTER TABLE `taxentry`
   ADD PRIMARY KEY (`holdingno`);
 
 --
+-- Indexes for table `uniondetails`
+--
+ALTER TABLE `uniondetails`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `unionporiciti`
 --
 ALTER TABLE `unionporiciti`
@@ -457,7 +493,7 @@ ALTER TABLE `khobor`
 -- AUTO_INCREMENT for table `log`
 --
 ALTER TABLE `log`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=93;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=94;
 
 --
 -- AUTO_INCREMENT for table `notice`
@@ -481,13 +517,19 @@ ALTER TABLE `protisthan`
 -- AUTO_INCREMENT for table `shikkha`
 --
 ALTER TABLE `shikkha`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `subuser`
 --
 ALTER TABLE `subuser`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
+-- AUTO_INCREMENT for table `uniondetails`
+--
+ALTER TABLE `uniondetails`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `unionporiciti`
