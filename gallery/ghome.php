@@ -40,7 +40,7 @@
           </svg>
           Create Or Edit Your Up Carousal Here
       </h2>
-      <form method='POST' action='porishodreg.php'  enctype="multipart/form-data" class="space-y-5 flex flex-col items-start justify-start">
+      <form method='POST' action=''  enctype="multipart/form-data" class="space-y-5 flex flex-col items-start justify-start">
       <select id="countries" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 " name='borgotype'>
   <option value='কলেজ'>কলেজ</option>
   <option value="মাধ্যমিক বিদ্যালয়">মাধ্যমিক বিদ্যালয়</option>

@@ -3,10 +3,9 @@
 if (isset($_POST['submit'])) {
     include '../_dbconnect.php';
     $borgotype = $_POST['borgotype'];
-    $filename = $_FILES["upfile"]["name"];
-    $tempname = $_FILES["upfile"]["tmp_name"] ;
-    $filename=md5(time().$originalfilename);
-    $folder = "../Assets/image/" . $filename;
+    $filename = $_FILES["uploadfile"]["name"];
+	$tempname = $_FILES["uploadfile"]["tmp_name"];
+	$folder = "../Assets/image/" . $filename;
     
  
     print_r(error_get_last());
