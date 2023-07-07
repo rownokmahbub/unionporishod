@@ -140,7 +140,7 @@ include './navbar.php'
 <div class="bg-white rounded-xl px-5 py-5 drop-shadow-lg my-10">
   <div class="flex gap-5">
     <div class="space-y-3">
-      <p class="text-xl font-semibold">Khobor</p>
+      <p class="text-xl font-semibold">খবর</p>
       <img class="w-20 h-20 rounded-full flex-shrink-0" src="Assets/mike.jpg" alt="mike">
     </div>
     <div class="overflow-x-hidden">
@@ -170,7 +170,7 @@ include './navbar.php'
 <div class="bg-white rounded-xl px-5 py-5 drop-shadow-lg my-10">
   <div class="flex gap-5">
     <div class="space-y-3">
-      <p class="text-xl font-semibold">Notice</p>
+      <p class="text-xl font-semibold">নোটিশ</p>
       <img class="w-20 h-20 rounded-full flex-shrink-0" src="Assets/mogram.png" alt="mike">
     </div>
    <div class="flex flex-col gap-5">
