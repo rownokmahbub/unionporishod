@@ -201,7 +201,7 @@
           ইউনিয়ন এর সেবার শর্ত যোগ করুন
       </h2>
       <form method='POST' action='sebarsortoreg.php' class="space-y-5 flex flex-col items-start justify-start gap-3">
-      <input class='bg-gray-50 border border-gray-300 text-sky-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5' type="text" name="id" id="" placeholder='ক্রমিক নং যোগ করুন...'>
+      
 
         <input class='bg-gray-50 border border-gray-300 text-sky-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5' type="text" name="seba" id="" placeholder='ইউনিয়ন এর সেবার শর্ত যোগ করুন...'>
 
@@ -243,7 +243,7 @@
           ইউনিয়ন এর সেবার মূল্য যোগ করুন
       </h2>
       <form method='POST' action='sebarmulloreg.php' class="space-y-5 flex flex-col items-start justify-start gap-3">
-      <input class='bg-gray-50 border border-gray-300 text-sky-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5' type="text" name="id" id="" placeholder='ক্রমিক নং যোগ করুন...'>
+    
 
         <input class='bg-gray-50 border border-gray-300 text-sky-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5' type="text" name="seba" id="" placeholder='ইউনিয়ন এর সেবার মূল্য যোগ করুন...'>
 
