@@ -245,13 +245,13 @@
 
     <!-- notice uodate -->
 
-    <p class="text-center font-semibold text-2xl md:text-3xl my-5">ইউনিয়ন এর পরিচিতি নোটিস করুণ </p>
+    <p class="text-center font-semibold text-2xl md:text-3xl my-5">ইউনিয়ন এর  নোটিস যোগ  করুণ </p>
     <div class="container mt-5">
     <table id="example" class="display rounded-md overflow-hidden" style="width:100%">
         <thead>
             <tr  class="bg-sky-900 flex flex-col flex-no wrap sm:table-row rounded-l-lg sm:rounded-none mb-2 sm:mb-0 text-white">
                 <th>ক্রমিক নং</th>
-                <th>নোটিস</th>
+                <th>নোটিশ</th>
                 <th>অ্যাকশন</th>
                 
             </tr>
