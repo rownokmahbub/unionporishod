@@ -2,8 +2,8 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Jul 07, 2023 at 04:34 AM
+-- Host: 127.0.0.1
+-- Generation Time: Jul 19, 2023 at 03:54 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -37,7 +37,7 @@ CREATE TABLE `khobor` (
 --
 
 INSERT INTO `khobor` (`id`, `khobor`) VALUES
-(7, 'এসডিএফকফস আর এফ এফ as');
+(7, '১. তিতুদহ ইউনিয়নে ৩নং ওয়ার্ড এর একজন গ্রাম-পুলিশ নিয়োগ দিয়া হবে।');
 
 -- --------------------------------------------------------
 
@@ -150,7 +150,7 @@ CREATE TABLE `notice` (
 --
 
 INSERT INTO `notice` (`id`, `notice`) VALUES
-(2, 'নবগঠিত গড়াইটুপি ইউনিয়ন প্রায় ৩০ বর্গ কিলোমিটার আয়তন বিশিষ্ট। ');
+(2, '১. ৬নং তিতুদহ ইউনিয়নের ৩নং ওয়ার্ডে যে গ্রাম-পুলিশ নিয়োগ দেয়া হবে তার আবেদনের শেষ তারিখ ৩১-০৭-২০২৩।');
 
 -- --------------------------------------------------------
 
@@ -200,6 +200,18 @@ CREATE TABLE `sebarmullo` (
   `mullo` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `sebarmullo`
+--
+
+INSERT INTO `sebarmullo` (`id`, `mullo`) VALUES
+(4, '১. ওয়ারেশ সনদপত্র ১০০ টাকা।'),
+(5, '২. উত্তরাধিকারী সনদপ্রত ১০০ টাকা।'),
+(6, '৩. নাগরিক সনদপত্র ২০ টাকা।'),
+(7, '৪. চারিত্রিক সনদপত্র ৩০ টাকা।'),
+(8, '৫. ট্রেডলােইসেন্স ফি ও কর ব্যাবসার ধরণ অনুযায়ী।'),
+(9, '৬. জন্ম-মৃত্যু নিবন্ধন ফি সরকারী বিধি মোতাবেক।');
+
 -- --------------------------------------------------------
 
 --
@@ -210,6 +222,16 @@ CREATE TABLE `sebarsorto` (
   `id` int(11) NOT NULL,
   `sorto` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `sebarsorto`
+--
+
+INSERT INTO `sebarsorto` (`id`, `sorto`) VALUES
+(2, '১.ট্রেডলাইসেন্স বাদে সকল সেবা গ্রহণের ক্ষেত্রে আবেদনকারীকে ইউনিয়নের স্থায়ী বাসিন্দা হতে হবে।'),
+(3, '২. হাল নাগাদ ট্যাক্স পরিশোধ থাকতে হবে।'),
+(4, '৩.ভোটার ও জন্মনিবন্ধন কার্ড সঙ্গে আনতে হবে।'),
+(5, '৪.ওয়ারেশ সনদপত্র গ্রহণের ক্ষেত্রে আবদেন পত্রে সংশ্লিষ্ট সদস্যের সুপারিশ থাকতে হবে।');
 
 -- --------------------------------------------------------
 
@@ -233,7 +255,7 @@ CREATE TABLE `shikkha` (
 --
 
 INSERT INTO `shikkha` (`id`, `college`, `maddhomik`, `nimo`, `prathomic`, `madracha`, `community`, `shikkharhar`) VALUES
-(9, '1', '2', '3', '1', '2', '2', '75.34%');
+(9, '১', '২', '২', '১০', '১', '৩', '৭৫.৩৪%');
 
 -- --------------------------------------------------------
 
@@ -337,7 +359,7 @@ CREATE TABLE `uniondetails` (
 --
 
 INSERT INTO `uniondetails` (`id`, `dakghor`, `gram`, `mouja`, `hatbazar`, `policecamp`, `enjio`, `vhumi`, `mosjid`, `koborsthan`, `edgah`, `mondir`, `sosan`) VALUES
-(1, '2', '2', '3', '2', '1', '2', '3', '3', '1', '2', '4', '4');
+(1, '১', '১৪', '৩', '২', '১', '২', '১', '32', '১৫', '২4', '১', '০');
 
 -- --------------------------------------------------------
 
@@ -355,7 +377,7 @@ CREATE TABLE `unionporiciti` (
 --
 
 INSERT INTO `unionporiciti` (`id`, `poriciti`) VALUES
-(14, 'তিতুদহ ইউনিয়ন প্রাই ৩০ বর্গ কিলোমিটার আয়তন বিশিষ্ট এই ইউনিয়ন পরিষদটি তিতুদহ মৌজা ৬৯৭ নাগ খতিয়ানের ১২৯০ ও ১২৯৭ নো দাগে ');
+(14, 'তিতুদহ ইউনিয়ন প্রায় ৩০ বর্গ কিলোমিটার আয়তন বিশিষ্ট। এ ইউনিয়ন পরিষদটি তিতুদহ মৌজার ৬৯৭ নং খতিয়ানের ১২৯০ ও ১২৯১ নং দাগে ০.৩৩০০ শতাংশ জমির উপর তিতুদহ ইউনিয়ন পরিষদ কমপ্লেক্স ভবন অবস্থিত। ইউনিয়নের জন সংখ্যা গত ২০১১ সালের আদম শুমারী অনুযায়ী পুরুষ ১০৪২৭ জন ও মহি');
 
 -- --------------------------------------------------------
 
@@ -505,13 +527,13 @@ ALTER TABLE `protisthan`
 -- AUTO_INCREMENT for table `sebarmullo`
 --
 ALTER TABLE `sebarmullo`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `sebarsorto`
 --
 ALTER TABLE `sebarsorto`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `shikkha`

@@ -3,11 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.5/css/jquery.dataTables.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.6/flowbite.min.css"  rel="stylesheet" />
 
  
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.6/flowbite.min.css"  rel="stylesheet" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="style.css">
+
+  
+ 
+  
   <script>
     tailwind.config = {
       theme: {
@@ -37,44 +42,44 @@
 include './navbar.php'
 ?>
 <!--hero section-->
-<div class="my-10 px-5">
-    <p class="text-center text-3xl font-semibold mb-5">শিক্ষা প্রতিষ্ঠান</p>
-    <div class="my-10 grid grid-cols-1 md:grid-cols-2 gap-10">
-        <div class="flex flex-col gap-3 border-b-4 border-primary rounded-xl bg-white drop-shadow-xl px-5 py-5">
-            <p class="text-2xl font-semibold text-center">কলেজ সমূহ</p>
-            <p class="text-gray-600 ">১ ট্রেডলাইসেন্স বাদে সকল সেবা গ্রহণের ক্ষেত্রে </p>
-            <p class="text-gray-600 ">২ হাল নাগাদ ট্যাক্স পরিশোধ থাকতে হবে।</p>
-           
-        </div>
-        <div class="flex flex-col gap-3 border-b-4 border-primary rounded-xl bg-white drop-shadow-xl px-5 py-5">
-          <p class="text-2xl font-semibold text-center">মাধ্যমিক বিদ্যালয় সমূহ</p>
-          <p class="text-gray-600 ">১ ওয়ারিশ সনদ পত্র ১০০ টাকা</p>
-         
-      </div>
-      <div class="flex flex-col gap-3 border-b-4 border-primary rounded-xl bg-white drop-shadow-xl px-5 py-5">
-        <p class="text-2xl font-semibold text-center">নিম্ন মাধ্যমিক বিদ্যালয় সমূহ</p>
-        <p class="text-gray-600 ">১ ওয়ারিশ সনদ পত্র ১০০ টাকা</p>
-       
-    </div>
-    <div class="flex flex-col gap-3 border-b-4 border-primary rounded-xl bg-white drop-shadow-xl px-5 py-5">
-        <p class="text-2xl font-semibold text-center">প্রাথমিক বিদ্যালয় সমূহ</p>
-        <p class="text-gray-600 ">১ ওয়ারিশ সনদ পত্র ১০০ টাকা</p>
-       
-    </div>
-    <div class="flex flex-col gap-3 border-b-4 border-primary rounded-xl bg-white drop-shadow-xl px-5 py-5">
-        <p class="text-2xl font-semibold text-center">মাদ্রাসা সমূহ</p>
-        <p class="text-gray-600 ">১ ওয়ারিশ সনদ পত্র ১০০ টাকা</p>
-       
-    </div>
-    <div class="flex flex-col gap-3 border-b-4 border-primary rounded-xl bg-white drop-shadow-xl px-5 py-5">
-        <p class="text-2xl font-semibold text-center">স্বাস্থ্য কেন্দ্র সমূহ</p>
-        <p class="text-gray-600 ">১ ওয়ারিশ সনদ পত্র ১০০ টাকা</p>
-       
-    </div>
-    </div>
-</div>
+
+<table id="myTable" class="cell-border" style="width:100%">
+<thead>
+        <tr>
+            <th>শিক্ষা প্রতিষ্ঠানের নাম </th>
+            <th>প্রতিষ্ঠানের ধরন</th>
+        </tr>
+    </thead>
+    <tbody>
+          
+    <?php
+                    include './_dbconnect.php';
+                    $query = "SELECT * FROM `shikkhaprotisthan`";
+                    $poriciti = mysqli_query($con, $query);
+                    
+                    while ($row = mysqli_fetch_assoc($poriciti)) {
+                        $id=$row['id'];
+                    ?>
+                <tr class="flex flex-col flex-no wrap sm:table-row mb-2 sm:mb-0">
+                    
+                    <td class=''><?= $row['sname'] ?></td>
+                    <td class=''><?= $row['sdhoron'] ?></td>
+                    
+               
 
 
+
+
+
+                </tr>
+            <?php
+                    }
+
+
+            ?>
+       
+    </tbody>
+</table>
   <!-- footer area -->
   <div class="px-4  mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
     <div class="grid gap-16 row-gap-10 mb-8 lg:grid-cols-6">
@@ -199,8 +204,15 @@ include './navbar.php'
       </div>
     </div>
   </div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.6/flowbite.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.6/flowbite.min.js"></script>
+ <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+<script>
+$(document).ready( function () {
+    $('#myTable').DataTable();
+} );
+</script>
 <script src="style.js"></script>
+<script src="https://cdn.datatables.net/1.13.5/js/jquery.dataTables.js"></script>
+<script src="https://cdn.datatables.net/1.13.5/js/jquery.dataTables.min.js"></script>
 </body>
 </html>

@@ -74,18 +74,22 @@ include './navbar.php'
   <div class="relative h-56 overflow-hidden  md:h-[450px]">
        <!-- Item 1 -->
       <div class="hidden duration-1000 ease-in-out" data-carousel-item>
-          <img src="Assets/2.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+          <img src="Assets/hero1.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
        
       </div>
       <!-- Item 2 -->
       <div class="hidden duration-700 ease-in-out" data-carousel-item>
-          <img src="Assets/1.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+          <img src="Assets/hero2.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
         
           
       </div>
       <!-- Item 3 -->
       <div class="hidden duration-700 ease-in-out" data-carousel-item>
-          <img src="Assets/3.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+          <img src="Assets/hero3.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+         
+      </div>
+      <div class="hidden duration-700 ease-in-out" data-carousel-item>
+          <img src="Assets/hero4.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
          
       </div>
    

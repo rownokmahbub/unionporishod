@@ -67,7 +67,7 @@
                     <a href="shikkhaprotisthan.php" class="block px-4 py-2 hover:bg-primary hover:text-white ">শিক্ষা প্রতিষ্ঠান</a>
                   </li>
                   <li>
-                    <a href="protisthan.html" class="block px-4 py-2 hover:bg-primary hover:text-white ">প্রতিষ্ঠান সমূহ</a>
+                    <a href="protisthan.php" class="block px-4 py-2 hover:bg-primary hover:text-white ">প্রতিষ্ঠান সমূহ</a>
                   </li>
                  
                   <li>
