@@ -7,5 +7,5 @@
     $result = mysqli_query($con,$sql);
     
     session_destroy();
-    header('location:index.html');
+    header('location:subuser.php');
 ?>

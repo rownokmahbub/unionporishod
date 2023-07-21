@@ -3,7 +3,7 @@
 <?php
  session_start();
  if($_SERVER["REQUEST_METHOD"] == "POST"){
-    include '_dbconnect.php';
+    include './_dbconnect.php';
   
     if(
         isset($_POST['email']) &&
@@ -19,7 +19,7 @@
        // We are going to insert the data into our sampleDB table
        
        $sql = "SELECT * FROM `subuser` WHERE email = '$email' and password='$password'";
-       
+       echo $sql;
    // Check if the query is successful
    if(mysqli_query($con, $sql)){
     $_SESSION['email'] = $email;
