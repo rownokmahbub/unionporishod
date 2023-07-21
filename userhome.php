@@ -26,17 +26,14 @@
       <p class='m'>Here you can update your files easily</p>
       <form action="userlogout.php">
 
-        <a href='createuser.php' class='px-4 py-2.5 cursor-pointer rounded-full text-white font-semibold text-base bg-sky-800 hover:bg-sky-600  duration-300 transition'> Create User</a>
-        <input type="button" class="px-4 py-2 cursor-pointer rounded-full text-white font-semibold text-base bg-sky-800 hover:bg-sky-600  duration-300 transition" value="User Log" onclick="log();">
-        <script>
-          function log() {
-            location.assign('userlog.php');
-          }
-        </script>
-        <div class="flex items-center gap-1 mt-3">
-          <a href='home/home.php' class='px-4 py-2 cursor-pointer rounded-full text-white font-semibold text-base bg-sky-800 hover:bg-sky-600  duration-300 transition'>HomePage</a>
-          <a href='./gallery/ghome.php' class='px-4 py-2 cursor-pointer rounded-full text-white font-semibold text-base bg-sky-800 hover:bg-sky-600  duration-300 transition'>Gallery</a>
-          <a href='./protisthan/phome.php' class='px-4 py-2 cursor-pointer rounded-full text-white font-semibold text-base bg-sky-800 hover:bg-sky-600  duration-300 transition'>Protisthan</a>
+
+        <div class="grid grid-cols-2 gap-2 items-center mt-2">
+        <a href='taxentry.php' class='px-4 py-2.5 cursor-pointer rounded-full text-white font-semibold text-base bg-sky-800 hover:bg-sky-600  duration-300 text-center transition'>ট্যাক্স এন্ট্রি </a>
+       
+          <a href='tadeentry.php' class='px-4 py-2 cursor-pointer rounded-full text-white font-semibold text-base bg-sky-800 hover:bg-sky-600  duration-300 text-center transition'>টেড এন্ট্রি</a>
+          <a href='sonodentry,php' class='px-4 py-2 cursor-pointer rounded-full text-white font-semibold text-base bg-sky-800 hover:bg-sky-600  duration-300 text-center transition'>সনদ এন্ট্রি </a>
+          <a href='oaresentry.php' class='px-4 py-2 cursor-pointer rounded-full text-white font-semibold text-base bg-sky-800 hover:bg-sky-600  duration-300 text-center transition'>ওয়ারেশ এন্ট্রি </a>
+          <a href='./protisthan/phome.php' class='px-4 py-2 cursor-pointer rounded-full text-white font-semibold text-base bg-sky-800 hover:bg-sky-600  duration-300 text-center transition'>Protisthan</a>
 
         </div>
         <br><br>

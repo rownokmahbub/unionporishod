@@ -24,7 +24,7 @@
   
   
     <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm px-10 py-5 bg-white rounded-xl">
-    <a href='index.html' class="flex gap-1">
+    <a href='index.php' class="flex gap-1">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
                 <p>Home</p>
            

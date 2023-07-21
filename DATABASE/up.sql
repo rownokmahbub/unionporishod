@@ -2,8 +2,8 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Jul 19, 2023 at 03:54 AM
+-- Host: localhost
+-- Generation Time: Jul 21, 2023 at 03:29 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -132,7 +132,39 @@ INSERT INTO `log` (`id`, `email`, `activity`, `time`) VALUES
 (92, 'rownok2001@gmail.com', 'Log Out', '2023-07-05 13:57:55'),
 (93, 'rownok2001@gmail.com', 'Log Out', '2023-07-06 08:06:02'),
 (94, 'rownok2001@gmail.com', 'Log Out', '2023-07-07 02:18:03'),
-(95, 'rownok2001@gmail.com', 'Log Out', '2023-07-07 02:23:24');
+(95, 'rownok2001@gmail.com', 'Log Out', '2023-07-07 02:23:24'),
+(96, 'rownok2001@gmail.com', 'Log Out', '2023-07-20 12:18:52'),
+(97, 'rownok2001@gmail.com', 'Log Out', '2023-07-20 13:48:16'),
+(98, 'rownok2001@gmail.com', 'Log Out', '2023-07-21 01:15:28'),
+(99, 'rownok2001@gmail.com', 'Log Out', '2023-07-21 01:15:49'),
+(100, 'rownok2001@gmail.com', 'Log Out', '2023-07-21 01:16:03'),
+(101, 'rownok2001@gmail.com', 'Log Out', '2023-07-21 01:16:11'),
+(102, 'rownok2001@gmail.com', 'Log Out', '2023-07-21 01:18:05'),
+(103, 'neaz@gmail.com', 'Log Out', '2023-07-21 01:19:05'),
+(104, 'rownok2001@gmail.com', 'Log Out', '2023-07-21 01:21:42'),
+(105, 'rownok2001@gmail.com', 'Log Out', '2023-07-21 01:23:25'),
+(106, 'neaz@gmail.com', 'Log Out', '2023-07-21 01:23:33'),
+(107, 'rownok2001@gmail.com', 'Log Out', '2023-07-21 01:23:39'),
+(108, 'rownok2001@gmail.com', 'Log Out', '2023-07-21 01:24:37'),
+(109, 'rownok2001@gmail.com', 'Log Out', '2023-07-21 01:26:01');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `nagorik`
+--
+
+CREATE TABLE `nagorik` (
+  `id` int(11) NOT NULL,
+  `sarok` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `fathername` varchar(255) NOT NULL,
+  `mothername` varchar(255) NOT NULL,
+  `gram` varchar(255) NOT NULL,
+  `word` varchar(255) NOT NULL,
+  `birthno` varchar(255) NOT NULL,
+  `voterid` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
 
@@ -169,25 +201,6 @@ CREATE TABLE `porishodborgo` (
 
 INSERT INTO `porishodborgo` (`id`, `filename`) VALUES
 (9, 'Home Page.png');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `protisthan`
---
-
-CREATE TABLE `protisthan` (
-  `id` int(11) NOT NULL,
-  `protisthan` varchar(255) NOT NULL,
-  `protisthandhoron` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `protisthan`
---
-
-INSERT INTO `protisthan` (`id`, `protisthan`, `protisthandhoron`) VALUES
-(2, 'fagifgasbkfgairuf kajrbjf jskj li ', 'হাটবাজার');
 
 -- --------------------------------------------------------
 
@@ -255,7 +268,28 @@ CREATE TABLE `shikkha` (
 --
 
 INSERT INTO `shikkha` (`id`, `college`, `maddhomik`, `nimo`, `prathomic`, `madracha`, `community`, `shikkharhar`) VALUES
-(9, '১', '২', '২', '১০', '১', '৩', '৭৫.৩৪%');
+(9, '১', '৩', '০', '৭', '২', '৩', '৭৫%');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `shikkhaprotisthan`
+--
+
+CREATE TABLE `shikkhaprotisthan` (
+  `id` int(11) NOT NULL,
+  `sname` varchar(255) NOT NULL,
+  `sdhoron` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+--
+-- Dumping data for table `shikkhaprotisthan`
+--
+
+INSERT INTO `shikkhaprotisthan` (`id`, `sname`, `sdhoron`) VALUES
+(6, 'বরসলুয়া নিউ মডেল ডিগ্রি', 'কলেজ'),
+(7, 'তিতুদহ বেসরকারি মাধ্যমিক বিদ্যালয় ', 'মাধ্যমিক বিদ্যালয়'),
+(8, 'গ্রিসনগর নিম্ন মাধ্যমিক বিদ্যালয় ', 'নিম্ন মাধ্যমিক বিদ্যালয়');
 
 -- --------------------------------------------------------
 
@@ -290,21 +324,23 @@ CREATE TABLE `tadeentry` (
   `name` varchar(255) NOT NULL,
   `father_husband` varchar(255) NOT NULL,
   `mother_name` varchar(255) NOT NULL,
+  `birth_place` varchar(255) NOT NULL,
   `word` varchar(255) NOT NULL,
-  `voterid` varchar(255) NOT NULL,
+  `tradename` varchar(255) NOT NULL,
+  `babsardhoron` varchar(255) NOT NULL,
   `kor` varchar(255) NOT NULL,
-  `messars` varchar(255) NOT NULL,
-  `babshardhoron` varchar(255) NOT NULL
+  `fee` varchar(255) NOT NULL,
+  `voterid` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `tadeentry`
 --
 
-INSERT INTO `tadeentry` (`licence_no`, `name`, `father_husband`, `mother_name`, `word`, `voterid`, `kor`, `messars`, `babshardhoron`) VALUES
-(1001, 'Emon', 'dfdf', 'rakha', '১', '3435687435843', '34', 'chuadanga', 'sodor'),
-(1002, 'rownokmahbub', 'mahsin', 'rakha', '৪', '3435687435843', '234', 'chuadanga', 'barishal'),
-(1003, 'reya', 'najmul', 'jannatul', '১', '3435687435841', '35', 'chuadanga', 'doulutdiar');
+INSERT INTO `tadeentry` (`licence_no`, `name`, `father_husband`, `mother_name`, `birth_place`, `word`, `tradename`, `babsardhoron`, `kor`, `fee`, `voterid`) VALUES
+(1001, 'Emon', 'dfdf', 'rakha', '', '১', '', '', '', '', '3435687435843'),
+(1002, 'rownokmahbub', 'mahsin', 'rakha', '', '৪', '', '', '', '', '3435687435843'),
+(1003, 'reya', 'najmul', 'jannatul', '', '১', '', '', '', '', '3435687435841');
 
 -- --------------------------------------------------------
 
@@ -318,6 +354,8 @@ CREATE TABLE `taxentry` (
   `fatherhusband` varchar(255) NOT NULL,
   `gram` varchar(255) NOT NULL,
   `ward` varchar(255) NOT NULL,
+  `housetype` varchar(255) NOT NULL,
+  `roomno` varchar(255) NOT NULL,
   `totaltax` varchar(255) NOT NULL,
   `voterid` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -326,11 +364,11 @@ CREATE TABLE `taxentry` (
 -- Dumping data for table `taxentry`
 --
 
-INSERT INTO `taxentry` (`holdingno`, `name`, `fatherhusband`, `gram`, `ward`, `totaltax`, `voterid`) VALUES
-(10023, 'rownokmahbub', 'mahsin', 'রোয়াকুলি', '১', '234', '2147483647'),
-(10024, 'Emon', 'mahsin', 'দক্ষিণ গোবিন্দপুর', '৬', '345', '2147483647'),
-(10025, 'rownokmahbub', 'mahsin', 'জেহালা', '১', '234', '016532234456'),
-(10027, 'emon', 'ramdnbf', 'রোয়াকুলি', '৫', '34', '344534324324543545');
+INSERT INTO `taxentry` (`holdingno`, `name`, `fatherhusband`, `gram`, `ward`, `housetype`, `roomno`, `totaltax`, `voterid`) VALUES
+(10023, 'rownokmahbub', 'mahsin', 'রোয়াকুলি', '১', '', '', '234', '2147483647'),
+(10024, 'Emon', 'mahsin', 'দক্ষিণ গোবিন্দপুর', '৬', '', '', '345', '2147483647'),
+(10025, 'rownokmahbub', 'mahsin', 'জেহালা', '১', '', '', '234', '016532234456'),
+(10027, 'emon', 'ramdnbf', 'রোয়াকুলি', '৫', '', '', '34', '344534324324543545');
 
 -- --------------------------------------------------------
 
@@ -359,7 +397,7 @@ CREATE TABLE `uniondetails` (
 --
 
 INSERT INTO `uniondetails` (`id`, `dakghor`, `gram`, `mouja`, `hatbazar`, `policecamp`, `enjio`, `vhumi`, `mosjid`, `koborsthan`, `edgah`, `mondir`, `sosan`) VALUES
-(1, '১', '১৪', '৩', '২', '১', '২', '১', '32', '১৫', '২4', '১', '০');
+(1, '১', '১২', '১০', '৩', '১', '১', '১', '২৬', '২০', '২২', '১', '১');
 
 -- --------------------------------------------------------
 
@@ -378,6 +416,27 @@ CREATE TABLE `unionporiciti` (
 
 INSERT INTO `unionporiciti` (`id`, `poriciti`) VALUES
 (14, 'তিতুদহ ইউনিয়ন প্রায় ৩০ বর্গ কিলোমিটার আয়তন বিশিষ্ট। এ ইউনিয়ন পরিষদটি তিতুদহ মৌজার ৬৯৭ নং খতিয়ানের ১২৯০ ও ১২৯১ নং দাগে ০.৩৩০০ শতাংশ জমির উপর তিতুদহ ইউনিয়ন পরিষদ কমপ্লেক্স ভবন অবস্থিত। ইউনিয়নের জন সংখ্যা গত ২০১১ সালের আদম শুমারী অনুযায়ী পুরুষ ১০৪২৭ জন ও মহি');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `upprotisthan`
+--
+
+CREATE TABLE `upprotisthan` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `pdhoron` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+--
+-- Dumping data for table `upprotisthan`
+--
+
+INSERT INTO `upprotisthan` (`id`, `name`, `pdhoron`) VALUES
+(2, 'তিতুদহ বিশ্বাস পাড়া জামে মসজিদ ', 'ডাকঘর'),
+(3, 'তিতুদহ বড় বাজার ', 'মসজিদ'),
+(4, 'তিতুদহ আবাসিক', 'ভূমি অফিস');
 
 -- --------------------------------------------------------
 
@@ -401,6 +460,24 @@ INSERT INTO `user` (`id`, `email`, `password`, `user_type`, `block`) VALUES
 (2, 'rownok2001@gmail.com', '1234', 2, 'no'),
 (3, 'mali191072@bscse.uiu.ac.bd', '1234', 1, 'no');
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `wares`
+--
+
+CREATE TABLE `wares` (
+  `id` int(11) NOT NULL,
+  `sarok` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `fathername` varchar(255) NOT NULL,
+  `mothername` varchar(255) NOT NULL,
+  `gram` varchar(255) NOT NULL,
+  `word` varchar(255) NOT NULL,
+  `deathno` varchar(255) NOT NULL,
+  `voterno` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
 --
 -- Indexes for dumped tables
 --
@@ -418,6 +495,12 @@ ALTER TABLE `log`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `nagorik`
+--
+ALTER TABLE `nagorik`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `notice`
 --
 ALTER TABLE `notice`
@@ -427,12 +510,6 @@ ALTER TABLE `notice`
 -- Indexes for table `porishodborgo`
 --
 ALTER TABLE `porishodborgo`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `protisthan`
---
-ALTER TABLE `protisthan`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -451,6 +528,12 @@ ALTER TABLE `sebarsorto`
 -- Indexes for table `shikkha`
 --
 ALTER TABLE `shikkha`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `shikkhaprotisthan`
+--
+ALTER TABLE `shikkhaprotisthan`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -484,9 +567,21 @@ ALTER TABLE `unionporiciti`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `upprotisthan`
+--
+ALTER TABLE `upprotisthan`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `user`
 --
 ALTER TABLE `user`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `wares`
+--
+ALTER TABLE `wares`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -503,7 +598,13 @@ ALTER TABLE `khobor`
 -- AUTO_INCREMENT for table `log`
 --
 ALTER TABLE `log`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=96;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=110;
+
+--
+-- AUTO_INCREMENT for table `nagorik`
+--
+ALTER TABLE `nagorik`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `notice`
@@ -516,12 +617,6 @@ ALTER TABLE `notice`
 --
 ALTER TABLE `porishodborgo`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
-
---
--- AUTO_INCREMENT for table `protisthan`
---
-ALTER TABLE `protisthan`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `sebarmullo`
@@ -542,6 +637,12 @@ ALTER TABLE `shikkha`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
+-- AUTO_INCREMENT for table `shikkhaprotisthan`
+--
+ALTER TABLE `shikkhaprotisthan`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
 -- AUTO_INCREMENT for table `subuser`
 --
 ALTER TABLE `subuser`
@@ -551,7 +652,7 @@ ALTER TABLE `subuser`
 -- AUTO_INCREMENT for table `uniondetails`
 --
 ALTER TABLE `uniondetails`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `unionporiciti`
@@ -560,10 +661,22 @@ ALTER TABLE `unionporiciti`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
+-- AUTO_INCREMENT for table `upprotisthan`
+--
+ALTER TABLE `upprotisthan`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `wares`
+--
+ALTER TABLE `wares`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
