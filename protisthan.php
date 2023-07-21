@@ -42,8 +42,9 @@
 include './navbar.php'
 ?>
 <!--hero section-->
+<div class="my-10">
 
-<table id="myTable" class="cell-border" style="width:100%">
+<table id="myTable" class="cell-border display responsive wrap" style="width:100%">
 <thead>
         <tr>
             <th>প্রতিষ্ঠানের নাম </th>
@@ -80,6 +81,7 @@ include './navbar.php'
        
     </tbody>
 </table>
+</div>
   <!-- footer area -->
   <div class="px-4  mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
     <div class="grid gap-16 row-gap-10 mb-8 lg:grid-cols-6">

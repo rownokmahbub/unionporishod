@@ -5,21 +5,21 @@
    
    
     include './_dbconnect.php';
-    $holdingno = $_POST['holdingno'];
+    $sarok = $_POST['sarok'];
     $name = $_POST['name'];
     $fname = $_POST['fname'];
+    $mname = $_POST['mname'];
     $gram = $_POST['gram'];
     $ward = $_POST['ward'];
-    $housetype = $_POST['housetype'];
-    $roomno = $_POST['roomno'];
-    $tax = $_POST['tax'];
-    $mnum = $_POST['mnum'];
+    $birthno = $_POST['birthno'];
+    $voterid = $_POST['voterid'];
+    
            
    
 
 
      
-       $sql = "INSERT INTO `taxentry`(`holdingno`, `name`, `fatherhusband`, `gram`, `ward`, `housetype`, `roomno`, `totaltax`, `voterid`)  VALUES ('$holdingno','$name','$fname','$gram','$ward','$housetype','$roomno','$tax','$mnum')";
+       $sql = "INSERT INTO `nagorik`(`sarok`, `name`, `fathername`, `mothername`, `gram`, `word`, `birthno`, `voterid`) VALUES ('$sarok','$name','$fname','$mname','$gram','$ward','$birthno','$voterid')";
        print_r(error_get_last());
   
    if(mysqli_query($con, $sql)){

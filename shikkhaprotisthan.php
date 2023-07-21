@@ -42,12 +42,13 @@
 include './navbar.php'
 ?>
 <!--hero section-->
+<div class="my-10">
 
-<table id="myTable" class="cell-border" style="width:100%">
+<table id="myTable" class="cell-border display responsive wrap" style="width:100%">
 <thead>
         <tr>
-            <th>শিক্ষা প্রতিষ্ঠানের নাম </th>
-            <th>প্রতিষ্ঠানের ধরন</th>
+            <th data-priority="1">শিক্ষা প্রতিষ্ঠানের নাম </th>
+            <th data-priority="2">প্রতিষ্ঠানের ধরন</th>
         </tr>
     </thead>
     <tbody>
@@ -80,6 +81,7 @@ include './navbar.php'
        
     </tbody>
 </table>
+</div>
   <!-- footer area -->
   <div class="px-4  mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
     <div class="grid gap-16 row-gap-10 mb-8 lg:grid-cols-6">
@@ -209,6 +211,13 @@ include './navbar.php'
 <script>
 $(document).ready( function () {
     $('#myTable').DataTable();
+} );
+$('#myTable').DataTable( {
+    responsive: true,
+    columnDefs: [
+        { responsivePriority: 1, targets: 0 },
+        { responsivePriority: 2, targets: -1 }
+    ]
 } );
 </script>
 <script src="style.js"></script>

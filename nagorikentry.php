@@ -54,15 +54,16 @@ echo $count;
             <path d="M19 12H6M12 5l-7 7 7 7" />
         </svg>
         Back</a>
-    <div class="font-semibold text-xl mb-4 text-center">ট্যাক্স ডাটা এন্ট্রি ফরম</div>
+    <div class="font-semibold text-xl mb-4 text-center">নাগরিক এন্ট্রি ফরম</div>
     
-      <form action="taxentryreg.php" method="POST">
+      <form action="nagorikentryreg.php" method="POST">
         <div class="space-y-4">
           <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-5">
            
-            <input class='px-2 py-2 bg-white border border-gray-300 rounded-xl w-full focus:outline-blue-400' type="text" name="holdingno" placeholder='হোল্ডিং নম্বর' required>
+            <input class='px-2 py-2 bg-white border border-gray-300 rounded-xl w-full focus:outline-blue-400' type="text" name="sarok" placeholder='সারক নম্বর' required>
             <input class='px-2 py-2 bg-white border border-gray-300 rounded-xl w-full focus:outline-blue-400' type="text" name="name" placeholder='নাম' required>
             <input class='px-2 py-2 bg-white border border-gray-300 rounded-xl w-full focus:outline-blue-400' type="text" name="fname" placeholder='পিতার নাম/স্বামীর নাম' required>
+            <input class='px-2 py-2 bg-white border border-gray-300 rounded-xl w-full focus:outline-blue-400' type="text" name="mname" placeholder='মাতার নাম' required>
            <div class="w-full">
             
               <select class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full focus:outline-blue-400" name="gram">
@@ -96,16 +97,12 @@ echo $count;
                 <option value="৯" class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">৯</option>
 
               </select>
-              <input class='px-2 py-2 bg-white border border-gray-300 rounded-xl w-full focus:outline-blue-400' type="text" name="housetype" placeholder='বাড়ির ধরন ' required>
-              <input class='px-2 py-2 bg-white border border-gray-300 rounded-xl w-full focus:outline-blue-400' type="text" name="roomno" placeholder='রুম সংখ্যা' required>
-              <input class='px-2 py-2 bg-white border border-gray-300 rounded-xl w-full focus:outline-blue-400' type="text" name="tax" placeholder='ট্যাক্স' required>
-         
-   
+              <input class='px-2 py-2 bg-white border border-gray-300 rounded-xl w-full focus:outline-blue-400' type="text" name="birthno" placeholder='জন্ম নিবন্ধন নাম্বার ' required>
+              <input class='px-2 py-2 bg-white border border-gray-300 rounded-xl w-full focus:outline-blue-400' type="text" name="voterid" placeholder='ভোটার আইডি' required>
 
           </div>
 
-          <input class='px-2 py-2 bg-white border border-gray-300 rounded-xl w-full focus:outline-blue-400' type="text" name="mnum" placeholder='ভোটার আইডি' required>
-
+    
 
         </div>
             <div class="flex justify-center items-center w-full mt-5">

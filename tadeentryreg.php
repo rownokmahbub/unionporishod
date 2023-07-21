@@ -1,36 +1,40 @@
+
 <?php
-    include '_dbconnect.php';/// received data collect
+ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
-    // to receive the post data we need to call $_POST variable
-    // $_POST represents an associative array
+   
+   
+    include './_dbconnect.php';
+    $licence = $_POST['licence'];
+    $name = $_POST['name'];
+    $fname = $_POST['fname'];
+    $mname = $_POST['mname'];
+    $ward = $_POST['ward'];
+    $bplace = $_POST['bplace'];
+    $tradename = $_POST['tradename'];
+    $bdhoron = $_POST['bdhoron'];
+    $kor = $_POST['kor'];
+    $vid = $_POST['vid'];
+           
+   
 
-    
-       
-        /// to establish a connection with database server
-        
-        $var0=$_POST['licence'];
-        $var1=$_POST['name'];
-        $var2=$_POST['fname'];
-        $var3=$_POST['mname'];
-        $var4=$_POST['ward'];
-        $var5=$_POST['vid']; 
-        $var6=$_POST['kor'];
-        $var7=$_POST['mes'];
-        $var8=$_POST['bdhoron'];
-         
-         
+
      
-   $query=" INSERT INTO `tadeentry`(`licence_no`, `name`, `father_husband`, `mother_name`, `word`, `voterid`, `kor`, `messars`, `babshardhoron`) VALUES ('$var0','$var1','$var2','$var3','$var4','$var5','$var6','$var7','$var8')";
+       $sql = "INSERT INTO `tadeentry`(`licence_no`, `name`, `father_husband`, `mother_name`, `word`, `bplace`, `tradename`, `babsardhoron`, `kor`, `voterid`)  VALUES ('$licence','$name','$fname','$mname','$ward','$bplace','$tradename','$bdhoron','$kor','$vid')";
+       print_r(error_get_last());
+  
+   if(mysqli_query($con, $sql)){
 
-	if(mysqli_query($con, $query)){
-
-    
-	  header('location:tadeentry.php');
-        }
-        else{
+   
+    header("Location:tadeentry.php");
           
-	 header('location:userhome.php');
-        }
+   } else{
+       echo "ERROR: Hush! Sorry $sql. "
+           . mysqli_error($con);
+   }
 
-      // echo $query;
- ?>
+   // Close conection
+   mysqli_close($con);
+ }
+
+?>

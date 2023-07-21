@@ -31,7 +31,7 @@
         <a href='taxentry.php' class='px-4 py-2.5 cursor-pointer rounded-full text-white font-semibold text-base bg-sky-800 hover:bg-sky-600  duration-300 text-center transition'>ট্যাক্স এন্ট্রি </a>
        
           <a href='tadeentry.php' class='px-4 py-2 cursor-pointer rounded-full text-white font-semibold text-base bg-sky-800 hover:bg-sky-600  duration-300 text-center transition'>টেড এন্ট্রি</a>
-          <a href='sonodentry,php' class='px-4 py-2 cursor-pointer rounded-full text-white font-semibold text-base bg-sky-800 hover:bg-sky-600  duration-300 text-center transition'>সনদ এন্ট্রি </a>
+          <a href='nagorikentry.php' class='px-4 py-2 cursor-pointer rounded-full text-white font-semibold text-base bg-sky-800 hover:bg-sky-600  duration-300 text-center transition'>নাগরিক এন্ট্রি </a>
           <a href='oaresentry.php' class='px-4 py-2 cursor-pointer rounded-full text-white font-semibold text-base bg-sky-800 hover:bg-sky-600  duration-300 text-center transition'>ওয়ারেশ এন্ট্রি </a>
           <a href='./protisthan/phome.php' class='px-4 py-2 cursor-pointer rounded-full text-white font-semibold text-base bg-sky-800 hover:bg-sky-600  duration-300 text-center transition'>Protisthan</a>
 
