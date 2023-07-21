@@ -1,42 +1,39 @@
+
 <?php
-     include '_dbconnect.php';/// received data collect
-      
-    // to receive the post data we need to call $_POST variable
-    // $_POST represents an associative array
-
-    if($_SERVER["REQUEST_METHOD"] == "POST"){
+ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
    
-       
-        $var1=$_POST['holdingno'];
-        $var2=$_POST['name'];
-        $var3=$_POST['fname'];
-        $var4=$_POST['gram'];
-        $var5=$_POST['ward']; 
-        $var6=$_POST['housetype']; 
-        $var7=$_POST['roomno']; 
-        $var8=$_POST['tax'];
-        $var9=$_POST['mnum'];
-         
-         
+   
+    include './_dbconnect.php';
+    $holdingno = $_POST['holdingno'];
+    $name = $_POST['name'];
+    $fname = $_POST['fname'];
+    $gram = $_POST['gram'];
+    $ward = $_POST['ward'];
+    $housetype = $_POST['housetype'];
+    $roomno = $_POST['roomno'];
+    $tax = $_POST['tax'];
+    $mnum = $_POST['mnum'];
+           
+   
+
+
      
-   $sql="INSERT INTO `taxentry`(`holdingno`, `name`,`fatherhusband`, `gram`, `ward`, `housetype`, `roomno`, `totaltax`, `voterid`) VALUES ('$var1','$var2','$var3','$var4','$var5','$var6','$var7','$var8','$var9'";
+       $sql = "INSERT INTO `taxenrty`(`holdingno`, `name`, `fatherhusband`, `gram`, `ward`, `housetype`, `roomno`, `totaltax`, `voterid`)  VALUES ('$holdingno','$name','$fname','$gram','$ward','$housetype','$roomno','$tax','$mnum')";
+       print_r(error_get_last());
+  
+   if(mysqli_query($con, $sql)){
 
    
+    header("Location:phome.php");
+          
+   } else{
+       echo "ERROR: Hush! Sorry $sql. "
+           . mysqli_error($con);
+   }
 
-if(mysqli_query($con, $sql)){
+   // Close conection
+   mysqli_close($con);
+ }
 
-
-header("Location:taxentry.php");
-      
-} else{
-   echo "ERROR: Hush! Sorry $sql. "
-       . mysqli_error($con);
-}
-
-// Close conection
-mysqli_close($con);
-}
-
-       // echo $query;
- ?>
+?>
