@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jul 21, 2023 at 03:29 AM
+-- Generation Time: Jul 21, 2023 at 04:34 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -146,7 +146,9 @@ INSERT INTO `log` (`id`, `email`, `activity`, `time`) VALUES
 (106, 'neaz@gmail.com', 'Log Out', '2023-07-21 01:23:33'),
 (107, 'rownok2001@gmail.com', 'Log Out', '2023-07-21 01:23:39'),
 (108, 'rownok2001@gmail.com', 'Log Out', '2023-07-21 01:24:37'),
-(109, 'rownok2001@gmail.com', 'Log Out', '2023-07-21 01:26:01');
+(109, 'rownok2001@gmail.com', 'Log Out', '2023-07-21 01:26:01'),
+(110, 'rownok2001@gmail.com', 'Log Out', '2023-07-21 01:37:13'),
+(111, 'rownok2001@gmail.com', 'Log Out', '2023-07-21 01:37:40');
 
 -- --------------------------------------------------------
 
@@ -359,16 +361,6 @@ CREATE TABLE `taxentry` (
   `totaltax` varchar(255) NOT NULL,
   `voterid` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `taxentry`
---
-
-INSERT INTO `taxentry` (`holdingno`, `name`, `fatherhusband`, `gram`, `ward`, `housetype`, `roomno`, `totaltax`, `voterid`) VALUES
-(10023, 'rownokmahbub', 'mahsin', 'রোয়াকুলি', '১', '', '', '234', '2147483647'),
-(10024, 'Emon', 'mahsin', 'দক্ষিণ গোবিন্দপুর', '৬', '', '', '345', '2147483647'),
-(10025, 'rownokmahbub', 'mahsin', 'জেহালা', '১', '', '', '234', '016532234456'),
-(10027, 'emon', 'ramdnbf', 'রোয়াকুলি', '৫', '', '', '34', '344534324324543545');
 
 -- --------------------------------------------------------
 
@@ -598,7 +590,7 @@ ALTER TABLE `khobor`
 -- AUTO_INCREMENT for table `log`
 --
 ALTER TABLE `log`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=110;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=112;
 
 --
 -- AUTO_INCREMENT for table `nagorik`
