@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jul 21, 2023 at 04:34 AM
+-- Generation Time: Jul 23, 2023 at 04:33 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -148,7 +148,16 @@ INSERT INTO `log` (`id`, `email`, `activity`, `time`) VALUES
 (108, 'rownok2001@gmail.com', 'Log Out', '2023-07-21 01:24:37'),
 (109, 'rownok2001@gmail.com', 'Log Out', '2023-07-21 01:26:01'),
 (110, 'rownok2001@gmail.com', 'Log Out', '2023-07-21 01:37:13'),
-(111, 'rownok2001@gmail.com', 'Log Out', '2023-07-21 01:37:40');
+(111, 'rownok2001@gmail.com', 'Log Out', '2023-07-21 01:37:40'),
+(112, 'rownok2001@gmail.com', 'Log Out', '2023-07-21 13:37:15'),
+(113, 'rownok2001@gmail.com', 'Log Out', '2023-07-21 13:48:28'),
+(114, 'rownok2001@gmail.com', 'Log Out', '2023-07-21 13:57:05'),
+(115, 'rownok2001@gmail.com', 'Log Out', '2023-07-21 14:41:00'),
+(116, 'rownok2001@gmail.com', 'Log Out', '2023-07-22 09:45:37'),
+(117, 'rownok2001@gmail.com', 'Log Out', '2023-07-22 09:46:30'),
+(118, 'rownok2001@gmail.com', 'Log Out', '2023-07-22 13:14:46'),
+(119, 'rownok2001@gmail.com', 'Log Out', '2023-07-22 13:44:54'),
+(120, 'rownok2001@gmail.com', 'Log Out', '2023-07-22 14:19:15');
 
 -- --------------------------------------------------------
 
@@ -157,7 +166,6 @@ INSERT INTO `log` (`id`, `email`, `activity`, `time`) VALUES
 --
 
 CREATE TABLE `nagorik` (
-  `id` int(11) NOT NULL,
   `sarok` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
   `fathername` varchar(255) NOT NULL,
@@ -165,8 +173,20 @@ CREATE TABLE `nagorik` (
   `gram` varchar(255) NOT NULL,
   `word` varchar(255) NOT NULL,
   `birthno` varchar(255) NOT NULL,
-  `voterid` varchar(255) NOT NULL
+  `voterid` varchar(255) NOT NULL,
+  `mobileno` varchar(255) NOT NULL,
+  `gender` varchar(255) NOT NULL,
+  `dakghor` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+--
+-- Dumping data for table `nagorik`
+--
+
+INSERT INTO `nagorik` (`sarok`, `name`, `fathername`, `mothername`, `gram`, `word`, `birthno`, `voterid`, `mobileno`, `gender`, `dakghor`) VALUES
+(10001, 'রওনক', 'মহসিন আলী ', 'রেক্সনা পারভিন ', 'জেহালা', '১', '৬৪৩৪২২৪৪৬৩', '৩৩৪৫৫৩২৫৪৩', '০১৩৪৫৬৫৩৩৫৬', 'পুরুষ', 'জেহলা '),
+(10002, 'rownok', 'mahsin ali', 'rakha', 'জেহালা', '১', '3443255', '324445356', '01273483465', 'পুরুষ', 'রোয়াকুলি'),
+(10003, 'rakha', 'rajjak', 'asura', 'হৈদেরপুর', '৫', '23324344', '34234534556', '01273483465', 'নারী', 'সোনাতনপুর');
 
 -- --------------------------------------------------------
 
@@ -326,23 +346,21 @@ CREATE TABLE `tadeentry` (
   `name` varchar(255) NOT NULL,
   `father_husband` varchar(255) NOT NULL,
   `mother_name` varchar(255) NOT NULL,
-  `birth_place` varchar(255) NOT NULL,
   `word` varchar(255) NOT NULL,
+  `bplace` varchar(255) NOT NULL,
   `tradename` varchar(255) NOT NULL,
   `babsardhoron` varchar(255) NOT NULL,
   `kor` varchar(255) NOT NULL,
-  `fee` varchar(255) NOT NULL,
-  `voterid` varchar(255) NOT NULL
+  `voterid` varchar(255) NOT NULL,
+  `mobileno` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `tadeentry`
 --
 
-INSERT INTO `tadeentry` (`licence_no`, `name`, `father_husband`, `mother_name`, `birth_place`, `word`, `tradename`, `babsardhoron`, `kor`, `fee`, `voterid`) VALUES
-(1001, 'Emon', 'dfdf', 'rakha', '', '১', '', '', '', '', '3435687435843'),
-(1002, 'rownokmahbub', 'mahsin', 'rakha', '', '৪', '', '', '', '', '3435687435843'),
-(1003, 'reya', 'najmul', 'jannatul', '', '১', '', '', '', '', '3435687435841');
+INSERT INTO `tadeentry` (`licence_no`, `name`, `father_husband`, `mother_name`, `word`, `bplace`, `tradename`, `babsardhoron`, `kor`, `voterid`, `mobileno`) VALUES
+(1005, 'rownok', 'ramdnbf', 'fgfgfg', '১', 'chuadanga', 'chuadanga', 'dokan', '443', '3423432454', '01826364455');
 
 -- --------------------------------------------------------
 
@@ -361,6 +379,14 @@ CREATE TABLE `taxentry` (
   `totaltax` varchar(255) NOT NULL,
   `voterid` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `taxentry`
+--
+
+INSERT INTO `taxentry` (`holdingno`, `name`, `fatherhusband`, `gram`, `ward`, `housetype`, `roomno`, `totaltax`, `voterid`) VALUES
+(1001, 'rownok', 'mahsin ali', 'জেহালা', '১', 'paka', '2', '34', '344534324324543545'),
+(1002, 'neaz', 'ramdnbf', 'সোনাতনপুর', '১', 'kacha', '4', '644', '7676465');
 
 -- --------------------------------------------------------
 
@@ -490,7 +516,7 @@ ALTER TABLE `log`
 -- Indexes for table `nagorik`
 --
 ALTER TABLE `nagorik`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`sarok`);
 
 --
 -- Indexes for table `notice`
@@ -590,13 +616,7 @@ ALTER TABLE `khobor`
 -- AUTO_INCREMENT for table `log`
 --
 ALTER TABLE `log`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=112;
-
---
--- AUTO_INCREMENT for table `nagorik`
---
-ALTER TABLE `nagorik`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=121;
 
 --
 -- AUTO_INCREMENT for table `notice`
