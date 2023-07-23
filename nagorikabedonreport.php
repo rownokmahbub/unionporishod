@@ -47,6 +47,7 @@
                    $word= $result['word'];
                    $birthno= $result['birthno'];
                    $voterid= $result['voterid'];
+                   $mobileno= $result['mobileno'];
                    
                     ?>
               <input type="hidden" name="hid" value="<?php echo $rid;?>">
@@ -91,7 +92,7 @@
 <div class=' absolute right-28 bottom-0 flex flex-col justify-end items-center'>
 <p>বিনীত নিবেদক,</p>
 <p>মোঃ আনোয়ার হোসেন</p>
-<p>মেবাইলঃ <span><?= $row['mobileno'] ?></span></p>
+<p>মেবাইলঃ <span><?= $mobileno ?></span></p>
 </div>
             <?php
                     
