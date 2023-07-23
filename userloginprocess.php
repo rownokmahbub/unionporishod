@@ -17,7 +17,7 @@
     $password =  $_POST['password'];
 
        // We are going to insert the data into our sampleDB table
-       
+       echo 'fgfg';
        $sql = "SELECT * FROM `subuser` WHERE email = '$email' and password='$password'";
        echo $sql;
    // Check if the query is successful

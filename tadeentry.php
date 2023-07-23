@@ -89,13 +89,10 @@ echo $count;
             
       
           </div>
+          <input class='px-2 py-2 bg-white border border-gray-300 rounded-xl w-full focus:outline-blue-400' type="text" name="mnum" placeholder='মোবাইল নাম্বার' required>
 
          
          
-         
-        
-          
-
         </div>
             <div class="flex justify-center items-center w-full mt-5">
             <input class='h-12 px-6 font-medium tracking-wide

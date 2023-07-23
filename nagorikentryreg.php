@@ -13,13 +13,16 @@
     $ward = $_POST['ward'];
     $birthno = $_POST['birthno'];
     $voterid = $_POST['voterid'];
+    $mnum = $_POST['mnum'];
+    $gender = $_POST['gender'];
+    $dakghor = $_POST['dakghor'];
     
            
    
 
 
      
-       $sql = "INSERT INTO `nagorik`(`sarok`, `name`, `fathername`, `mothername`, `gram`, `word`, `birthno`, `voterid`) VALUES ('$sarok','$name','$fname','$mname','$gram','$ward','$birthno','$voterid')";
+       $sql = "INSERT INTO `nagorik`(`sarok`, `name`, `fathername`, `mothername`, `gram`, `word`, `birthno`, `voterid`, `mobileno`,`gender`,`dakghor`) VALUES ('$sarok','$name','$fname','$mname','$gram','$ward','$birthno','$voterid','$mnum','$gender','$dakghor')";
        print_r(error_get_last());
   
    if(mysqli_query($con, $sql)){

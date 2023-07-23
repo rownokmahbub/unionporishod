@@ -15,12 +15,13 @@
     $bdhoron = $_POST['bdhoron'];
     $kor = $_POST['kor'];
     $vid = $_POST['vid'];
+    $mnum = $_POST['mnum'];
            
    
 
 
      
-       $sql = "INSERT INTO `tadeentry`(`licence_no`, `name`, `father_husband`, `mother_name`, `word`, `bplace`, `tradename`, `babsardhoron`, `kor`, `voterid`)  VALUES ('$licence','$name','$fname','$mname','$ward','$bplace','$tradename','$bdhoron','$kor','$vid')";
+       $sql = "INSERT INTO `tadeentry`(`licence_no`, `name`, `father_husband`, `mother_name`, `word`, `bplace`, `tradename`, `babsardhoron`, `kor`, `voterid`,`mobileno`)  VALUES ('$licence','$name','$fname','$mname','$ward','$bplace','$tradename','$bdhoron','$kor','$vid','$mnum')";
        print_r(error_get_last());
   
    if(mysqli_query($con, $sql)){
