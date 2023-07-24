@@ -62,28 +62,31 @@
 <p class='my-2'>জনাব,</p>
 <p class="ml-10 my-2">যথাবিহিত সম্মান প্রদর্শন পূর্বক বিনীত নিবেদন এই যে, আমি আপনার ইউনিয়নের  একজন স্থায়ী বাসিন্দা। আমার একটি নাগরিক সনদ পত্র প্রয়োজন।</p>
 <div class="flex flex-col justify-center items-center">
-<div class='flex justify-between items-center my-10'>
-        <div>
+<div class='flex justify-between w-full my-10'>
+        <div class='w-full text-center font-medium border border-black'>
             
-            <p class='border border-slate-200 px-4 py-2'>নাম</p>
-            <p class='border border-slate-200 px-4 py-2'>পিতার নাম</p>
-            <p class='border border-slate-200 px-4 py-2'>মাতর নাম</p>
-            <p class='border border-slate-200 px-4 py-2'>গ্রাম</p>
-            <p class='border border-slate-200 px-4 py-2'>ওয়ার্ড নম্বর</p>
-            <p class='border border-slate-200 px-4 py-2'>জন্ম নিবন্ধন নাম্বার </p>
-            <p class='border border-slate-200 px-4 py-2'>ভোটার আইডি</p>
+            <p class='border border-black px-4 py-2'>নাম</p>
+            <p class='border border-black px-4 py-2'>পিতার নাম</p>
+            <p class='border border-black px-4 py-2'>মাতর নাম</p>
+            <p class='border border-black px-4 py-2'>গ্রাম</p>
+            <p class='border border-black px-4 py-2'>ওয়ার্ড নম্বর</p>
+            <p class='border border-black px-4 py-2'>জন্ম নিবন্ধন নাম্বার </p>
+            <p class='border border-black px-4 py-2'>ভোটার আইডি</p>
 
             
         </div>
-        <div>
+        <div class='w-full text-center border border-black'>
        
-            <p class='border border-slate-200 px-4 py-2'><span><?= $name ?></span></p>
-            <p class='border border-slate-200 px-4 py-2'><span><?= $fathername ?></span></p>
-            <p class='border border-slate-200 px-4 py-2'><span><?= $mothername ?></span></p>
-            <p class='border border-slate-200 px-4 py-2'><span><?= $gram ?></span></p>
-            <p class='border border-slate-200 px-4 py-2'><span><?= $word ?></span></p>
-            <p class='border border-slate-200 px-4 py-2'><span><?= $birthno ?></span></p>
-            <p class='border border-slate-200 px-4 py-2'><span><?= $voterid ?></span></p>
+            <p class='border border-black px-4 py-2'><span><?= $name ?></span></p>
+            <p class='border border-black px-4 py-2'><span><?= $fathername ?></span></p>
+            <p class='border border-black px-4 py-2'><span><?= $mothername ?></span></p>
+            <p class='border border-black px-4 py-2'><span><?= $gram ?></span></p>
+            <p class='border border-black px-4 py-2'><span><?= $word ?></span></p>
+            <p class='border border-black px-4 py-2'><span><?= $birthno ?></span></p>
+            <p class='border border-black px-4 py-2'><span><?= $voterid ?></span></p>
+        </div>
+        <div class="w-full border-2 border-black text-center">
+        <p class='border-b-2 border-black px-4 py-2'>মন্তব্য</p>
         </div>
 </div>
 </div>

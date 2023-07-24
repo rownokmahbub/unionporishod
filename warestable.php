@@ -59,23 +59,53 @@
         <tr>
             <th data-priority="1">সারক নম্বর</th>
             <th data-priority="1">নাম</th>
-            <th data-priority="2">পিতার নাম/স্বামীর নাম</th>
+            <th data-priority="2">পিতার নাম</th>
             <th data-priority="2">মাতার নাম</th>
             <th data-priority="2">গ্রাম</th>
             <th data-priority="2">ওয়ার্ড</th>
             <th data-priority="2">জন্ম নিবন্ধন নাম্বার </th>
             <th data-priority="2">ভোটার আইডি</th>
-            <th data-priority="2">মোবাইল নাম্বার</th>
-            <th data-priority="2">লিঙ্গ</th>
-            <th data-priority="2">ডাকঘর</th>
-            <th data-priority="2">অ্যাকশন</th>
+            <th data-priority="1">মোবাইল নাম্বার</th>
+            <th data-priority="1">আবেদনকারী নাম </th>
+            <th data-priority="1">ওয়ারেশ ১</th>
+            <th data-priority="1">সম্পর্ক </th>
+            <th data-priority="1">ওয়ারেশ ২</th>
+            <th data-priority="1">সম্পর্ক </th>
+            <th data-priority="1">ওয়ারেশ ৩</th>
+            <th data-priority="1">সম্পর্ক </th>
+            <th data-priority="1">ওয়ারেশ ৪</th>
+            <th data-priority="1">সম্পর্ক </th>
+            <th data-priority="1">ওয়ারেশ ৫</th>
+            <th data-priority="1">সম্পর্ক </th>
+            <th data-priority="1">ওয়ারেশ ৬</th>
+            <th data-priority="1">সম্পর্ক </th>
+            <th data-priority="1">ওয়ারেশ ৭</th>
+            <th data-priority="1">সম্পর্ক </th>
+            <th data-priority="1">ওয়ারেশ ৮</th>
+            <th data-priority="1">সম্পর্ক </th>
+            <th data-priority="1">ওয়ারেশ ৯</th>
+            <th data-priority="1">সম্পর্ক </th>
+            <th data-priority="1">ওয়ারেশ ১০</th>
+            <th data-priority="1">সম্পর্ক </th>
+            <th data-priority="1">ওয়ারেশ ১১</th>
+            <th data-priority="1">সম্পর্ক </th>
+            <th data-priority="1">ওয়ারেশ ১২</th>
+            <th data-priority="1">সম্পর্ক </th>
+            <th data-priority="1">ওয়ারেশ ১৩</th>
+            <th data-priority="1">সম্পর্ক </th>
+            <th data-priority="1">ওয়ারেশ ১৪</th>
+            <th data-priority="1">সম্পর্ক </th>
+            <th data-priority="1">ওয়ারেশ ১৫</th>
+            <th data-priority="1">সম্পর্ক </th>
+            <th data-priority="1">অ্যাকশন </th>
+            
         </tr>
     </thead>
     <tbody>
           
     <?php
                     include './_dbconnect.php';
-                    $query = "SELECT * FROM `nagorik`";
+                    $query = "SELECT * FROM `wares`";
                     $poriciti = mysqli_query($con, $query);
                     
                     while ($row = mysqli_fetch_assoc($poriciti)) {
@@ -89,18 +119,47 @@
                     <td class=''><?= $row['mothername'] ?></td>
                     <td class=''><?= $row['gram'] ?></td>
                     <td class=''><?= $row['word'] ?></td>
-                    <td class=''><?= $row['birthno'] ?></td>
+                    <td class=''><?= $row['deathno'] ?></td>
                     <td class=''><?= $row['voterid'] ?></td>
                     <td class=''><?= $row['mobileno'] ?></td>
-                    <td class=''><?= $row['gender'] ?></td>
-                    <td class=''><?= $row['dakghor'] ?></td>
+                    <td class=''><?= $row['aname'] ?></td>
+                    <td class=''><?= $row['w1'] ?></td>
+                    <td class=''><?= $row['r1'] ?></td>
+                    <td class=''><?= $row['w2'] ?></td>
+                    <td class=''><?= $row['r2'] ?></td>
+                    <td class=''><?= $row['w3'] ?></td>
+                    <td class=''><?= $row['r3'] ?></td>
+                    <td class=''><?= $row['w4'] ?></td>
+                    <td class=''><?= $row['r4'] ?></td>
+                    <td class=''><?= $row['w5'] ?></td>
+                    <td class=''><?= $row['r5'] ?></td>
+                    <td class=''><?= $row['w6'] ?></td>
+                    <td class=''><?= $row['r6'] ?></td>
+                    <td class=''><?= $row['w7'] ?></td>
+                    <td class=''><?= $row['r7'] ?></td>
+                    <td class=''><?= $row['w8'] ?></td>
+                    <td class=''><?= $row['r8'] ?></td>
+                    <td class=''><?= $row['w9'] ?></td>
+                    <td class=''><?= $row['r9'] ?></td>
+                    <td class=''><?= $row['w10'] ?></td>
+                    <td class=''><?= $row['r10'] ?></td>
+                    <td class=''><?= $row['w11'] ?></td>
+                    <td class=''><?= $row['r11'] ?></td>
+                    <td class=''><?= $row['w12'] ?></td>
+                    <td class=''><?= $row['r12'] ?></td>
+                    <td class=''><?= $row['w13'] ?></td>
+                    <td class=''><?= $row['r13'] ?></td>
+                    <td class=''><?= $row['w14'] ?></td>
+                    <td class=''><?= $row['r14'] ?></td>
+                    <td class=''><?= $row['w15'] ?></td>
+                    <td class=''><?= $row['r15'] ?></td>
                     <td class=''>
                            
 <div class="flex gap-3 justify-center items-center w-full">
-<a  href="nagorikabedonreport.php?id=<?php echo $id; ?>" class='px-3 py-2 cursor-pointer rounded-xl text-white text-sm  bg-purple-700 hover:bg-purple-600  duration-300 transition flex items-center gap-1'>
+<a  href="waresabedonreport.php?id=<?php echo $id; ?>" class='px-3 py-2 cursor-pointer rounded-xl text-white text-sm  bg-purple-700 hover:bg-purple-600  duration-300 transition flex items-center gap-1'>
 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fefefe" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>   
         </a>
-        <a href='nagorikedit.php?id=<?php echo $id; ?>' class='px-3 py-2 cursor-pointer rounded-xl text-white text-sm  bg-green-700 hover:bg-green-600  duration-300 transition flex items-center gap-1'>
+        <a href='waresedit.php?id=<?php echo $id; ?>' class='px-3 py-2 cursor-pointer rounded-xl text-white text-sm  bg-green-700 hover:bg-green-600  duration-300 transition flex items-center gap-1'>
         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.66V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h5.34"></path><polygon points="18 2 22 6 12 16 8 16 8 12 18 2"></polygon></svg>    
         </a>
         <a href='edit/homeedit.php' class='px-3 py-2 cursor-pointer rounded-xl text-white text-sm  bg-red-700 hover:bg-red-600  duration-300 transition flex items-center gap-1'>

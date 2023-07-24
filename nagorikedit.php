@@ -37,7 +37,7 @@ include './_dbconnect.php';
 
 
 <body>
-<div class="flex px-5 md:px-20 py-5 md:h-screen justify-between gap-5 items-center bg-slate-300 ">
+<div class="flex px-5 md:px-10 py-5 md:h-screen justify-between gap-5 items-center bg-slate-300 ">
 
 
 

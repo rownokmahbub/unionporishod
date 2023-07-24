@@ -28,7 +28,7 @@
    if(mysqli_query($con, $sql)){
 
    
-    header("Location:taxentry.php");
+    header("Location:nagoriktable.php");
           
    } else{
        echo "ERROR: Hush! Sorry $sql. "

@@ -42,9 +42,9 @@
             <path d="M19 12H6M12 5l-7 7 7 7" />
         </svg>
         Back</a>
-    <div class="font-semibold text-xl mb-4 text-center">নাগরিক এন্ট্রি ফরম</div>
+    <div class="font-semibold text-xl mb-4 text-center">ওয়ারেশ এন্ট্রি ফরম</div>
     
-      <form action="nagorikentryreg.php" method="POST">
+      <form action="waresreg.php" method="POST">
         <div class="space-y-4">
           <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-5">
            
@@ -85,33 +85,46 @@
                 <option value="৯" class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">৯</option>
 
               </select>
-              <input class='px-2 py-2 bg-white border border-gray-300 rounded-xl w-full focus:outline-blue-400' type="text" name="birthno" placeholder='জন্ম নিবন্ধন নাম্বার ' required>
+              <input class='px-2 py-2 bg-white border border-gray-300 rounded-xl w-full focus:outline-blue-400' type="text" name="birthno" placeholder='মৃত্যু নিবন্ধন নাম্বার ' required>
               <input class='px-2 py-2 bg-white border border-gray-300 rounded-xl w-full focus:outline-blue-400' type="text" name="voterid" placeholder='ভোটার আইডি' required>
-              <input class='px-2 py-2 bg-white border border-gray-300 rounded-xl w-full focus:outline-blue-400' type="text" name="mnum" placeholder='মোবাইল নাম্বার' required>
-          
-              <select class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full" name="gender">
-                <option value="পুরুষ" class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">পুরুষ</option>
-                <option value="নারী" class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">নারী</option>
+              <input class='px-2 py-2 bg-white border border-gray-300 rounded-xl w-full focus:outline-blue-400' type="text" name="mnum" placeholder='আবেদনকারীর মোবাইল নাম্বার' required>
+          <input class='px-2 py-2 bg-white border border-gray-300 rounded-xl w-full focus:outline-blue-400' type="text" name="aname" placeholder='আবেদনকারীর নাম' required>
              
-
-              </select>
           </div>
-
-          <select class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full focus:outline-blue-400" name="dakghor">
-                <option value="জেহালা" class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">জেহালা</option>
-                <option value="মাদাহুদা" class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full"> মাদাহুদা</option>
-                <option value="রোয়াকুলি" class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">রোয়াকুলি</option>
-                <option value="জেহালা বাজার" class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">জেহালা বাজার</option>
-                <option value="সোনাতনপুর" class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">সোনাতনপুর</option>
-                <option value="হৈদেরপুর" class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">হৈদেরপুর</option>
-                <option value="গড়গড়ী" class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">গড়গড়ী</option>
-                <option value="দক্ষিণ গোবিন্দপুর" class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">দক্ষিণ গোবিন্দপুর</option>
-                <option value="খুদিয়াখালী" class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full"> খুদিয়াখালী</option>
-                <option value="পূর্ব কমলাপুর" class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">পূর্ব কমলাপুর</option>
-                <option value="বেতবাড়িয়া" class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">বেতবাড়িয়া</option>
-               
-
-              </select>
+        
+          <div class="font-semibold text-xl mb-4 text-center">ওয়ারেশ গণের নাম</div>
+          <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-5">
+          <input class='px-2 py-2 bg-white border border-gray-300 rounded-xl w-full focus:outline-blue-400' type="text" name="w1" placeholder='নাম' >
+            <input class='px-2 py-2 bg-white border border-gray-300 rounded-xl w-full focus:outline-blue-400' type="text" name="r1" placeholder='সম্পর্ক' >
+            <input class='px-2 py-2 bg-white border border-gray-300 rounded-xl w-full focus:outline-blue-400' type="text" name="w2" placeholder='নাম' >
+            <input class='px-2 py-2 bg-white border border-gray-300 rounded-xl w-full focus:outline-blue-400' type="text" name="r2" placeholder='সম্পর্ক' >
+            <input class='px-2 py-2 bg-white border border-gray-300 rounded-xl w-full focus:outline-blue-400' type="text" name="w3" placeholder='নাম' >
+            <input class='px-2 py-2 bg-white border border-gray-300 rounded-xl w-full focus:outline-blue-400' type="text" name="r3" placeholder='সম্পর্ক' >
+            <input class='px-2 py-2 bg-white border border-gray-300 rounded-xl w-full focus:outline-blue-400' type="text" name="w4" placeholder='নাম' >
+            <input class='px-2 py-2 bg-white border border-gray-300 rounded-xl w-full focus:outline-blue-400' type="text" name="r4" placeholder='সম্পর্ক' >
+            <input class='px-2 py-2 bg-white border border-gray-300 rounded-xl w-full focus:outline-blue-400' type="text" name="w5" placeholder='নাম' >
+            <input class='px-2 py-2 bg-white border border-gray-300 rounded-xl w-full focus:outline-blue-400' type="text" name="r5" placeholder='সম্পর্ক' >
+            <input class='px-2 py-2 bg-white border border-gray-300 rounded-xl w-full focus:outline-blue-400' type="text" name="w6" placeholder='নাম' >
+            <input class='px-2 py-2 bg-white border border-gray-300 rounded-xl w-full focus:outline-blue-400' type="text" name="r6" placeholder='সম্পর্ক' >
+            <input class='px-2 py-2 bg-white border border-gray-300 rounded-xl w-full focus:outline-blue-400' type="text" name="w7" placeholder='নাম' >
+            <input class='px-2 py-2 bg-white border border-gray-300 rounded-xl w-full focus:outline-blue-400' type="text" name="r7" placeholder='সম্পর্ক' >
+            <input class='px-2 py-2 bg-white border border-gray-300 rounded-xl w-full focus:outline-blue-400' type="text" name="w8" placeholder='নাম' >
+            <input class='px-2 py-2 bg-white border border-gray-300 rounded-xl w-full focus:outline-blue-400' type="text" name="r8" placeholder='সম্পর্ক' >
+            <input class='px-2 py-2 bg-white border border-gray-300 rounded-xl w-full focus:outline-blue-400' type="text" name="w9" placeholder='নাম' >
+            <input class='px-2 py-2 bg-white border border-gray-300 rounded-xl w-full focus:outline-blue-400' type="text" name="r9" placeholder='সম্পর্ক' >
+            <input class='px-2 py-2 bg-white border border-gray-300 rounded-xl w-full focus:outline-blue-400' type="text" name="w10" placeholder='নাম' >
+            <input class='px-2 py-2 bg-white border border-gray-300 rounded-xl w-full focus:outline-blue-400' type="text" name="r10" placeholder='সম্পর্ক' >
+            <input class='px-2 py-2 bg-white border border-gray-300 rounded-xl w-full focus:outline-blue-400' type="text" name="w11" placeholder='নাম' >
+            <input class='px-2 py-2 bg-white border border-gray-300 rounded-xl w-full focus:outline-blue-400' type="text" name="r11" placeholder='সম্পর্ক' >
+            <input class='px-2 py-2 bg-white border border-gray-300 rounded-xl w-full focus:outline-blue-400' type="text" name="w12" placeholder='নাম' >
+            <input class='px-2 py-2 bg-white border border-gray-300 rounded-xl w-full focus:outline-blue-400' type="text" name="r12" placeholder='সম্পর্ক' >
+            <input class='px-2 py-2 bg-white border border-gray-300 rounded-xl w-full focus:outline-blue-400' type="text" name="w13" placeholder='নাম' >
+            <input class='px-2 py-2 bg-white border border-gray-300 rounded-xl w-full focus:outline-blue-400' type="text" name="r13" placeholder='সম্পর্ক' >
+            <input class='px-2 py-2 bg-white border border-gray-300 rounded-xl w-full focus:outline-blue-400' type="text" name="w14" placeholder='নাম' >
+            <input class='px-2 py-2 bg-white border border-gray-300 rounded-xl w-full focus:outline-blue-400' type="text" name="r14" placeholder='সম্পর্ক' >
+            <input class='px-2 py-2 bg-white border border-gray-300 rounded-xl w-full focus:outline-blue-400' type="text" name="w15" placeholder='নাম' >
+            <input class='px-2 py-2 bg-white border border-gray-300 rounded-xl w-full focus:outline-blue-400' type="text" name="r15" placeholder='সম্পর্ক' >
+          </div>
         
 
         </div>
