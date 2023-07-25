@@ -28,9 +28,10 @@
 
 
         <div class="grid grid-cols-2 gap-2 items-center mt-2">
-        <a href='taxentry.php' class='px-4 py-2.5 cursor-pointer rounded-full text-white font-semibold text-base bg-sky-800 hover:bg-sky-600  duration-300 text-center transition'>ট্যাক্স এন্ট্রি </a>
-       
+        <a href='taxentrytable.php' class='px-4 py-2.5 cursor-pointer rounded-full text-white font-semibold text-base bg-sky-800 hover:bg-sky-600  duration-300 text-center transition'>ট্যাক্স এন্ট্রি </a>
+        <a href='taxentrytable.php' class='px-4 py-2.5 cursor-pointer rounded-full text-white font-semibold text-base bg-sky-800 hover:bg-sky-600  duration-300 text-center transition'>ট্যাক্স টেবিল </a>
           <a href='tadeentry.php' class='px-4 py-2 cursor-pointer rounded-full text-white font-semibold text-base bg-sky-800 hover:bg-sky-600  duration-300 text-center transition'>টেড এন্ট্রি</a>
+          <a href='tadeentrytable.php' class='px-4 py-2 cursor-pointer rounded-full text-white font-semibold text-base bg-sky-800 hover:bg-sky-600  duration-300 text-center transition'>টেড টেবিল</a>
           <a href='nagorikentry.php' class='px-4 py-2 cursor-pointer rounded-full text-white font-semibold text-base bg-sky-800 hover:bg-sky-600  duration-300 text-center transition'>নাগরিক এন্ট্রি </a>
           <a href='nagoriktable.php' class='px-4 py-2 cursor-pointer rounded-full text-white font-semibold text-base bg-sky-800 hover:bg-sky-600  duration-300 text-center transition'>সনদ আবেদন </a>
         

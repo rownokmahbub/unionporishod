@@ -1,0 +1,40 @@
+
+<?php
+ if($_SERVER["REQUEST_METHOD"] == "POST"){
+
+   
+   
+    include './_dbconnect.php';
+    $holdingno = $_POST['hid'];
+    $name = $_POST['name'];
+    $fname = $_POST['fname'];
+    $gram = $_POST['gram'];
+    $ward = $_POST['ward'];
+    $housetype = $_POST['housetype'];
+    $voterid = $_POST['voterid'];
+    $rnum = $_POST['rnum'];
+    $kor = $_POST['kor'];
+    
+           
+   
+
+
+     
+       $sql = "UPDATE `taxentry` SET `holdingno`='$holdingno',`name`='$name',`fatherhusband`='$fname',`gram`='$gram',`ward`='$ward',`housetype`='$housetype',`roomno`='$rnum',`totaltax`='$kor',`voterid`='$voterid' WHERE `holdingno`=$holdingno";;
+       print_r(error_get_last());
+  
+   if(mysqli_query($con, $sql)){
+
+   
+    header("Location:taxentrytable.php");
+          
+   } else{
+       echo "ERROR: Hush! Sorry $sql. "
+           . mysqli_error($con);
+   }
+
+   // Close conection
+   mysqli_close($con);
+ }
+
+?>

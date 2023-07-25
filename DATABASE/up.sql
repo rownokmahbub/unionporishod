@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jul 23, 2023 at 04:33 AM
+-- Generation Time: Jul 25, 2023 at 03:29 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -157,7 +157,8 @@ INSERT INTO `log` (`id`, `email`, `activity`, `time`) VALUES
 (117, 'rownok2001@gmail.com', 'Log Out', '2023-07-22 09:46:30'),
 (118, 'rownok2001@gmail.com', 'Log Out', '2023-07-22 13:14:46'),
 (119, 'rownok2001@gmail.com', 'Log Out', '2023-07-22 13:44:54'),
-(120, 'rownok2001@gmail.com', 'Log Out', '2023-07-22 14:19:15');
+(120, 'rownok2001@gmail.com', 'Log Out', '2023-07-22 14:19:15'),
+(121, 'rownok2001@gmail.com', 'Log Out', '2023-07-25 05:39:45');
 
 -- --------------------------------------------------------
 
@@ -184,9 +185,9 @@ CREATE TABLE `nagorik` (
 --
 
 INSERT INTO `nagorik` (`sarok`, `name`, `fathername`, `mothername`, `gram`, `word`, `birthno`, `voterid`, `mobileno`, `gender`, `dakghor`) VALUES
-(10001, 'রওনক', 'মহসিন আলী ', 'রেক্সনা পারভিন ', 'জেহালা', '১', '৬৪৩৪২২৪৪৬৩', '৩৩৪৫৫৩২৫৪৩', '০১৩৪৫৬৫৩৩৫৬', 'পুরুষ', 'জেহলা '),
-(10002, 'rownok', 'mahsin ali', 'rakha', 'জেহালা', '১', '3443255', '324445356', '01273483465', 'পুরুষ', 'রোয়াকুলি'),
-(10003, 'rakha', 'rajjak', 'asura', 'হৈদেরপুর', '৫', '23324344', '34234534556', '01273483465', 'নারী', 'সোনাতনপুর');
+(10001, 'রওনক', 'মহসিন আলী ', 'রেক্সনা পারভিন ', 'জেহালা', '১', '৬৪৩৪২২৪৪৬৩', '৩৩৪৫৫৩২৫৪৩', '০১৩৪৫৬৫৩৩৫৬', 'নারী', 'জেহলা '),
+(10002, 'rownok mahbub', 'mahsin ali', 'rakha', 'জেহালা', '১', '3443255', '324445356', '01273483465', 'পুরুষ', 'রোয়াকুলি'),
+(10003, 'rakha khatun', 'rajjak', 'asura', 'হৈদেরপুর', '৫', '23324344', '34234534556', '01273483465', 'নারী', 'সোনাতনপুর');
 
 -- --------------------------------------------------------
 
@@ -352,15 +353,17 @@ CREATE TABLE `tadeentry` (
   `babsardhoron` varchar(255) NOT NULL,
   `kor` varchar(255) NOT NULL,
   `voterid` varchar(255) NOT NULL,
-  `mobileno` varchar(255) NOT NULL
+  `mobileno` varchar(255) NOT NULL,
+  `upozela` varchar(255) NOT NULL,
+  `zela` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `tadeentry`
 --
 
-INSERT INTO `tadeentry` (`licence_no`, `name`, `father_husband`, `mother_name`, `word`, `bplace`, `tradename`, `babsardhoron`, `kor`, `voterid`, `mobileno`) VALUES
-(1005, 'rownok', 'ramdnbf', 'fgfgfg', '১', 'chuadanga', 'chuadanga', 'dokan', '443', '3423432454', '01826364455');
+INSERT INTO `tadeentry` (`licence_no`, `name`, `father_husband`, `mother_name`, `word`, `bplace`, `tradename`, `babsardhoron`, `kor`, `voterid`, `mobileno`, `upozela`, `zela`) VALUES
+(1007, 'rownok', 'mahsin ali', 'rakha', '৪', 'chuadanga', 'chuadanga', 'dokan', '443', '3423432454', '01273483465', 'চুডাঙ্গা ', 'chuadanga');
 
 -- --------------------------------------------------------
 
@@ -385,8 +388,8 @@ CREATE TABLE `taxentry` (
 --
 
 INSERT INTO `taxentry` (`holdingno`, `name`, `fatherhusband`, `gram`, `ward`, `housetype`, `roomno`, `totaltax`, `voterid`) VALUES
-(1001, 'rownok', 'mahsin ali', 'জেহালা', '১', 'paka', '2', '34', '344534324324543545'),
-(1002, 'neaz', 'ramdnbf', 'সোনাতনপুর', '১', 'kacha', '4', '644', '7676465');
+(1001, 'rownok mahbub', 'mahsin ali', 'জেহালা', '১', 'paka', '2', '34', '98789667'),
+(1002, 'neaz mahmud', 'abdur rahim', 'সোনাতনপুর', '১', 'kacha', '4', '644', '7676465');
 
 -- --------------------------------------------------------
 
@@ -485,7 +488,6 @@ INSERT INTO `user` (`id`, `email`, `password`, `user_type`, `block`) VALUES
 --
 
 CREATE TABLE `wares` (
-  `id` int(11) NOT NULL,
   `sarok` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
   `fathername` varchar(255) NOT NULL,
@@ -493,8 +495,48 @@ CREATE TABLE `wares` (
   `gram` varchar(255) NOT NULL,
   `word` varchar(255) NOT NULL,
   `deathno` varchar(255) NOT NULL,
-  `voterno` varchar(255) NOT NULL
+  `voterid` varchar(255) NOT NULL,
+  `mobileno` varchar(255) NOT NULL,
+  `aname` varchar(255) NOT NULL,
+  `w1` varchar(255) DEFAULT NULL,
+  `w2` varchar(255) DEFAULT NULL,
+  `w3` varchar(255) DEFAULT NULL,
+  `w4` varchar(255) DEFAULT NULL,
+  `w5` varchar(255) DEFAULT NULL,
+  `w6` varchar(255) DEFAULT NULL,
+  `w7` varchar(255) DEFAULT NULL,
+  `w8` varchar(255) DEFAULT NULL,
+  `w9` varchar(255) DEFAULT NULL,
+  `w10` varchar(255) DEFAULT NULL,
+  `w11` varchar(255) DEFAULT NULL,
+  `w12` varchar(255) DEFAULT NULL,
+  `w13` varchar(255) DEFAULT NULL,
+  `w14` varchar(255) DEFAULT NULL,
+  `w15` varchar(255) DEFAULT NULL,
+  `r1` varchar(255) DEFAULT NULL,
+  `r2` varchar(255) DEFAULT NULL,
+  `r3` varchar(255) DEFAULT NULL,
+  `r4` varchar(255) DEFAULT NULL,
+  `r5` varchar(255) DEFAULT NULL,
+  `r6` varchar(255) DEFAULT NULL,
+  `r7` varchar(255) DEFAULT NULL,
+  `r8` varchar(255) DEFAULT NULL,
+  `r9` varchar(255) DEFAULT NULL,
+  `r10` varchar(255) DEFAULT NULL,
+  `r11` varchar(255) DEFAULT NULL,
+  `r12` varchar(255) DEFAULT NULL,
+  `r13` varchar(255) DEFAULT NULL,
+  `r14` varchar(255) DEFAULT NULL,
+  `r15` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+--
+-- Dumping data for table `wares`
+--
+
+INSERT INTO `wares` (`sarok`, `name`, `fathername`, `mothername`, `gram`, `word`, `deathno`, `voterid`, `mobileno`, `aname`, `w1`, `w2`, `w3`, `w4`, `w5`, `w6`, `w7`, `w8`, `w9`, `w10`, `w11`, `w12`, `w13`, `w14`, `w15`, `r1`, `r2`, `r3`, `r4`, `r5`, `r6`, `r7`, `r8`, `r9`, `r10`, `r11`, `r12`, `r13`, `r14`, `r15`) VALUES
+(10001, 'rownok', 'mahsin ali', 'রেক্সনা পারভিন ', 'জেহালা', '১', '৬৪৩৪২২৪৪৬৩', '৩৩৪৫৫৩২৫৪৩', '০১৩৪৫৬৫৩৩৫৬', 'রাহমান ', 'রাব্বু ', 'রাবিয়ের ', '', '', '', '', '', '', '', '', '', '', '', '', '', 'পিতা ', 'কন্যা ', '', '', '', '', '', '', '', '', '', '', '', '', ''),
+(10002, 'emon', 'ramdnbf', 'asura', 'জেহালা বাজার', '৫', '23324344', '34234534556', '34453432432454', 'রাহমান ', 'রাব্বু ', 'রাবিয়ের ', 'এইচ ', 'এইচএফ ', 'এইচএফএফই ', 'জিএফজেডটাই ', 'টাইটিড্ট ', 'ডিএসই ', 'এ ', 'আরএফজেড ', 'ভজভ ', 'আরজিএফডিএফ ', 'আরডিটিডি', 'আরডিটি ', 'ডিএক্সড ', 'পিতা ', 'কন্যা ', 'ইফজেএফ ', 'এ ', 'সিভিএফ ', 'এইচএফ ', 'টাইফিফাইট্ফ ', 'ডিডি ', 'rdtrtyhfv ', 'আরটিফডি ', 'ড্টহকড্ড ', 'আরটিএফজিডির ', 'এইচজি ', 'এফজিডি ', 'ডিএফএফটাইডি ');
 
 --
 -- Indexes for dumped tables
@@ -600,7 +642,7 @@ ALTER TABLE `user`
 -- Indexes for table `wares`
 --
 ALTER TABLE `wares`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`sarok`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -616,7 +658,7 @@ ALTER TABLE `khobor`
 -- AUTO_INCREMENT for table `log`
 --
 ALTER TABLE `log`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=121;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=122;
 
 --
 -- AUTO_INCREMENT for table `notice`
@@ -683,12 +725,6 @@ ALTER TABLE `upprotisthan`
 --
 ALTER TABLE `user`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
---
--- AUTO_INCREMENT for table `wares`
---
-ALTER TABLE `wares`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

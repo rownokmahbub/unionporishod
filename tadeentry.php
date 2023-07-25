@@ -86,12 +86,14 @@ echo $count;
    
               <input class='px-2 py-2 bg-white border border-gray-300 rounded-xl w-full focus:outline-blue-400' type="text" name="vid" placeholder='ভোটার আইডি' required>
 
+              <input class='px-2 py-2 bg-white border border-gray-300 rounded-xl w-full focus:outline-blue-400' type="text" name="mnum" placeholder='মোবাইল নাম্বার' required>
+              <input class='px-2 py-2 bg-white border border-gray-300 rounded-xl w-full focus:outline-blue-400' type="text" name="upozela" placeholder='উপজেলা' required>
             
-      
           </div>
-          <input class='px-2 py-2 bg-white border border-gray-300 rounded-xl w-full focus:outline-blue-400' type="text" name="mnum" placeholder='মোবাইল নাম্বার' required>
+        
+          <input class='px-2 py-2 bg-white border border-gray-300 rounded-xl w-full focus:outline-blue-400' type="text" name="zela" placeholder='জেলা' required>
 
-         
+      
          
         </div>
             <div class="flex justify-center items-center w-full mt-5">
