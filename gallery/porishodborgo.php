@@ -5,13 +5,16 @@ $msg = "";
 
 // If upload button is clicked ...
 if (isset($_POST['upload'])) {
+	$name= $_POST['name'];
+	$podobi= $_POST['podobi'];
+	$mobileno= $_POST['mobileno'];
 
 	$filename = $_FILES["uploadfile"]["name"];
 	$tempname = $_FILES["uploadfile"]["tmp_name"];
 	$folder = "../Assets/image/" . $filename;
 
 	// Get all the submitted data from the form
-	$sql = "INSERT INTO porishodborgo (filename) VALUES ('$filename')";
+	$sql = "INSERT INTO `porishodborgo`(`name`, `podobi`, `mobileno`, `filename`) VALUES ('$name','$podobi','$mobileno','$filename')";
 
 	// Execute query
 	mysqli_query($con, $sql);
@@ -19,39 +22,9 @@ if (isset($_POST['upload'])) {
 	// Now let's move the uploaded image into the folder: image
 	if (move_uploaded_file($tempname, $folder)) {
 		echo "<h3> Image uploaded successfully!</h3>";
+		header("Location:ghome.php");
 	} else {
 		echo "<h3> Failed to upload image!</h3>";
 	}
 }
 ?>
-
-<!DOCTYPE html>
-<html>
-
-<head>
-	<title>Image Upload</title>
-	<script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.6/flowbite.min.css"  rel="stylesheet" />
-	
-</head>
-
-<body>
-	<div id="content" class='flex justify-between items-center'>
-		<div>
-			
-		</div>
-		<form method="POST" action="" enctype="multipart/form-data">
-			<div class="form-group">
-				<input class="form-control" type="file" name="uploadfile" value="" />
-			</div>
-			<div class="form-group">
-				<button class="btn btn-primary" type="submit" name="upload">UPLOAD</button>
-			</div>
-		</form>
-	</div>
-	
-	
-	</div>
-</body>
-
-</html>

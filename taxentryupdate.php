@@ -5,7 +5,8 @@
    
    
     include './_dbconnect.php';
-    $holdingno = $_POST['hid'];
+    $id = $_POST['hid'];
+    $holdingno = $_POST['holdingno'];
     $name = $_POST['name'];
     $fname = $_POST['fname'];
     $gram = $_POST['gram'];
@@ -20,7 +21,7 @@
 
 
      
-       $sql = "UPDATE `taxentry` SET `holdingno`='$holdingno',`name`='$name',`fatherhusband`='$fname',`gram`='$gram',`ward`='$ward',`housetype`='$housetype',`roomno`='$rnum',`totaltax`='$kor',`voterid`='$voterid' WHERE `holdingno`=$holdingno";;
+       $sql = "UPDATE `taxentry` SET `holdingno`='$holdingno',`name`='$name',`fatherhusband`='$fname',`gram`='$gram',`ward`='$ward',`housetype`='$housetype',`roomno`='$rnum',`totaltax`='$kor',`voterid`='$voterid' WHERE `id`=$id";;
        print_r(error_get_last());
   
    if(mysqli_query($con, $sql)){

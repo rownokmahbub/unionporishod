@@ -17,8 +17,8 @@
     $password =  $_POST['password'];
 
        // We are going to insert the data into our sampleDB table
-       echo 'fgfg';
-       $sql = "SELECT * FROM `subuser` WHERE email = '$email' and password='$password'";
+      
+       $sql = "SELECT id FROM subuser WHERE email = '$email' and password = '$password'";
        echo $sql;
    // Check if the query is successful
    if(mysqli_query($con, $sql)){
@@ -30,7 +30,7 @@
            . mysqli_error($con);
    }
 
-   // Close conection
+   
    mysqli_close($con);
  }
 

@@ -4,7 +4,7 @@ include './_dbconnect.php';
     if (isset($_REQUEST['id'])) {
         $rid=$_REQUEST['id'];
         
-        $query="SELECT * FROM `taxentry` WHERE holdingno=$rid";
+        $query="SELECT * FROM `taxentry` WHERE id=$rid";
         $poriciti=mysqli_query($con,$query);
         $result=mysqli_fetch_array($poriciti);
        
@@ -49,6 +49,7 @@ include './_dbconnect.php';
         Back</a>
     <div class="font-semibold text-xl mb-4 text-center">ট্যাক্স এডিট ফরম</div>
     <?php
+    $id= $result['id'];
     $rid= $result['holdingno'];
     $name= $result['name'];
     $fathername= $result['fatherhusband'];
@@ -61,7 +62,7 @@ include './_dbconnect.php';
     
     ?>
       <form action="taxentryupdate.php" method="POST">
-      <input type="hidden" name="hid" value="<?php echo $rid;?>">
+      <input type="hidden" name="hid" value="<?php echo $id;?>">
         <div class="space-y-4">
           <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-5">
            <div class="space-y-1">

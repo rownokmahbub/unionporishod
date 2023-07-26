@@ -5,6 +5,19 @@
     header('Location:../login2.php'); 
   }
 ?>
+<?php
+include '../../_dbconnect.php';
+
+    if (isset($_REQUEST['id'])) {
+        $kid=$_REQUEST['id'];
+        
+        $query="SELECT * FROM `porishodborgo` WHERE id=$kid";
+        $poriciti=mysqli_query($con,$query);
+        $result=mysqli_fetch_array($poriciti);
+       
+    }
+   
+?>
 <!doctype html>
 <html>
 <head>
@@ -38,29 +51,40 @@
             </defs>
             <rect fill="url(#192913ce-1f29-4abd-b545-0fbccfd2b0ec)" width="52" height="24"></rect>
           </svg>
-          Create Or Edit Your Up Carousal Here
+          update your porishodborgo here
       </h2>
+      <?php
+
+$kid= $result['id'];
+$name= $result['name'];
+$podobi= $result['podobi'];
+$mobileno= $result['mobileno'];
+$filename= $result['filename'];
+?>
       <form method="POST" action="porishodborgo.php" enctype="multipart/form-data">
-			<div class="form-group space-y-4">
-        <input class="rounded-xl overflow-hidden px-2 py-2 border border-sky-800 w-full" type="text" placeholder="নাম" name='name'>
-        <input class="rounded-xl overflow-hidden px-2 py-2 border border-sky-800 w-full" type="text" placeholder="পদবি" name='podobi'>
-        <input class="rounded-xl overflow-hidden px-2 py-2 border border-sky-800 w-full" type="text" placeholder="মোবাইল নাম্বার" name='mobileno'>
-				<input class="rounded-xl overflow-hidden px-2 border border-sky-800 w-full" type="file" name="uploadfile" value="" />
+			<div class="flex flex-col justify-center items-center space-y-4">
+        <input class="rounded-xl overflow-hidden px-2 py-2 border border-sky-800 w-full" type="text" placeholder="নাম" name='name'  value='<?php echo $name ?>'>
+        <input class="rounded-xl overflow-hidden px-2 py-2 border border-sky-800 w-full" type="text" placeholder="পদবি" name='podobi'  value='<?php echo $podobi ?>'>
+        <input class="rounded-xl overflow-hidden px-2 py-2 border border-sky-800 w-full" type="text" placeholder="মোবাইল নাম্বার" name='mobileno'  value='<?php echo $mobileno ?>'>
+				<input class="rounded-xl overflow-hidden px-2 border border-sky-800 w-full" type="file" name="uploadfile"  value='<?php echo $filename ?>' />
+                <img class="h-60 rounded-lg" src="../../Assets/image/<?php echo $filename ?>">
 			</div>
       <div class="flex gap-3 justify-center items-center w-full mt-3">
         <button class='px-4 md:px-20 py-2.5 cursor-pointer rounded-xl text-white font-semibold text-base bg-sky-800 hover:bg-sky-600 duration-300 transition' value="upload" name="upload" type="submit">Create</button>
-        <a href='./porishodtable.php' class='px-4 md:px-20 py-2.5 cursor-pointer rounded-xl text-white font-semibold text-base bg-green-700 hover:bg-green-600  duration-300 transition flex items-center gap-1'>
+        <a href='' class='px-4 md:px-20 py-2.5 cursor-pointer rounded-xl text-white font-semibold text-base bg-green-700 hover:bg-green-600  duration-300 transition flex items-center gap-1'>
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.66V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h5.34"></path><polygon points="18 2 22 6 12 16 8 16 8 12 18 2"></polygon></svg>    
         Edit</a>
         </div>
 		</form>
      
-
+        <?php
+    
+    ?>
     </div>
 
    
   </div>
-  <img src="../Assets/carousal.png" class="w-full max-w-screen-sm mx-auto rounded shadow-2xl md:w-auto lg:max-w-screen-md" alt="" />
+
 </div>
 
 

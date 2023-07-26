@@ -1,8 +1,4 @@
-<?php
- include '_dbconnect.php';
 
-
-?>
 
 <!doctype html>
 <html>
@@ -46,56 +42,32 @@ include './navbar.php'
 <div class="my-10 px-5">
     <p class="text-center text-3xl font-semibold mb-5">পরিষদ বর্গ</p>
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-5 ">
-        <div class="bg-[#ffffff] drop-shadow-lg flex flex-col max-h-96 items-center rounded-xl overflow-hidden">
-            <p class="bg-primary px-5 py-2 text-lg font-semibold w-full text-white capitalize text-center">secretory</p>
-           <div class="min-h-56">
-           <?php
-        $query = " SELECT * FROM porishodborgo ";
-        $result = mysqli_query($con, $query);
+    <?php
+                    include './_dbconnect.php';
+                    $query = "SELECT * FROM `porishodborgo`";
+                    $poriciti = mysqli_query($con, $query);
+                    
+                    while ($row = mysqli_fetch_assoc($poriciti)) {
+                        $id=$row['id'];
+                    ?>
+  <div class="bg-[#ffffff] drop-shadow-lg flex flex-col max-h-96 items-center rounded-xl overflow-hidden">
+            <p class="bg-primary px-5 py-2 text-lg font-semibold w-full text-white capitalize text-center"><?php echo $row['podobi']; ?></p>
+          
+            <img class="w-full max-h-56  min-h-28" src="./Assets/image/<?php echo $row['filename']; ?>">
  
-        while ($data = mysqli_fetch_assoc($result)) {
-        ?>
-            <img class="w-full " src="./Assets/image/<?php echo $data['filename']; ?>">
  
-        <?php
+           <div class='flex flex-col items-center -space-y-2'>
+           <p class="text-xl capitalize font-semibold px-2 py-2"><?php echo $row['name']; ?></p>
+            <p class="text-md  px-2 py-2"><?php echo $row['mobileno']; ?></p>
+           </div>
+      
+        </div>
+                    <?php
         }
         ?>
-          
-           </div>
-           
-            <p class="text-md font-medium px-2 py-2">Mahsin Ali</p>
-            <p class="text-md font-medium px-2 py-2">01765346543</p>
-        </div>
+      
     
-        <div class="bg-[#ffffff] drop-shadow-lg flex flex-col max-h-96 items-center rounded-xl overflow-hidden">
-            <p class="bg-primary px-5 py-2 text-lg font-semibold w-full text-white capitalize text-center">secretory</p>
-            <img class="max-h-52 min-h-52 w-full" src="Assets/mahsin.png" alt="">
-            <p class="text-md font-medium px-2 py-2">Mahsin Ali</p>
-            <p class="text-md font-medium px-2 py-2">01765346543</p>
-        </div>
-        <div class="bg-[#ffffff] drop-shadow-lg flex flex-col max-h-96 items-center rounded-xl overflow-hidden">
-            <p class="bg-primary px-5 py-2 text-lg font-semibold w-full text-white capitalize text-center">secretory</p>
-            <img class="max-h-52 min-h-52 w-full" src="Assets/রওশনারা.png" alt="">
-            <p class="text-md font-medium px-2 py-2">Mahsin Ali</p>
-            <p class="text-md font-medium px-2 py-2">01765346543</p>
-        </div>
-        <div class="bg-[#ffffff] drop-shadow-lg flex flex-col max-h-96 items-center rounded-xl overflow-hidden">
-            <p class="bg-primary px-5 py-2 text-lg font-semibold w-full text-white capitalize text-center">secretory</p>
-            <img class="max-h-52 min-h-52 w-full" src="Assets/মুক্তিয়ারা.png" alt="">
-            <p class="text-md font-medium px-2 py-2">Mahsin Ali</p>
-            <p class="text-md font-medium px-2 py-2">01765346543</p>
-        </div> <div class="bg-[#ffffff] drop-shadow-lg flex flex-col max-h-96 items-center rounded-xl overflow-hidden">
-            <p class="bg-primary px-5 py-2 text-lg font-semibold w-full text-white capitalize text-center">secretory</p>
-            <img class="max-h-52 min-h-52 w-full" src="Assets/সামসুল.png" alt="">
-            <p class="text-md font-medium px-2 py-2">Mahsin Ali</p>
-            <p class="text-md font-medium px-2 py-2">01765346543</p>
-        </div>
-        <div class="bg-[#ffffff] drop-shadow-lg flex flex-col max-h-96 items-center rounded-xl overflow-hidden">
-            <p class="bg-primary px-5 py-2 text-lg font-semibold w-full text-white capitalize text-center">secretory</p>
-            <img class="max-h-52 min-h-52 w-full" src="Assets/সাগর.png" alt="">
-            <p class="text-md font-medium px-2 py-2">Mahsin Ali</p>
-            <p class="text-md font-medium px-2 py-2">01765346543</p>
-        </div>
+       
        
     </div>
 </div>
