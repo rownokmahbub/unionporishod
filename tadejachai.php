@@ -44,24 +44,26 @@
             <path d="M19 12H6M12 5l-7 7 7 7" />
         </svg>
         Back</a>
-        <p class='text-center text-2xl font-semibold'>নাগরিক ও অনন্য সনদ </p>
+        <p class='text-center text-2xl font-semibold'>টেড এন্ট্রি টেবিল </p>
 <!--hero section-->
 <div class="my-10">
 
 <table id="myTable" class="cell-border display responsive wrap" style="width:100%">
 <thead>
         <tr>
-            <th data-priority="1">সারক নম্বর</th>
+            <th data-priority="1">লাইসেন্স নম্বর</th>
             <th data-priority="1">নাম</th>
             <th data-priority="2">পিতার নাম/স্বামীর নাম</th>
             <th data-priority="2">মাতার নাম</th>
-            <th data-priority="2">গ্রাম</th>
             <th data-priority="2">ওয়ার্ড</th>
-            <th data-priority="2">জন্ম নিবন্ধন নাম্বার </th>
+            <th data-priority="2">জন্মস্থান </th>
+            <th data-priority="2">মেসার্স</th>
+            <th data-priority="2">ব্যবসা ধরন</th>
+            <th data-priority="2">কর</th>
             <th data-priority="2">ভোটার আইডি</th>
             <th data-priority="2">মোবাইল নাম্বার</th>
-            <th data-priority="2">লিঙ্গ</th>
-            <th data-priority="2">ডাকঘর</th>
+            <th data-priority="2">উপজেলা</th>
+            <th data-priority="2">জেলা</th>
             <th data-priority="2">অ্যাকশন</th>
         </tr>
     </thead>
@@ -69,32 +71,33 @@
           
     <?php
                     include './_dbconnect.php';
-                    $query = "SELECT * FROM `nagorik`";
+                    $query = "SELECT * FROM `tadeentry`";
                     $poriciti = mysqli_query($con, $query);
                     
                     while ($row = mysqli_fetch_assoc($poriciti)) {
-                        $id=$row['sarok'];
+                        $id=$row['licence_no'];
                     ?>
                 <tr class="flex flex-col flex-no wrap sm:table-row mb-2 sm:mb-0">
                     
-                    <td class=''><?= $row['sarok'] ?></td>
+                    <td class=''><?= $row['licence_no'] ?></td>
                     <td class=''><?= $row['name'] ?></td>
-                    <td class=''><?= $row['fathername'] ?></td>
-                    <td class=''><?= $row['mothername'] ?></td>
-                    <td class=''><?= $row['gram'] ?></td>
+                    <td class=''><?= $row['father_husband'] ?></td>
+                    <td class=''><?= $row['mother_name'] ?></td>
                     <td class=''><?= $row['word'] ?></td>
-                    <td class=''><?= $row['birthno'] ?></td>
+                    <td class=''><?= $row['bplace'] ?></td>
+                    <td class=''><?= $row['tradename'] ?></td>
+                    <td class=''><?= $row['babsardhoron'] ?></td>
+                    <td class=''><?= $row['kor'] ?></td>
                     <td class=''><?= $row['voterid'] ?></td>
                     <td class=''><?= $row['mobileno'] ?></td>
-                    <td class=''><?= $row['gender'] ?></td>
-                    <td class=''><?= $row['dakghor'] ?></td>
+                    <td class=''><?= $row['upozela'] ?></td>
+                    <td class=''><?= $row['zela'] ?></td>
+                    
                     <td class=''>
                            
-<div class="flex gap-3 justify-center items-center w-full">
-<a  href="sonodreport.php?id=<?php echo $id; ?>" class='px-3 py-2 cursor-pointer rounded-xl text-white text-sm  bg-blue-800 hover:bg-blue-600  duration-300 transition flex items-center gap-1'>
+<div class="flex gap-3 justify-center items-center w-full"><a  href="tadejachaireport.php?id=<?php echo $id; ?>" class='px-3 py-2 cursor-pointer rounded-xl text-white text-sm  bg-blue-800 hover:bg-blue-600  duration-300 transition flex items-center gap-1'>
 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>  
         </a>
-       
         </div>
                     </td>
                     

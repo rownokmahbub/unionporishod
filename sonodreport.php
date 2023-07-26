@@ -18,7 +18,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title> ট্যাক্স ডাটা এন্ট্রি </title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -37,47 +37,54 @@
 
 
 <body class='bg-white mb-10'>
-<div class='px-20 py-20 relative text-lg'>
+<div class='px-20 py-20 relative'>
+    <p class="text-2xl text-center font-semibold">নাগরিক ও অনন্য সনদপত্র যাচাই</p>
 <?php
-                    include '../../_dbconnect.php';
-                    $query = "SELECT * FROM `nagorik`";
-                    $poriciti = mysqli_query($con, $query);
-                    
-                    while ($row = mysqli_fetch_assoc($poriciti)) {
-                        $id=$row['sarok'];
+                   $rid= $result['sarok'];
+                   $name= $result['name'];
+                   $fathername= $result['fathername'];
+                   $mothername= $result['mothername'];
+                   $gram= $result['gram'];
+                   $word= $result['word'];
+                   $birthno= $result['birthno'];
+                   $gender= $result['gender'];
+                   $dakghor= $result['dakghor'];
+                   $voterid= $result['voterid'];
+                   $mobileno= $result['mobileno'];
+                   
                     ?>
-             
+              <input type="hidden" name="hid" value="<?php echo $rid;?>">
 
-<div class="flex justify-between items-center">
-<p class=''>স্মারক নম্বর : <span><?= $row['sarok'] ?></span></p>
+              <div class="flex justify-between items-center">
+<p class=''>স্মারক নম্বর : <span><?= $rid ?></span></p>
 
 <p class=''>তারিখ : ১২/০৩/২৩</p>
 </div>
 <div class="flex justify-between items-start">
-<p>লিঙ্গ : <span><?= $row['gender'] ?></span> </p>
-<p class=''>ওয়ার্ড নম্বর : <span><?= $row['word'] ?></span></p>
+<p>লিঙ্গ : <span><?= $gender ?></span> </p>
+<p class=''>ওয়ার্ড নম্বর : <span><?= $word ?></span></p>
 </div>
 <div class="flex justify-between items-start">
-<p>জন্ম নিবন্ধন নাম্বার : <span><?= $row['birthno'] ?></span> </p>
-<p>ভোটার আইডি : <span><?= $row['voterid'] ?></span> </p>
+<p>জন্ম নিবন্ধন নাম্বার : <span><?= $birthno ?></span> </p>
+<p>ভোটার আইডি : <span><?= $voterid ?></span> </p>
 </div>
 
 <p class="my-2">এই মর্মে নাগরিক সনদ পত্র প্রদান করা যাচ্ছে যে ,</p>
 <div class="flex justify-between items-start">
-<p>নাম : <span><?= $row['name'] ?></span> </p>
+<p>নাম : <span><?= $name ?></span> </p>
 <p>জাতীয়তা  : বাংলাদেশী </p>
 </div>
 <div class="flex justify-between items-start">
-<p>পিতার নাম : <span><?= $row['fathername'] ?></span> </p>
+<p>পিতার নাম : <span><?= $fathername ?></span> </p>
 <p>জাতীয়তা  : বাংলাদেশী </p>
 </div>
 <div class="flex justify-between items-start">
-<p>মাতার নাম : <span><?= $row['mothername'] ?></span> </p>
+<p>মাতার নাম : <span><?= $mothername ?></span> </p>
 <p>জাতীয়তা  : বাংলাদেশী </p>
 </div>
 <div class="flex justify-between items-start">
-<p>গ্রাম : <span><?= $row['gram'] ?></span> </p>
-<p>ডাকঘর : <span><?= $row['dakghor'] ?></span></p>
+<p>গ্রাম : <span><?= $gram ?></span> </p>
+<p>ডাকঘর : <span><?= $dakghor ?></span></p>
 </div>
 
 <p class="text-justify my-2">উপজেলা-চুয়াডাঙ্গা সদর, জেলা-চুয়াডাঙ্গা  কে আমি ব্যাক্তিগত  ভাবে চিনি ও জানি। সে
@@ -89,10 +96,8 @@
            
         </div>
 
-
-
             <?php
-                    }
+                    
 
 
             ?>

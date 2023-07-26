@@ -1,10 +1,4 @@
-<?php
-  session_start();
-  $email = $_SESSION['email'];
-  if($email==null){
-    header('Location:subuser.php'); 
-  }
-?>
+
 <!doctype html>
 <html>
 <head>
@@ -15,9 +9,6 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.6/flowbite.min.css"  rel="stylesheet" />
 
- 
-
-  
  
   
   <script>
@@ -45,7 +36,7 @@
 </head>
 <body class="md:px-10 mx-auto bg-gradient-to-r from-teal-50 to-sky-50">
 	<!-- Navbar goes here -->
-    <a href="./userhome.php" class="text-center mb-3 font-semibold flex gap-3 mt-10 items-center sticky top-0 left-0 w-full ">
+    <a href="./index.php" class="text-center mb-3 font-semibold flex gap-3 mt-10 items-center sticky top-0 left-0 w-full ">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M19 12H6M12 5l-7 7 7 7" />
         </svg>
@@ -155,15 +146,8 @@
                     <td class=''><?= $row['r15'] ?></td>
                     <td class=''>
                            
-<div class="flex gap-3 justify-center items-center w-full">
-<a  href="waresabedonreport.php?id=<?php echo $id; ?>" class='px-3 py-2 cursor-pointer rounded-xl text-white text-sm  bg-purple-700 hover:bg-purple-600  duration-300 transition flex items-center gap-1'>
-<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fefefe" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>   
-        </a>
-        <a href='waresedit.php?id=<?php echo $id; ?>' class='px-3 py-2 cursor-pointer rounded-xl text-white text-sm  bg-green-700 hover:bg-green-600  duration-300 transition flex items-center gap-1'>
-        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.66V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h5.34"></path><polygon points="18 2 22 6 12 16 8 16 8 12 18 2"></polygon></svg>    
-        </a>
-        <a href='edit/homeedit.php' class='px-3 py-2 cursor-pointer rounded-xl text-white text-sm  bg-red-700 hover:bg-red-600  duration-300 transition flex items-center gap-1'>
-        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fefefe" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>  
+<div class="flex gap-3 justify-center items-center w-full"><a  href="waresreport.php?id=<?php echo $id; ?>" class='px-3 py-2 cursor-pointer rounded-xl text-white text-sm  bg-blue-800 hover:bg-blue-600  duration-300 transition flex items-center gap-1'>
+<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>  
         </a>
         </div>
                     </td>

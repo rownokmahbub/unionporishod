@@ -73,7 +73,10 @@
                     <a href="sonodjachai.php" class="block px-4 py-2 hover:bg-primary hover:text-white ">সনদ যাচাই</a>
                   </li>
                   <li>
-                    <a href="#" class="block px-4 py-2 hover:bg-primary hover:text-white ">বাজেট</a>
+                    <a href="tadejachai.php" class="block px-4 py-2 hover:bg-primary hover:text-white ">টেড যাচাই</a>
+                  </li>
+                  <li>
+                    <a href="waresjachai.php" class="block px-4 py-2 hover:bg-primary hover:text-white ">ওয়ারেশ যাচাই</a>
                   </li>
                   <li>
                     <a href="#" class="block px-4 py-2 hover:bg-primary hover:text-white ">ভিজিডি তালিকা</a>
