@@ -4,7 +4,7 @@ include './_dbconnect.php';
     if (isset($_REQUEST['id'])) {
         $rid=$_REQUEST['id'];
         
-        $query="SELECT * FROM `tadeentry` WHERE licence_no=$rid";
+        $query="SELECT * FROM `tadeentry` WHERE id=$rid";
         $poriciti=mysqli_query($con,$query);
         $result=mysqli_fetch_array($poriciti);
        
@@ -57,7 +57,7 @@ include './_dbconnect.php';
     $word= $result['word'];
     $bplace= $result['bplace'];
     $tradename= $result['tradename'];
-    $babsardhoron= $result['babsardhoron'];
+    $babsardhoron= $result['babshardhoron'];
     $kor= $result['kor'];
     $mobileno= $result['mobileno'];
     $voterid= $result['voterid'];

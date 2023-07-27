@@ -32,7 +32,7 @@
 
 
 <body>
-<div class="flex px-5 md:px-20 py-5  justify-between gap-5 items-center bg-slate-300 ">
+<div class="flex px-5 md:px-20 py-5  justify-center md:h-screen gap-5 items-center bg-slate-300 ">
 
 
 

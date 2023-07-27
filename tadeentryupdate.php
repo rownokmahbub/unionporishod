@@ -24,7 +24,7 @@
 
 
      
-       $sql = "UPDATE `tadeentry` SET `licence_no`='$licence',`name`='$name',`father_husband`='$fname',`mother_name`='$mname',`word`='$ward',`bplace`='$bplace',`tradename`='$tradename',`babsardhoron`='$bdhoron',`kor`='$kor',`voterid`='$vid',`mobileno`='$mnum',`upozela`='$upozela',`zela`='$zela' WHERE `licence_no`=$licence";;
+       $sql = "UPDATE `tadeentry` SET `licence_no`='$licence',`name`='$name',`father_husband`='$fname',`mother_name`='$mname',`word`='$ward',`bplace`='$bplace',`tradename`='$tradename',`babshardhoron`='$bdhoron',`kor`='$kor',`voterid`='$vid',`mobileno`='$mnum',`upozela`='$upozela',`zela`='$zela' WHERE `licence_no`=$licence";;
        print_r(error_get_last());
   
    if(mysqli_query($con, $sql)){

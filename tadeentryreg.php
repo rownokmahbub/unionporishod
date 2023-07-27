@@ -23,7 +23,7 @@
 
 
      
-       $sql = "INSERT INTO `tadeentry`(`licence_no`, `name`, `father_husband`, `mother_name`, `word`, `bplace`, `tradename`, `babsardhoron`, `kor`, `voterid`,`mobileno`,`upozela`,`zela`)  VALUES ('$licence','$name','$fname','$mname','$ward','$bplace','$tradename','$bdhoron','$kor','$vid','$mnum','$upozela','$zela')";
+       $sql = "INSERT INTO  `tadeentry`(`licence_no`, `name`, `father_husband`, `mother_name`, `word`, `bplace`, `tradename`, `babshardhoron`, `kor`, `voterid`, `mobileno`, `upozela`, `zela`)  VALUES ('$licence','$name','$fname','$mname','$ward','$bplace','$tradename','$bdhoron','$kor','$vid','$mnum','$upozela','$zela')";
        print_r(error_get_last());
   
    if(mysqli_query($con, $sql)){

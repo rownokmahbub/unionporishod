@@ -58,17 +58,14 @@
 
               <div class="flex justify-between items-center">
 <p class=''>লাইসেন্স নম্বর : <span><?= $rid ?></span></p>
+<p>ভোটার আইডি : <span><?= $voterid ?></span> </p>
 
-<p class=''>তারিখ : ১২/০৩/২৩</p>
 </div>
 <div class="flex justify-between items-start">
 <p>প্রতিষ্ঠানের নাম: <span><?= $tradename ?></span> </p>
 <p class=''>ওয়ার্ড নম্বর : <span><?= $word ?></span></p>
 </div>
-<div class="flex justify-between items-start">
-<p>জন্ম নিবন্ধন নাম্বার : <span><?= $birthno ?></span> </p>
-<p>ভোটার আইডি : <span><?= $voterid ?></span> </p>
-</div>
+
 
 <div class="flex justify-between items-start">
 <p>প্রোপাইটার : <span><?= $name ?></span> </p>

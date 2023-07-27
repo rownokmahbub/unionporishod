@@ -3,7 +3,7 @@
   if (isset($_REQUEST['id'])) {
     $rid=$_REQUEST['id'];
     
-    $query="SELECT * FROM `tadeentry` WHERE licence_no=$rid";
+    $query="SELECT * FROM `tadeentry` WHERE id=$rid";
     $poriciti=mysqli_query($con,$query);
     $result=mysqli_fetch_array($poriciti);
    
@@ -46,7 +46,7 @@
                    $bplace= $result['bplace'];
                    $word= $result['word'];
                    $tradename= $result['tradename'];
-                   $babsardhoron= $result['babsardhoron'];
+                   $babsardhoron= $result['babshardhoron'];
                    $upozela= $result['upozela'];
                    $zela= $result['zela'];
                    $voterid= $result['voterid'];

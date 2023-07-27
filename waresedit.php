@@ -2,9 +2,9 @@
 include './_dbconnect.php';
 
     if (isset($_REQUEST['id'])) {
-        $rid=$_REQUEST['id'];
+        $id=$_REQUEST['id'];
         
-        $query="SELECT * FROM `wares` WHERE sarok=$rid";
+        $query="SELECT * FROM `wares` WHERE id=$id";
         $poriciti=mysqli_query($con,$query);
         $result=mysqli_fetch_array($poriciti);
        
@@ -44,7 +44,7 @@ include './_dbconnect.php';
   <div class="px-10 py-10 bg-slate-100 mx-auto w-full rounded-xl">
 
     <?php
-     $rid= $result['sarok'];
+     $sarok= $result['sarok'];
      $name= $result['name'];
      $fathername= $result['fathername'];
      $mothername= $result['mothername'];
@@ -96,8 +96,8 @@ include './_dbconnect.php';
       <form action="waresupdate.php" method="POST">
         <div class="space-y-4">
           <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-5">
-           
-            <input class='px-2 py-2 bg-white border border-gray-300 rounded-xl w-full focus:outline-blue-400' type="text" name="sarok" placeholder='সারক নম্বর'  value="<?php echo $rid;?>">
+          <input type="hidden" name="id" value="<?php echo $id;?>">
+            <input class='px-2 py-2 bg-white border border-gray-300 rounded-xl w-full focus:outline-blue-400' type="text" name="sarok" placeholder='সারক নম্বর'  value="<?php echo $sarok;?>">
             <input class='px-2 py-2 bg-white border border-gray-300 rounded-xl w-full focus:outline-blue-400' type="text" name="name" placeholder='নাম'  value="<?php echo $name;?>">
             <input class='px-2 py-2 bg-white border border-gray-300 rounded-xl w-full focus:outline-blue-400' type="text" name="fname" placeholder='পিতার নাম'  value="<?php echo $fathername;?>">
             <input class='px-2 py-2 bg-white border border-gray-300 rounded-xl w-full focus:outline-blue-400' type="text" name="mname" placeholder='মাতার নাম'  value="<?php echo $mothername;?>">

@@ -86,7 +86,7 @@
                     <td class=''><?= $row['word'] ?></td>
                     <td class=''><?= $row['bplace'] ?></td>
                     <td class=''><?= $row['tradename'] ?></td>
-                    <td class=''><?= $row['babsardhoron'] ?></td>
+                    <td class=''><?= $row['babshardhoron'] ?></td>
                     <td class=''><?= $row['kor'] ?></td>
                     <td class=''><?= $row['voterid'] ?></td>
                     <td class=''><?= $row['mobileno'] ?></td>

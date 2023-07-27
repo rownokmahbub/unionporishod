@@ -81,7 +81,7 @@
                     $poriciti = mysqli_query($con, $query);
                     
                     while ($row = mysqli_fetch_assoc($poriciti)) {
-                        $id=$row['licence_no'];
+                        $id=$row['id'];
                     ?>
                 <tr class="flex flex-col flex-no wrap sm:table-row mb-2 sm:mb-0">
                     
@@ -92,7 +92,7 @@
                     <td class=''><?= $row['word'] ?></td>
                     <td class=''><?= $row['bplace'] ?></td>
                     <td class=''><?= $row['tradename'] ?></td>
-                    <td class=''><?= $row['babsardhoron'] ?></td>
+                    <td class=''><?= $row['babshardhoron'] ?></td>
                     <td class=''><?= $row['kor'] ?></td>
                     <td class=''><?= $row['voterid'] ?></td>
                     <td class=''><?= $row['mobileno'] ?></td>
