@@ -61,8 +61,9 @@ $podobi= $result['podobi'];
 $mobileno= $result['mobileno'];
 $filename= $result['filename'];
 ?>
-      <form method="POST" action="porishodborgo.php" enctype="multipart/form-data">
+      <form method="POST" action="porishodupdate.php" enctype="multipart/form-data">
 			<div class="flex flex-col justify-center items-center space-y-4">
+      <input type="hidden" name="id" value="<?php echo $kid;?>">
         <input class="rounded-xl overflow-hidden px-2 py-2 border border-sky-800 w-full" type="text" placeholder="নাম" name='name'  value='<?php echo $name ?>'>
         <input class="rounded-xl overflow-hidden px-2 py-2 border border-sky-800 w-full" type="text" placeholder="পদবি" name='podobi'  value='<?php echo $podobi ?>'>
         <input class="rounded-xl overflow-hidden px-2 py-2 border border-sky-800 w-full" type="text" placeholder="মোবাইল নাম্বার" name='mobileno'  value='<?php echo $mobileno ?>'>
