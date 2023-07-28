@@ -3,7 +3,7 @@
   if (isset($_REQUEST['id'])) {
     $rid=$_REQUEST['id'];
     
-    $query="SELECT * FROM `nagorik` WHERE sarok=$rid";
+    $query="SELECT * FROM `nagorik` WHERE id=$rid";
     $poriciti=mysqli_query($con,$query);
     $result=mysqli_fetch_array($poriciti);
    

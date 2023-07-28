@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jul 28, 2023 at 03:50 PM
+-- Generation Time: Jul 28, 2023 at 05:44 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -69,7 +69,7 @@ CREATE TABLE `boyoskovata` (
 --
 
 INSERT INTO `boyoskovata` (`id`, `slno`, `name`, `fatherhusband`, `mothername`, `gram`, `word`, `voterid`, `montobbo`) VALUES
-(1, '1', 'rownok', 'mahsin ali', 'rakha', 'সোনাতনপুর', '৬', '34234534556', '');
+(4, '1', 'rownok', 'mahsin ali', 'rakha', 'চাঁদপুর', '৪', '34234534556', 'fdfdf');
 
 -- --------------------------------------------------------
 
@@ -109,7 +109,10 @@ CREATE TABLE `log` (
 INSERT INTO `log` (`id`, `email`, `activity`, `time`) VALUES
 (129, 'rownok2001@gmail.com', 'Log Out', '2023-07-28 10:54:02'),
 (130, 'rownok2001@gmail.com', 'Log Out', '2023-07-28 10:56:14'),
-(131, 'rownok2001@gmail.com', 'Log Out', '2023-07-28 13:44:18');
+(131, 'rownok2001@gmail.com', 'Log Out', '2023-07-28 13:44:18'),
+(132, 'rownok2001@gmail.com', 'Log Out', '2023-07-28 13:58:39'),
+(133, 'rownok2001@gmail.com', 'Log Out', '2023-07-28 14:08:48'),
+(134, 'rownok2001@gmail.com', 'Log Out', '2023-07-28 14:46:15');
 
 -- --------------------------------------------------------
 
@@ -134,7 +137,7 @@ CREATE TABLE `masisuvata` (
 --
 
 INSERT INTO `masisuvata` (`id`, `slno`, `name`, `fatherhusband`, `mothername`, `gram`, `word`, `voterid`, `montobbo`) VALUES
-(1, '1', 'rownok', 'mahsin ali', 'rakha', 'জেহালা', '১', '3343454', 'ase');
+(2, '1', 'rownok', 'mahsin ali', 'rakha', '৬২ নং আড়িয়া', '৪', '34234534556', 'fdfdf');
 
 -- --------------------------------------------------------
 
@@ -162,7 +165,8 @@ CREATE TABLE `nagorik` (
 --
 
 INSERT INTO `nagorik` (`id`, `sarok`, `name`, `fathername`, `mothername`, `gram`, `word`, `birthno`, `voterid`, `mobileno`, `gender`, `dakghor`) VALUES
-(2, '10001', 'neaz', 'ramdnbf', 'fgfgfg', 'হৈদেরপুর', '৯', '23324344', '৩৩৪৫৫৩২৫৪৩', '34453432432454', 'পুরুষ', 'জেহালা');
+(3, '10002', 'rownok', 'rajjak', 'fgfgfg', 'নুরুল্লাপুর', '৫', '23324344', '34234534556', '01273483465', 'নারী', 'নুরুল্লাপুর'),
+(4, '10004', 'rownok', 'mahsin ali', 'rakha', 'বড়শলুয়া', '৩', '23324344', '34234534556', '34453432432454', 'নারী', '৬৩ নং আড়িয়া');
 
 -- --------------------------------------------------------
 
@@ -190,20 +194,11 @@ INSERT INTO `notice` (`id`, `notice`) VALUES
 
 CREATE TABLE `porishodborgo` (
   `id` int(11) NOT NULL,
-  `name` varchar(255) NOT NULL,
-  `podobi` varchar(255) NOT NULL,
-  `mobileno` varchar(255) NOT NULL,
-  `filename` varchar(100) DEFAULT NULL
+  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `podobi` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `mobileno` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `filename` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
-
---
--- Dumping data for table `porishodborgo`
---
-
-INSERT INTO `porishodborgo` (`id`, `name`, `podobi`, `mobileno`, `filename`) VALUES
-(21, 'sukur ali', 'chainman', '076345654', '1 2.jpg'),
-(20, 'rownok', 'secretory', '0172663344', 'MA.jpg'),
-(22, 'rouson ara', 'member', '0172663344', '2 2.jpg');
 
 -- --------------------------------------------------------
 
@@ -228,7 +223,7 @@ CREATE TABLE `protibondhivata` (
 --
 
 INSERT INTO `protibondhivata` (`id`, `slno`, `name`, `fatherhusband`, `mothername`, `gram`, `word`, `voterid`, `montobbo`) VALUES
-(1, '1', 'rownok ali', 'মহসিন আলী ', 'রেক্সনা পারভিন ', 'সোনাতনপুর', '৫', '34234534556', 'nai');
+(2, '1', 'rownok', 'ramdnbf', 'rakha', '৬২ নং আড়িয়া', '৬', '34234534556', 'fdfdf');
 
 -- --------------------------------------------------------
 
@@ -316,8 +311,7 @@ CREATE TABLE `shikkhaprotisthan` (
 
 INSERT INTO `shikkhaprotisthan` (`id`, `sname`, `sdhoron`) VALUES
 (6, 'বরসলুয়া নিউ মডেল ডিগ্রি', 'কলেজ'),
-(7, 'তিতুদহ বেসরকারি মাধ্যমিক বিদ্যালয় ', 'মাধ্যমিক বিদ্যালয়'),
-(8, 'গ্রিসনগর নিম্ন মাধ্যমিক বিদ্যালয় ', 'নিম্ন মাধ্যমিক বিদ্যালয়');
+(7, 'তিতুদহ বেসরকারি মাধ্যমিক বিদ্যালয় ', 'মাধ্যমিক বিদ্যালয়');
 
 -- --------------------------------------------------------
 
@@ -395,7 +389,6 @@ CREATE TABLE `taxentry` (
 --
 
 INSERT INTO `taxentry` (`id`, `holdingno`, `name`, `fatherhusband`, `gram`, `ward`, `housetype`, `roomno`, `totaltax`, `voterid`) VALUES
-(2, '1001', 'rownok', 'mahsin ali', 'হৈদেরপুর', '৫', 'paka', '2', '346', '34453432432454'),
 (5, '1002', 'rabeya', 'kamal', '৬২ নং আড়িয়া', '৪', 'paka', '2', '644', '34453432432454');
 
 -- --------------------------------------------------------
@@ -463,8 +456,7 @@ CREATE TABLE `upprotisthan` (
 
 INSERT INTO `upprotisthan` (`id`, `name`, `pdhoron`) VALUES
 (2, 'তিতুদহ বিশ্বাস পাড়া জামে মসজিদ ', 'ডাকঘর'),
-(3, 'তিতুদহ বড় বাজার ', 'মসজিদ'),
-(4, 'তিতুদহ আবাসিক', 'ভূমি অফিস');
+(3, 'তিতুদহ বড় বাজার ', 'মসজিদ');
 
 -- --------------------------------------------------------
 
@@ -543,7 +535,7 @@ CREATE TABLE `wares` (
 --
 
 INSERT INTO `wares` (`id`, `sarok`, `name`, `fathername`, `mothername`, `gram`, `word`, `deathno`, `voterid`, `mobileno`, `aname`, `w1`, `w2`, `w3`, `w4`, `w5`, `w6`, `w7`, `w8`, `w9`, `w10`, `w11`, `w12`, `w13`, `w14`, `w15`, `r1`, `r2`, `r3`, `r4`, `r5`, `r6`, `r7`, `r8`, `r9`, `r10`, `r11`, `r12`, `r13`, `r14`, `r15`) VALUES
-(1, '1001', 'rownok', 'mahsin ali', 'rakha', 'জেহালা বাজার', '৩', '23324344', '34234534556', '34453432432454', 'rownok', 'রাব্বু ', 'রাবিয়ের ', '', '', '', '', '', '', '', '', '', '', '', '', '', 'পিতা ', 'কন্যা ', '', '', '', '', '', '', '', '', '', '', '', '', '');
+(2, '10001', 'rownok', 'mahsin ali', 'rakha', '৬২ নং আড়িয়া', '৩', '23324344', '৩৩৪৫৫৩২৫৪৩', '34453432432454', 'রাহমান ', 'রাব্বু ', 'রাবিয়ের ', 'এইচ ', '', '', '', '', '', '', '', '', '', '', '', '', 'পিতা ', 'কন্যা ', 'ইফজেএফ ', '', '', '', '', '', '', '', '', '', '', '', '');
 
 --
 -- Indexes for dumped tables
@@ -691,13 +683,13 @@ ALTER TABLE `wares`
 -- AUTO_INCREMENT for table `bidhobavata`
 --
 ALTER TABLE `bidhobavata`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `boyoskovata`
 --
 ALTER TABLE `boyoskovata`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `khobor`
@@ -709,19 +701,19 @@ ALTER TABLE `khobor`
 -- AUTO_INCREMENT for table `log`
 --
 ALTER TABLE `log`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=132;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=135;
 
 --
 -- AUTO_INCREMENT for table `masisuvata`
 --
 ALTER TABLE `masisuvata`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `nagorik`
 --
 ALTER TABLE `nagorik`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `notice`
@@ -733,13 +725,13 @@ ALTER TABLE `notice`
 -- AUTO_INCREMENT for table `porishodborgo`
 --
 ALTER TABLE `porishodborgo`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT for table `protibondhivata`
 --
 ALTER TABLE `protibondhivata`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `sebarmullo`
@@ -775,7 +767,7 @@ ALTER TABLE `subuser`
 -- AUTO_INCREMENT for table `tadeentry`
 --
 ALTER TABLE `tadeentry`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `taxentry`
@@ -811,7 +803,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `wares`
 --
 ALTER TABLE `wares`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

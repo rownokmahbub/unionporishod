@@ -6,10 +6,10 @@ include './_dbconnect.php';
         $id = $_REQUEST['id'];
       
         
-        $delete="DELETE FROM `taxentry` WHERE `id`='$id'";
+        $delete="DELETE FROM `wares` WHERE `id`='$id'";
         $query=mysqli_query($con,$delete);
         if($query){
-            header("location:./taxentrytable.php");
+            header("location:./warestable.php");
         }
     
 ?>

@@ -96,19 +96,19 @@
 
               </select>
           </div>
-
+    
           <select class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full focus:outline-blue-400" name="dakghor">
-                <option value="জেহালা" class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">জেহালা</option>
-                <option value="মাদাহুদা" class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full"> মাদাহুদা</option>
-                <option value="রোয়াকুলি" class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">রোয়াকুলি</option>
-                <option value="জেহালা বাজার" class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">জেহালা বাজার</option>
-                <option value="সোনাতনপুর" class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">সোনাতনপুর</option>
-                <option value="হৈদেরপুর" class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">হৈদেরপুর</option>
-                <option value="গড়গড়ী" class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">গড়গড়ী</option>
-                <option value="দক্ষিণ গোবিন্দপুর" class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">দক্ষিণ গোবিন্দপুর</option>
-                <option value="খুদিয়াখালী" class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full"> খুদিয়াখালী</option>
-                <option value="পূর্ব কমলাপুর" class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">পূর্ব কমলাপুর</option>
-                <option value="বেতবাড়িয়া" class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">বেতবাড়িয়া</option>
+                <option value="ছোটশলুয়া" class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">ছোটশলুয়া</option>
+                <option value="বলদিয়া" class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full"> বলদিয়া</option>
+                <option value="বড়শলুয়া" class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">বড়শলুয়া</option>
+                <option value="৬২ নং আড়িয়া" class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">৬২ নং আড়িয়া</option>
+                <option value="৬৩ নং আড়িয়া" class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">৬৩ নং আড়িয়া</option>
+                <option value="চাঁদপুর" class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">চাঁদপুর</option>
+                <option value="আড়িয়ারচক" class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">আড়িয়ারচক</option>
+                <option value="নুরুল্লাপুর" class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">নুরুল্লাপুর</option>
+                <option value="গিরিশনগর" class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full"> গিরিশনগর</option>
+                <option value="তিতুদহ" class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">তিতুদহ</option>
+                
                
 
               </select>
