@@ -24,7 +24,7 @@ if (isset($_POST['upload'])) {
     }
     
     $run_update=mysqli_query($con, $sql);
-	header("Location:../porishodtable.php");
+	header("Location:../edit/porishodtable.php");
 	// $sql = "UPDATE `porishodborgo` SET `name`='$name',`podobi`='$podobi',`mobileno`='$mobileno',`filename`='$filename' WHERE `id`=$id";
 
 	
