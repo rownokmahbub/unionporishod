@@ -38,7 +38,7 @@
             </defs>
             <rect fill="url(#192913ce-1f29-4abd-b545-0fbccfd2b0ec)" width="52" height="24"></rect>
           </svg>
-          Create Or Edit Your Up Carousal Here
+         পরিষদ বর্গ অ্যাড করুন 
       </h2>
       <form method="POST" action="porishodborgo.php" enctype="multipart/form-data">
 			<div class="form-group space-y-4">

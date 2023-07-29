@@ -26,8 +26,8 @@ if ($email == null) {
 <body class="md:px-32 mx-auto bg-gradient-to-r from-indigo-50 via-purple-50 to-pink-50">
   <div class="flex flex-col md:flex-row px-5 justify-between items-center md:h-screen">
     <div class="space-y-2">
-      <p class='text-4xl font-semibold leading-snug'>Welcome Dear Sir/Maa'm <br> To Your Admin Panel</p>
-      <p class='m'>Here you can update your file and website easily</p>
+      <p class='text-4xl font-semibold leading-snug'>অ্যাডমিন ড্যাশবোর্ড এ আপনাকে স্বাগতম</p>
+     
       <form action="logout.php">
 
         <a href='createuser.php' class='px-4 py-2.5 cursor-pointer rounded-full text-white font-semibold text-base bg-sky-800 hover:bg-sky-600  duration-300 transition'> Create User</a>
