@@ -2,8 +2,8 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Jul 29, 2023 at 03:05 AM
+-- Host: 127.0.0.1
+-- Generation Time: Jul 29, 2023 at 04:57 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -112,7 +112,9 @@ INSERT INTO `log` (`id`, `email`, `activity`, `time`) VALUES
 (131, 'rownok2001@gmail.com', 'Log Out', '2023-07-28 13:44:18'),
 (132, 'rownok2001@gmail.com', 'Log Out', '2023-07-28 13:58:39'),
 (133, 'rownok2001@gmail.com', 'Log Out', '2023-07-28 14:08:48'),
-(134, 'rownok2001@gmail.com', 'Log Out', '2023-07-28 14:46:15');
+(134, 'rownok2001@gmail.com', 'Log Out', '2023-07-28 14:46:15'),
+(135, 'rownok2001@gmail.com', 'Log Out', '2023-07-29 01:09:04'),
+(136, 'rownok2001@gmail.com', 'Log Out', '2023-07-29 01:46:00');
 
 -- --------------------------------------------------------
 
@@ -194,12 +196,32 @@ INSERT INTO `notice` (`id`, `notice`) VALUES
 
 CREATE TABLE `porishodborgo` (
   `id` int(11) NOT NULL,
-  `slno` varchar(255) NOT NULL,
+  `slno` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `podobi` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `mobileno` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `filename` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--
+-- Dumping data for table `porishodborgo`
+--
+
+INSERT INTO `porishodborgo` (`id`, `slno`, `name`, `podobi`, `mobileno`, `filename`) VALUES
+(58, '৯', 'সামসুল আলম', 'সাধারন আসন-৪', '০১৯৯৬২৮৪৭০', '8.jpg'),
+(56, '৮', 'মোঃ আহাদ আলী মল্লিক', 'সাধারন আসন-৩', '০১৭৩৮০২১৭৭৮', '7.jpg'),
+(49, '১', 'মোঃ শুকুর আলী', 'চেয়ারম্যান', '০১৭৩৬৫৭৮৯৭০', 'Chairman.png'),
+(50, '২', 'মোঃ মহাসীন আলী', 'সচিব', '০১৯৪০৫৩৮১৭৬', 'mahsin.jpg'),
+(51, '৩', 'মোছাঃ রওশনারা বেগম', 'সংরক্ষিত আসন-১', '০১৯২৫৫৯৯৭১৫', '2 2.jpg'),
+(52, '৪', 'মোছাঃ চাম্পা বেগম', 'সংরক্ষিত আসন-২', '০১৯৬২৬৪৫৩২৮', '3 2.jpg'),
+(53, '৫', 'মোছাঃ মুক্তিয়ারা বেগম', 'সংরক্ষিত আসন-৩', '০১৯১৬৬১৯০৩২', '4.jpg'),
+(54, '৬', 'মোঃ মুকুল হোসেন', 'সাধারন আসন-১', '০১৩২১৪৮৭২৫৫', '5.jpg'),
+(55, '৭', 'মোঃ জাহাঙ্গীর আলম', 'সাধারন আসন-২', '০১৯২০২৫৭৫৫২', '6.jpg'),
+(59, '১০', 'মো কাছেদ আলী', 'সাধারন আসন-৫', '০১৯২৫৫৯৯৭১৫', '100.jpg'),
+(60, '১১', 'মোঃ শমসের আলী', 'সাধারন আসন-৬', '০১৯১৫৭২৫৮৩৯', '99.jpg'),
+(61, '১২', 'মোঃ রিপন আলী লস্কর', 'সাধারন আসন-৭', '০১৭১৯৭৬৬২৯৭', '111.jpg'),
+(62, '১৩', 'মোঃ তসলিমুজ্জামান', 'সাধারন আসন-৮', '০১৭১৬৮৮৭৫০৫', '121.jpg'),
+(63, '১৪', 'মোঃ কালাম উদ্দীন', 'সাধারন আসন-৯', '০১৯৮৫৮০৮৭৩০', '131.jpg');
 
 -- --------------------------------------------------------
 
@@ -593,7 +615,7 @@ ALTER TABLE `notice`
 --
 ALTER TABLE `porishodborgo`
   ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `slno` (`slno`);
+  ADD UNIQUE KEY `slno` (`slno`) USING HASH;
 
 --
 -- Indexes for table `protibondhivata`
@@ -703,7 +725,7 @@ ALTER TABLE `khobor`
 -- AUTO_INCREMENT for table `log`
 --
 ALTER TABLE `log`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=135;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=137;
 
 --
 -- AUTO_INCREMENT for table `masisuvata`
@@ -727,7 +749,7 @@ ALTER TABLE `notice`
 -- AUTO_INCREMENT for table `porishodborgo`
 --
 ALTER TABLE `porishodborgo`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=64;
 
 --
 -- AUTO_INCREMENT for table `protibondhivata`
