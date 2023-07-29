@@ -60,8 +60,8 @@ include './navbar.php'
            <div class='flex flex-col items-center -space-y-1'>
            
            <div class='flex items-center gap-2 mt-1'>
-           <p class="text-xl capitalize font-semibold "><?php echo $row['slno']; ?></p>
-           <p class="text-xl capitalize font-semibold "><?php echo $row['name']; ?></p>
+           <p class="text-md capitalize font-semibold "><?php echo $row['slno']; ?></p>
+           <p class="text-md capitalize font-semibold "><?php echo $row['name']; ?></p>
            </div>
   
             <p class="text-md  px-2 py-2"><?php echo $row['mobileno']; ?></p>
