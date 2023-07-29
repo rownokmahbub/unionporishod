@@ -55,7 +55,7 @@
                     <a href="porishodborgo.php" class="block px-4 py-2 hover:bg-primary hover:text-white ">পরিষদ বর্গ</a>
                   </li>
                   <li>
-                    <a href="kormokortaborgo.php" class="block px-4 py-2 hover:bg-primary hover:text-white ">কর্মকর্তা বর্গ</a>
+                    <a href="kormokortaborgo.php" class="block px-4 py-2 hover:bg-primary hover:text-white ">কর্মকর্তা বর্গ ও কর্মচারী</a>
                   </li>
                   <li>
                     <a href="#" class="block px-4 py-2 hover:bg-primary hover:text-white ">ভিডিও</a>

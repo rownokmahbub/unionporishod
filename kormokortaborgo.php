@@ -1,3 +1,5 @@
+
+
 <!doctype html>
 <html>
 <head>
@@ -34,48 +36,44 @@
 <body class="md:px-32 mx-auto bg-gradient-to-r from-teal-50 to-sky-50">
 	<!-- Navbar goes here -->
   <?php
-  include './navbar.php'
-  ?>
+include './navbar.php'
+?>
 <!--hero section-->
 <div class="my-10 px-5">
-    <p class="text-center text-3xl font-semibold mb-5">কর্মকর্তা কর্মচারী</p>
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 xl:grid-cols-5 GA-5 md:gap-12 ">
-        <div class="bg-[#ffffff] drop-shadow-lg flex flex-col justify-center items-center rounded-xl overflow-hidden">
-            <p class="bg-primary px-5 py-2 text-lg font-semibold w-full text-white capitalize text-center">secretory</p>
-            <img class="max-h-60 w-full" src="Assets/Chairman.png" alt="">
-            <p class="text-md font-medium px-2 py-2">Mahsin Ali</p>
-            <p class="text-md font-medium px-2 py-2">01765346543</p>
+    <p class="text-center text-3xl font-semibold mb-5">কর্মকর্তা  ও কর্মচারী বর্গ</p>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-5 ">
+    <?php
+                    include './_dbconnect.php';
+                    $query = "SELECT * FROM `kormokortaborgo` ORDER BY `id` ASC";
+                    $poriciti = mysqli_query($con, $query);
+                    
+                    while ($row = mysqli_fetch_assoc($poriciti)) {
+                        $id=$row['slno'];
+                        
+                    ?>
+  <div class="bg-[#ffffff] drop-shadow-lg flex flex-col max-h-96 items-center rounded-xl overflow-hidden">
+            <p class="bg-primary px-5 py-2 text-lg font-semibold w-full text-white capitalize text-center"><?php echo $row['podobi']; ?></p>
+          
+            <img class="w-full max-h-56  min-h-28" src="./Assets/image/<?php echo $row['filename']; ?>">
+ 
+ 
+           <div class='flex flex-col items-center -space-y-1'>
+           
+         
+           
+           <p class="text-sm capitalize font-semibold mt-3"><?php echo $row['name']; ?></p>
+         
+  
+            <p class="text-sm  px-2 py-2"><?php echo $row['mobileno']; ?></p>
+           </div>
+      
         </div>
+                    <?php
+        }
+        ?>
+      
     
-        <div class="bg-[#ffffff] drop-shadow-lg flex flex-col justify-center items-center rounded-xl overflow-hidden">
-            <p class="bg-primary px-5 py-2 text-lg font-semibold w-full text-white capitalize text-center">secretory</p>
-            <img class="max-h-60 w-full" src="Assets/mahsin.png" alt="">
-            <p class="text-md font-medium px-2 py-2">Mahsin Ali</p>
-            <p class="text-md font-medium px-2 py-2">01765346543</p>
-        </div>
-        <div class="bg-[#ffffff] drop-shadow-lg flex flex-col justify-center items-center rounded-xl overflow-hidden">
-            <p class="bg-primary px-5 py-2 text-lg font-semibold w-full text-white capitalize text-center">secretory</p>
-            <img class="max-h-60 w-full" src="Assets/রওশনারা.png" alt="">
-            <p class="text-md font-medium px-2 py-2">Mahsin Ali</p>
-            <p class="text-md font-medium px-2 py-2">01765346543</p>
-        </div>
-        <div class="bg-[#ffffff] drop-shadow-lg flex flex-col justify-center items-center rounded-xl overflow-hidden">
-            <p class="bg-primary px-5 py-2 text-lg font-semibold w-full text-white capitalize text-center">secretory</p>
-            <img class="max-h-60 w-full" src="Assets/মুক্তিয়ারা.png" alt="">
-            <p class="text-md font-medium px-2 py-2">Mahsin Ali</p>
-            <p class="text-md font-medium px-2 py-2">01765346543</p>
-        </div> <div class="bg-[#ffffff] drop-shadow-lg flex flex-col justify-center items-center rounded-xl overflow-hidden">
-            <p class="bg-primary px-5 py-2 text-lg font-semibold w-full text-white capitalize text-center">secretory</p>
-            <img class="max-h-60 w-full" src="Assets/সামসুল.png" alt="">
-            <p class="text-md font-medium px-2 py-2">Mahsin Ali</p>
-            <p class="text-md font-medium px-2 py-2">01765346543</p>
-        </div>
-        <div class="bg-[#ffffff] drop-shadow-lg flex flex-col justify-center items-center rounded-xl overflow-hidden">
-            <p class="bg-primary px-5 py-2 text-lg font-semibold w-full text-white capitalize text-center">secretory</p>
-            <img class="max-h-60 w-full" src="Assets/সাগর.png" alt="">
-            <p class="text-md font-medium px-2 py-2">Mahsin Ali</p>
-            <p class="text-md font-medium px-2 py-2">01765346543</p>
-        </div>
+       
        
     </div>
 </div>
