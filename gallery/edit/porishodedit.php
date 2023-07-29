@@ -37,7 +37,7 @@ include '../../_dbconnect.php';
   <div class="flex flex-col items-center max-w-2xl md:px-8">
     <div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
       <div>
-      <a href="../porishodtable.php" class="text-center mb-3 font-semibold flex gap-3 items-center sticky top-0 left-0 w-full ">
+      <a href="../edit/porishodtable.php" class="text-center mb-3 font-semibold flex gap-3 items-center sticky top-0 left-0 w-full ">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M19 12H6M12 5l-7 7 7 7" />
         </svg>
@@ -51,6 +51,7 @@ include '../../_dbconnect.php';
       <?php
 
 $kid= $result['id'];
+$slno= $result['slno'];
 $name= $result['name'];
 $podobi= $result['podobi'];
 $mobileno= $result['mobileno'];
@@ -59,6 +60,7 @@ $filename= $result['filename'];
       <form method="POST" action="porishodupdate.php" enctype="multipart/form-data">
 			<div class="flex flex-col justify-center items-center space-y-4">
       <input type="hidden" name="id" value="<?php echo $kid;?>">
+      <input class="rounded-xl overflow-hidden px-2 py-2 border border-sky-800 w-full" type="text" placeholder="ক্রমিক নং" name='slno'  value='<?php echo $slno ?>'>
         <input class="rounded-xl overflow-hidden px-2 py-2 border border-sky-800 w-full" type="text" placeholder="নাম" name='name'  value='<?php echo $name ?>'>
         <input class="rounded-xl overflow-hidden px-2 py-2 border border-sky-800 w-full" type="text" placeholder="পদবি" name='podobi'  value='<?php echo $podobi ?>'>
         <input class="rounded-xl overflow-hidden px-2 py-2 border border-sky-800 w-full" type="text" placeholder="মোবাইল নাম্বার" name='mobileno'  value='<?php echo $mobileno ?>'>

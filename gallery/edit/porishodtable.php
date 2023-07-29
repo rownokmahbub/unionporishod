@@ -57,7 +57,7 @@
 <table id="myTable" class="cell-border display responsive wrap" style="width:100%">
 <thead>
         <tr>
-           
+        <th data-priority="1">ক্রমিক নং</th>
             <th data-priority="1">নাম</th>
             
             <th data-priority="2">পদবি</th>
@@ -80,6 +80,7 @@
                 <tr class="flex flex-col flex-no wrap sm:table-row mb-2 sm:mb-0">
                     
           
+                    <td class=''><?= $row['slno'] ?></td>
                     <td class=''><?= $row['name'] ?></td>
                     <td class=''><?= $row['podobi'] ?></td>
                     <td class=''><?= $row['mobileno'] ?></td>

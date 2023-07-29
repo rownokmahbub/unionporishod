@@ -42,6 +42,7 @@
       </h2>
       <form method="POST" action="porishodborgo.php" enctype="multipart/form-data">
 			<div class="form-group space-y-4">
+        <input class="rounded-xl overflow-hidden px-2 py-2 border border-sky-800 w-full" type="text" placeholder="ক্রমিক নং" name='slno'>
         <input class="rounded-xl overflow-hidden px-2 py-2 border border-sky-800 w-full" type="text" placeholder="নাম" name='name'>
         <input class="rounded-xl overflow-hidden px-2 py-2 border border-sky-800 w-full" type="text" placeholder="পদবি" name='podobi'>
         <input class="rounded-xl overflow-hidden px-2 py-2 border border-sky-800 w-full" type="text" placeholder="মোবাইল নাম্বার" name='mobileno'>

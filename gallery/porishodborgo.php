@@ -5,6 +5,7 @@ $msg = "";
 
 // If upload button is clicked ...
 if (isset($_POST['upload'])) {
+	$slno= $_POST['slno'];
 	$name= $_POST['name'];
 	$podobi= $_POST['podobi'];
 	$mobileno= $_POST['mobileno'];
@@ -14,7 +15,7 @@ if (isset($_POST['upload'])) {
 	$folder = "../Assets/image/" . $filename;
 
 	// Get all the submitted data from the form
-	$sql = "INSERT INTO `porishodborgo`(`name`, `podobi`, `mobileno`, `filename`) VALUES ('$name','$podobi','$mobileno','$filename')";
+	$sql = "INSERT INTO `porishodborgo`(`slno`,`name`, `podobi`, `mobileno`, `filename`) VALUES ('$slno','$name','$podobi','$mobileno','$filename')";
 
 	// Execute query
 	mysqli_query($con, $sql);
