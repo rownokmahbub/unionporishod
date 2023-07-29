@@ -44,7 +44,7 @@ include './navbar.php'
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-5 ">
     <?php
                     include './_dbconnect.php';
-                    $query = "SELECT * FROM `porishodborgo`";
+                    $query = "SELECT * FROM `porishodborgo` ORDER BY `slno`";
                     $poriciti = mysqli_query($con, $query);
                     
                     while ($row = mysqli_fetch_assoc($poriciti)) {
