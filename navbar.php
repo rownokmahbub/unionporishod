@@ -22,19 +22,25 @@
             <a href="index.php" class="block py-2 pl-3 pr-4   rounded  md:p-0 " aria-current="page">মুল পাতা</a>
           </li>
           <li class="">
-              <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center justify-between w-full py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-primary md:p-0 md:w-auto  ">ট্যাক্স দেখুন <svg class="w-5 h-5 ml-1" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button>
+              <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center justify-between w-full py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-primary md:p-0 md:w-auto  ">ট্যাক্স ও সনদ <svg class="w-5 h-5 ml-1" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button>
               <!-- Dropdown menu -->
               <div id="dropdownNavbar" class="z-50 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 ">
                   <ul class="py-2 text-sm text-gray-700 " aria-labelledby="dropdownLargeButton">
                     <li>
-                      <a href="#" class="block px-4 py-2 hover:bg-primary hover:text-white">আবাসিক করদাতা</a>
+                      <a href="taxtable.php" class="block px-4 py-2 hover:bg-primary hover:text-white">হোল্ডিং ট্যাক্স</a>
                     </li>
                     <li>
-                      <a href="#" class="block px-4 py-2 hover:bg-primary hover:text-white">বাণিজ্যিক করদাতা</a>
+                      <a href="tadetable.php" class="block px-4 py-2 hover:bg-primary hover:text-white">বাবসা কর</a>
                     </li>
                     <li>
-                      <a href="#" class="block px-4 py-2 hover:bg-primary hover:text-white">সনদ যাচাই করুন</a>
-                    </li>
+                    <a href="sonodjachai.php" class="block px-4 py-2 hover:bg-primary hover:text-white "> নাগরিক ও অনান্য সনদ যাচাই</a>
+                  </li>
+                  <li>
+                    <a href="tadejachai.php" class="block px-4 py-2 hover:bg-primary hover:text-white ">টেড লাইন্সেস যাচাই</a>
+                  </li>
+                  <li>
+                    <a href="waresjachai.php" class="block px-4 py-2 hover:bg-primary hover:text-white ">ওয়ারেশ সনদ যাচাই</a>
+                  </li>
                   </ul>
                   
               </div>
@@ -70,16 +76,19 @@
                     <a href="protisthan.php" class="block px-4 py-2 hover:bg-primary hover:text-white ">প্রতিষ্ঠান সমূহ</a>
                   </li>
                   <li>
-                    <a href="sonodjachai.php" class="block px-4 py-2 hover:bg-primary hover:text-white ">সনদ যাচাই</a>
+                    <a href="#" class="block px-4 py-2 hover:bg-primary hover:text-white ">মৌজার তালিকা</a>
                   </li>
                   <li>
-                    <a href="tadejachai.php" class="block px-4 py-2 hover:bg-primary hover:text-white ">টেড যাচাই</a>
+                    <a href="#" class="block px-4 py-2 hover:bg-primary hover:text-white ">ভিডব্লিউবি  তালিকা</a>
                   </li>
                   <li>
-                    <a href="waresjachai.php" class="block px-4 py-2 hover:bg-primary hover:text-white ">ওয়ারেশ যাচাই</a>
+                    <a href="#" class="block px-4 py-2 hover:bg-primary hover:text-white ">বাজেট</a>
                   </li>
                   <li>
-                    <a href="#" class="block px-4 py-2 hover:bg-primary hover:text-white ">ভিজিডি তালিকা</a>
+                    <a href="#" class="block px-4 py-2 hover:bg-primary hover:text-white ">পঞ্চবার্ষিক</a>
+                  </li>
+                  <li>
+                    <a href="#" class="block px-4 py-2 hover:bg-primary hover:text-white ">গ্রাম</a>
                   </li>
                 </ul>
                 
@@ -91,13 +100,16 @@
           <div id="dropdownNavbar3" class="z-50 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 ">
               <ul class="py-2 text-sm text-gray-700 " aria-labelledby="dropdownLargeButton">
                 <li>
-                  <a href="#" class="block px-4 py-2 hover:bg-primary hover:text-white ">বয়স্ক ভাতা</a>
+                  <a href="boyoskovtable.php" class="block px-4 py-2 hover:bg-primary hover:text-white ">বয়স্ক ভাতা</a>
                 </li>
                 <li>
-                  <a href="#" class="block px-4 py-2 hover:bg-primary hover:text-white ">বিধবা ভাতা</a>
+                  <a href="bidhobavtable.php" class="block px-4 py-2 hover:bg-primary hover:text-white ">বিধবা ভাতা</a>
                 </li>
                 <li>
-                  <a href="#" class="block px-4 py-2 hover:bg-primary hover:text-white ">প্রতিবন্ধি ভাতা</a>
+                  <a href="protibondhivtable.php" class="block px-4 py-2 hover:bg-primary hover:text-white ">প্রতিবন্ধি ভাতা</a>
+                </li>
+                <li>
+                  <a href="masisuvtable.php" class="block px-4 py-2 hover:bg-primary hover:text-white ">মা ও শিশু ভাতা ভাতা</a>
                 </li>
               </ul>
           

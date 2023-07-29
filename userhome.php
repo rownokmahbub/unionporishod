@@ -36,17 +36,17 @@ if ($email == null) {
         <a href='tadeentry.php' class='px-4 py-2 cursor-pointer rounded-full text-white font-semibold text-base bg-sky-800 hover:bg-sky-600  duration-300 text-center transition'>টেড এন্ট্রি</a>
         <a href='tadeentrytable.php' class='px-4 py-2 cursor-pointer rounded-full text-white font-semibold text-base bg-purple-800 hover:bg-purple-600  duration-300 text-center transition'>টেড এডিট</a>
         <a href='nagorikentry.php' class='px-4 py-2 cursor-pointer rounded-full text-white font-semibold text-base bg-sky-800 hover:bg-sky-600  duration-300 text-center transition'>নাগরিক এন্ট্রি </a>
-        <a href='nagoriktable.php' class='px-4 py-2 cursor-pointer rounded-full text-white font-semibold text-base bg-purple-800 hover:bg-purple-600  duration-300 text-center transition'>সনদ আবেদন </a>
+        <a href='nagoriktable.php' class='px-4 py-2 cursor-pointer rounded-full text-white font-semibold text-base bg-purple-800 hover:bg-purple-600  duration-300 text-center transition'>নাগরিক  এডিট  </a>
 
         <a href='waresentry.php' class='px-4 py-2 cursor-pointer rounded-full text-white font-semibold text-base bg-sky-800 hover:bg-sky-600  duration-300 text-center transition'>ওয়ারেশ এন্ট্রি </a>
-        <a href='warestable.php' class='px-4 py-2 cursor-pointer rounded-full text-white font-semibold text-base bg-purple-800 hover:bg-purple-600  duration-300 text-center transition'>ওয়ারেশ আবেদন</a>
-        <a href='boyoskovataentry.php' class='px-4 py-2 cursor-pointer rounded-full text-white font-semibold text-base bg-sky-800 hover:bg-sky-600  duration-300 text-center transition'>বয়স্ক ভাতা</a>
+        <a href='warestable.php' class='px-4 py-2 cursor-pointer rounded-full text-white font-semibold text-base bg-purple-800 hover:bg-purple-600  duration-300 text-center transition'>ওয়ারেশ এডিট</a>
+        <a href='boyoskovataentry.php' class='px-4 py-2 cursor-pointer rounded-full text-white font-semibold text-base bg-sky-800 hover:bg-sky-600  duration-300 text-center transition'>বয়স্ক এন্ট্রি ভাতা</a>
         <a href='boyoskotable.php' class='px-4 py-2 cursor-pointer rounded-full text-white font-semibold text-base bg-purple-800 hover:bg-purple-600  duration-300 text-center transition'>বয়স্ক ভাতা এডিট</a>
-        <a href='bidhobavataentry.php' class='px-4 py-2 cursor-pointer rounded-full text-white font-semibold text-base bg-sky-800 hover:bg-sky-600  duration-300 text-center transition'>বিধবা ভাতা</a>
+        <a href='bidhobavataentry.php' class='px-4 py-2 cursor-pointer rounded-full text-white font-semibold text-base bg-sky-800 hover:bg-sky-600  duration-300 text-center transition'>বিধবা এন্ট্রি ভাতা</a>
         <a href='bidhobatable.php' class='px-4 py-2 cursor-pointer rounded-full text-white font-semibold text-base bg-purple-800 hover:bg-purple-600  duration-300 text-center transition'>বিধবা এডিট</a>
-        <a href='protibondhivata.php' class='px-4 py-2 cursor-pointer rounded-full text-white font-semibold text-base bg-sky-800 hover:bg-sky-600  duration-300 text-center transition'>প্রতিবন্ধী ভাতা</a>
+        <a href='protibondhivata.php' class='px-4 py-2 cursor-pointer rounded-full text-white font-semibold text-base bg-sky-800 hover:bg-sky-600  duration-300 text-center transition'>প্রতিবন্ধী এন্ট্রি ভাতা</a>
         <a href='protibondhitable.php' class='px-4 py-2 cursor-pointer rounded-full text-white font-semibold text-base bg-purple-800 hover:bg-purple-600  duration-300 text-center transition'>প্রতিবন্ধী এডিট</a>
-        <a href='masisuvata.php' class='px-4 py-2 cursor-pointer rounded-full text-white font-semibold text-base bg-sky-800 hover:bg-sky-600  duration-300 text-center transition'>মা ও শিশু ভাতা</a>
+        <a href='masisuvata.php' class='px-4 py-2 cursor-pointer rounded-full text-white font-semibold text-base bg-sky-800 hover:bg-sky-600  duration-300 text-center transition'>মা ও শিশু ভাতা  এন্ট্রি </a>
         <a href='masisutable.php' class='px-4 py-2 cursor-pointer rounded-full text-white font-semibold text-base bg-purple-800 hover:bg-purple-600  duration-300 text-center transition'>মা ও শিশু ভাতা এডিট</a>
       </div>
       <br><br>

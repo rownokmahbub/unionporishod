@@ -52,37 +52,41 @@
             <input class='px-2 py-2 bg-white border border-gray-300 rounded-xl w-full focus:outline-blue-400' type="text" name="name" placeholder='নাম' required>
             <input class='px-2 py-2 bg-white border border-gray-300 rounded-xl w-full focus:outline-blue-400' type="text" name="fname" placeholder='পিতার নাম/স্বামীর নাম' required>
             <input class='px-2 py-2 bg-white border border-gray-300 rounded-xl w-full focus:outline-blue-400' type="text" name="mname" placeholder='মাতার নাম' required>
-           <div class="w-full">
-           <select class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full focus:outline-blue-400" name="gram">
-                <option value="ছোটশলুয়া" class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">ছোটশলুয়া</option>
-                <option value="বলদিয়া" class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full"> বলদিয়া</option>
-                <option value="বড়শলুয়া" class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">বড়শলুয়া</option>
-                <option value="৬২ নং আড়িয়া" class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">৬২ নং আড়িয়া</option>
-                <option value="৬৩ নং আড়িয়া" class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">৬৩ নং আড়িয়া</option>
-                <option value="চাঁদপুর" class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">চাঁদপুর</option>
-                <option value="আড়িয়ারচক" class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">আড়িয়ারচক</option>
-                <option value="নুরুল্লাপুর" class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">নুরুল্লাপুর</option>
-                <option value="গিরিশনগর" class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full"> গিরিশনগর</option>
-                <option value="তিতুদহ" class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">তিতুদহ</option>
+            <div class="w-full">
+            
+            <select class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full focus:outline-blue-400" name="gram">
+            <option disabled selected value="গ্রাম" class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">গ্রাম</option>
+                 <option value="ছোটশলুয়া" class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">ছোটশলুয়া</option>
+                 <option value="বলদিয়া" class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full"> বলদিয়া</option>
+                 <option value="বড়শলুয়া" class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">বড়শলুয়া</option>
+                 <option value="৬২ নং আড়িয়া" class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">৬২ নং আড়িয়া</option>
+                 <option value="৬৩ নং আড়িয়া" class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">৬৩ নং আড়িয়া</option>
+                 <option value="চাঁদপুর" class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">চাঁদপুর</option>
+                 <option value="আড়িয়ারচক" class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">আড়িয়ারচক</option>
+                 <option value="নুরুল্লাপুর" class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">নুরুল্লাপুর</option>
+                 <option value="গিরিশনগর" class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full"> গিরিশনগর</option>
+                 <option value="তিতুদহ" class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">তিতুদহ</option>
+                 
                 
-               
-
-              </select>
-
-          </div>
-
-          <select class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full" name="ward">
-                <option value="১" class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">১</option>
-                <option value="২" class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">২</option>
-                <option value="৩" class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">৩</option>
-                <option value="৪" class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">৪</option>
-                <option value="৫" class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">৫</option>
-                <option value="৬" class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">৬</option>
-                <option value="৭" class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">৭</option>
-                <option value="৮" class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">৮</option>
-                <option value="৯" class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">৯</option>
-
-              </select>
+ 
+               </select>
+          
+ 
+           </div>
+ 
+           <select class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full" name="ward">
+           <option disabled selected value="ওয়ার্ড" class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">ওয়ার্ড</option>       
+           <option value="১" class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">১</option>
+                 <option value="২" class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">২</option>
+                 <option value="৩" class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">৩</option>
+                 <option value="৪" class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">৪</option>
+                 <option value="৫" class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">৫</option>
+                 <option value="৬" class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">৬</option>
+                 <option value="৭" class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">৭</option>
+                 <option value="৮" class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">৮</option>
+                 <option value="৯" class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">৯</option>
+ 
+               </select>
               <input class='px-2 py-2 bg-white border border-gray-300 rounded-xl w-full focus:outline-blue-400' type="text" name="voterid" placeholder='ভোটার আইডি' required>
               <input class='px-2 py-2 bg-white border border-gray-300 rounded-xl w-full focus:outline-blue-400' type="text" name="montobbo" placeholder='মন্তব্য'>
              

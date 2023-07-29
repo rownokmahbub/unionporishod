@@ -55,6 +55,7 @@
            <div class="w-full">
             
            <select class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full focus:outline-blue-400" name="gram">
+           <option disabled selected value="গ্রাম" class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">গ্রাম</option>
                 <option value="ছোটশলুয়া" class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">ছোটশলুয়া</option>
                 <option value="বলদিয়া" class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full"> বলদিয়া</option>
                 <option value="বড়শলুয়া" class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">বড়শলুয়া</option>
@@ -74,7 +75,8 @@
           </div>
 
           <select class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full" name="ward">
-                <option value="১" class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">১</option>
+          <option disabled selected value="ওয়ার্ড" class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">ওয়ার্ড</option>       
+          <option value="১" class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">১</option>
                 <option value="২" class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">২</option>
                 <option value="৩" class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">৩</option>
                 <option value="৪" class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">৪</option>
