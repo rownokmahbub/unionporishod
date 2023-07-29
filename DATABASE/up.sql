@@ -2,8 +2,8 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Jul 29, 2023 at 04:57 AM
+-- Host: localhost
+-- Generation Time: Jul 29, 2023 at 08:13 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -92,6 +92,20 @@ INSERT INTO `khobor` (`id`, `khobor`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `kormokortaborgo`
+--
+
+CREATE TABLE `kormokortaborgo` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `podobi` varchar(255) NOT NULL,
+  `mobileno` varchar(255) NOT NULL,
+  `filename` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `log`
 --
 
@@ -114,7 +128,11 @@ INSERT INTO `log` (`id`, `email`, `activity`, `time`) VALUES
 (133, 'rownok2001@gmail.com', 'Log Out', '2023-07-28 14:08:48'),
 (134, 'rownok2001@gmail.com', 'Log Out', '2023-07-28 14:46:15'),
 (135, 'rownok2001@gmail.com', 'Log Out', '2023-07-29 01:09:04'),
-(136, 'rownok2001@gmail.com', 'Log Out', '2023-07-29 01:46:00');
+(136, 'rownok2001@gmail.com', 'Log Out', '2023-07-29 01:46:00'),
+(137, 'rownok2001@gmail.com', 'Log Out', '2023-07-29 03:21:33'),
+(138, 'rownok2001@gmail.com', 'Log Out', '2023-07-29 04:36:43'),
+(139, 'rownok2001@gmail.com', 'Log Out', '2023-07-29 04:37:04'),
+(140, 'rownok2001@gmail.com', 'Log Out', '2023-07-29 04:45:25');
 
 -- --------------------------------------------------------
 
@@ -168,7 +186,8 @@ CREATE TABLE `nagorik` (
 
 INSERT INTO `nagorik` (`id`, `sarok`, `name`, `fathername`, `mothername`, `gram`, `word`, `birthno`, `voterid`, `mobileno`, `gender`, `dakghor`) VALUES
 (3, '10002', 'rownok', 'rajjak', 'fgfgfg', 'নুরুল্লাপুর', '৫', '23324344', '34234534556', '01273483465', 'নারী', 'নুরুল্লাপুর'),
-(4, '10004', 'rownok', 'mahsin ali', 'rakha', 'বড়শলুয়া', '৩', '23324344', '34234534556', '34453432432454', 'নারী', '৬৩ নং আড়িয়া');
+(4, '10004', 'rownok', 'mahsin ali', 'rakha', 'বড়শলুয়া', '৩', '23324344', '34234534556', '34453432432454', 'নারী', '৬৩ নং আড়িয়া'),
+(5, '1005', 'rownok', 'mahsin ali', 'fgfgfg', '৬২ নং আড়িয়া', '৪', '23324344', '৩৩৪৫৫৩২৫৪৩', '34453432432454', 'নারী', 'তিতুদহ');
 
 -- --------------------------------------------------------
 
@@ -196,7 +215,6 @@ INSERT INTO `notice` (`id`, `notice`) VALUES
 
 CREATE TABLE `porishodborgo` (
   `id` int(11) NOT NULL,
-  `slno` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `podobi` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `mobileno` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
@@ -207,21 +225,21 @@ CREATE TABLE `porishodborgo` (
 -- Dumping data for table `porishodborgo`
 --
 
-INSERT INTO `porishodborgo` (`id`, `slno`, `name`, `podobi`, `mobileno`, `filename`) VALUES
-(58, '৯', 'সামসুল আলম', 'সাধারন আসন-৪', '০১৯৯৬২৮৪৭০', '8.jpg'),
-(56, '৮', 'মোঃ আহাদ আলী মল্লিক', 'সাধারন আসন-৩', '০১৭৩৮০২১৭৭৮', '7.jpg'),
-(49, '১', 'মোঃ শুকুর আলী', 'চেয়ারম্যান', '০১৭৩৬৫৭৮৯৭০', 'Chairman.png'),
-(50, '২', 'মোঃ মহাসীন আলী', 'সচিব', '০১৯৪০৫৩৮১৭৬', 'mahsin.jpg'),
-(51, '৩', 'মোছাঃ রওশনারা বেগম', 'সংরক্ষিত আসন-১', '০১৯২৫৫৯৯৭১৫', '2 2.jpg'),
-(52, '৪', 'মোছাঃ চাম্পা বেগম', 'সংরক্ষিত আসন-২', '০১৯৬২৬৪৫৩২৮', '3 2.jpg'),
-(53, '৫', 'মোছাঃ মুক্তিয়ারা বেগম', 'সংরক্ষিত আসন-৩', '০১৯১৬৬১৯০৩২', '4.jpg'),
-(54, '৬', 'মোঃ মুকুল হোসেন', 'সাধারন আসন-১', '০১৩২১৪৮৭২৫৫', '5.jpg'),
-(55, '৭', 'মোঃ জাহাঙ্গীর আলম', 'সাধারন আসন-২', '০১৯২০২৫৭৫৫২', '6.jpg'),
-(59, '১০', 'মো কাছেদ আলী', 'সাধারন আসন-৫', '০১৯২৫৫৯৯৭১৫', '100.jpg'),
-(60, '১১', 'মোঃ শমসের আলী', 'সাধারন আসন-৬', '০১৯১৫৭২৫৮৩৯', '99.jpg'),
-(61, '১২', 'মোঃ রিপন আলী লস্কর', 'সাধারন আসন-৭', '০১৭১৯৭৬৬২৯৭', '111.jpg'),
-(62, '১৩', 'মোঃ তসলিমুজ্জামান', 'সাধারন আসন-৮', '০১৭১৬৮৮৭৫০৫', '121.jpg'),
-(63, '১৪', 'মোঃ কালাম উদ্দীন', 'সাধারন আসন-৯', '০১৯৮৫৮০৮৭৩০', '131.jpg');
+INSERT INTO `porishodborgo` (`id`, `name`, `podobi`, `mobileno`, `filename`) VALUES
+(58, 'সামসুল আলম', 'সাধারন আসন-৪', '০১৯৯৬২৮৪৭০', '8.jpg'),
+(56, 'মোঃ আহাদ আলী মল্লিক', 'সাধারন আসন-৩', '০১৭৩৮০২১৭৭৮', '7.jpg'),
+(49, 'মোঃ শুকুর আলী', 'চেয়ারম্যান', '০১৭৩৬৫৭৮৯৭০', 'Chairman.png'),
+(50, 'মোঃ মহাসীন আলী', 'সচিব', '০১৯৪০৫৩৮১৭৬', 'mahsin.jpg'),
+(51, 'মোছাঃ রওশনারা বেগম', 'সংরক্ষিত আসন-১', '০১৯২৫৫৯৯৭১৫', '2 2.jpg'),
+(52, 'মোছাঃ চাম্পা বেগম', 'সংরক্ষিত আসন-২', '০১৯৬২৬৪৫৩২৮', '3 2.jpg'),
+(53, 'মোছাঃ মুক্তিয়ারা বেগম', 'সংরক্ষিত আসন-৩', '০১৯১৬৬১৯০৩২', '4.jpg'),
+(54, 'মোঃ মুকুল হোসেন', 'সাধারন আসন-১', '০১৩২১৪৮৭২৫৫', '5.jpg'),
+(55, 'মোঃ জাহাঙ্গীর আলম', 'সাধারন আসন-২', '০১৯২০২৫৭৫৫২', '6.jpg'),
+(59, 'মো কাছেদ আলী', 'সাধারন আসন-৫', '০১৯২৫৫৯৯৭১৫', '100.jpg'),
+(60, 'মোঃ শমসের আলী', 'সাধারন আসন-৬', '০১৯১৫৭২৫৮৩৯', '99.jpg'),
+(61, 'মোঃ রিপন আলী লস্কর', 'সাধারন আসন-৭', '০১৭১৯৭৬৬২৯৭', '111.jpg'),
+(62, 'মোঃ তসলিমুজ্জামান', 'সাধারন আসন-৮', '০১৭১৬৮৮৭৫০৫', '121.jpg'),
+(63, 'মোঃ কালাম উদ্দীন', 'সাধারন আসন-৯', '০১৯৮৫৮০৮৭৩০', '131.jpg');
 
 -- --------------------------------------------------------
 
@@ -386,7 +404,8 @@ CREATE TABLE `tadeentry` (
 --
 
 INSERT INTO `tadeentry` (`id`, `licence_no`, `name`, `father_husband`, `mother_name`, `word`, `bplace`, `tradename`, `babshardhoron`, `kor`, `voterid`, `mobileno`, `upozela`, `zela`) VALUES
-(2, '1001', 'rownok', 'mahsin ali', 'rakha', '১', 'chuadanga', 'chuadangar', 'dokan', '443', '3423432454', '34453432432454', 'chuadangar', 'chuadanga ');
+(2, '1001', 'rownok', 'mahsin ali', 'rakha', '১', 'chuadanga', 'chuadangar', 'dokan', '443', '3423432454', '34453432432454', 'chuadangar', 'chuadanga '),
+(4, '1006', 'rownok', 'mahsin ali', 'rakha', '৫', '৬২ নং আড়িয়া', 'chuadanga', 'dokan', '443', '3423432454', '01273483465', 'chuadanga ', 'chuadanga ');
 
 -- --------------------------------------------------------
 
@@ -585,6 +604,12 @@ ALTER TABLE `khobor`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `kormokortaborgo`
+--
+ALTER TABLE `kormokortaborgo`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `log`
 --
 ALTER TABLE `log`
@@ -614,8 +639,7 @@ ALTER TABLE `notice`
 -- Indexes for table `porishodborgo`
 --
 ALTER TABLE `porishodborgo`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `slno` (`slno`) USING HASH;
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `protibondhivata`
@@ -722,10 +746,16 @@ ALTER TABLE `khobor`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
+-- AUTO_INCREMENT for table `kormokortaborgo`
+--
+ALTER TABLE `kormokortaborgo`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT for table `log`
 --
 ALTER TABLE `log`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=137;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=141;
 
 --
 -- AUTO_INCREMENT for table `masisuvata`
@@ -737,7 +767,7 @@ ALTER TABLE `masisuvata`
 -- AUTO_INCREMENT for table `nagorik`
 --
 ALTER TABLE `nagorik`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `notice`
@@ -749,7 +779,7 @@ ALTER TABLE `notice`
 -- AUTO_INCREMENT for table `porishodborgo`
 --
 ALTER TABLE `porishodborgo`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=64;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=65;
 
 --
 -- AUTO_INCREMENT for table `protibondhivata`
@@ -791,7 +821,7 @@ ALTER TABLE `subuser`
 -- AUTO_INCREMENT for table `tadeentry`
 --
 ALTER TABLE `tadeentry`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `taxentry`
