@@ -49,6 +49,7 @@ include './navbar.php'
                     
                     while ($row = mysqli_fetch_assoc($poriciti)) {
                         $id=$row['id'];
+                        
                     ?>
   <div class="bg-[#ffffff] drop-shadow-lg flex flex-col max-h-96 items-center rounded-xl overflow-hidden">
             <p class="bg-primary px-5 py-2 text-lg font-semibold w-full text-white capitalize text-center"><?php echo $row['podobi']; ?></p>

@@ -17,11 +17,11 @@ if (isset($_POST['upload'])) {
     if($tempname != "")
     {
         move_uploaded_file($tempname , "$folder");
-        $sql = "UPDATE `porishodborgo` SET `slno`='$slno',`podobi`='$podobi',`mobileno`='$mobileno',`filename`='$filename' WHERE `id`=$id";  
+        $sql = "UPDATE `porishodborgo` SET `slno`='$slno',`name`='$name',`podobi`='$podobi',`mobileno`='$mobileno',`filename`='$filename' WHERE `id`=$id";  
         
     }else
     {
-        $sql = "UPDATE `porishodborgo` SET `slno`='$slno',`podobi`='$podobi',`mobileno`='$mobileno' WHERE `id`=$id";  
+        $sql = "UPDATE `porishodborgo` SET `slno`='$slno',`name`='$name',`podobi`='$podobi',`mobileno`='$mobileno' WHERE `id`=$id";  
     }
     
     $run_update=mysqli_query($con, $sql);
