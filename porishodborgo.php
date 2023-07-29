@@ -48,7 +48,7 @@ include './navbar.php'
                     $poriciti = mysqli_query($con, $query);
                     
                     while ($row = mysqli_fetch_assoc($poriciti)) {
-                        $id=$row['slno'];
+                        $id=$row['id'];
                         
                     ?>
   <div class="bg-[#ffffff] drop-shadow-lg flex flex-col max-h-96 items-center rounded-xl overflow-hidden">
