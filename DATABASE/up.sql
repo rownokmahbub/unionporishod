@@ -2,8 +2,8 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Aug 04, 2023 at 01:22 PM
+-- Host: localhost
+-- Generation Time: Sep 09, 2023 at 05:28 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -70,6 +70,28 @@ CREATE TABLE `boyoskovata` (
 
 INSERT INTO `boyoskovata` (`id`, `slno`, `name`, `fatherhusband`, `mothername`, `gram`, `word`, `voterid`, `montobbo`) VALUES
 (4, '1', 'rownok', 'mahsin ali', 'rakha', 'চাঁদপুর', '৪', '34234534556', 'fdfdf');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `gram`
+--
+
+CREATE TABLE `gram` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `word` varchar(255) NOT NULL,
+  `male` varchar(255) NOT NULL,
+  `female` varchar(255) NOT NULL,
+  `total` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `gram`
+--
+
+INSERT INTO `gram` (`id`, `name`, `word`, `male`, `female`, `total`) VALUES
+(2, 'rownok', '২', '23', '34', '12');
 
 -- --------------------------------------------------------
 
@@ -154,7 +176,14 @@ INSERT INTO `log` (`id`, `email`, `activity`, `time`) VALUES
 (138, 'rownok2001@gmail.com', 'Log Out', '2023-07-29 04:36:43'),
 (139, 'rownok2001@gmail.com', 'Log Out', '2023-07-29 04:37:04'),
 (140, 'rownok2001@gmail.com', 'Log Out', '2023-07-29 04:45:25'),
-(141, 'rownok2001@gmail.com', 'Log Out', '2023-08-03 04:04:12');
+(141, 'rownok2001@gmail.com', 'Log Out', '2023-08-03 04:04:12'),
+(142, 'rowok2001@gmail.com', 'Log Out', '2023-09-08 14:13:37'),
+(143, 'mahsinali4@gmail.com', 'Log Out', '2023-09-08 14:38:38'),
+(144, 'rowok2001@gmail.com', 'Log Out', '2023-09-09 01:46:27'),
+(145, 'mahsinali4@gmail.com', 'Log Out', '2023-09-09 01:47:26'),
+(146, 'rowok2001@gmail.com', 'Log Out', '2023-09-09 03:46:24'),
+(147, 'mahsinali4@gmail.com', 'Log Out', '2023-09-09 03:47:10'),
+(148, 'rowok2001@gmail.com', 'Log Out', '2023-09-09 03:50:39');
 
 -- --------------------------------------------------------
 
@@ -180,6 +209,26 @@ CREATE TABLE `masisuvata` (
 
 INSERT INTO `masisuvata` (`id`, `slno`, `name`, `fatherhusband`, `mothername`, `gram`, `word`, `voterid`, `montobbo`) VALUES
 (2, '1', 'rownok', 'mahsin ali', 'rakha', '৬২ নং আড়িয়া', '৪', '34234534556', 'fdfdf');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `mouja`
+--
+
+CREATE TABLE `mouja` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `word` varchar(255) NOT NULL,
+  `moujano` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `mouja`
+--
+
+INSERT INTO `mouja` (`id`, `name`, `word`, `moujano`) VALUES
+(2, 'amir', '1', '৪');
 
 -- --------------------------------------------------------
 
@@ -374,7 +423,8 @@ CREATE TABLE `shikkhaprotisthan` (
 
 INSERT INTO `shikkhaprotisthan` (`id`, `sname`, `sdhoron`) VALUES
 (6, 'বরসলুয়া নিউ মডেল ডিগ্রি', 'কলেজ'),
-(7, 'তিতুদহ বেসরকারি মাধ্যমিক বিদ্যালয় ', 'মাধ্যমিক বিদ্যালয়');
+(7, 'তিতুদহ বেসরকারি মাধ্যমিক বিদ্যালয় ', 'মাধ্যমিক বিদ্যালয়'),
+(9, 'oiajfioarjofjoasj', 'কলেজ');
 
 -- --------------------------------------------------------
 
@@ -543,7 +593,30 @@ CREATE TABLE `user` (
 
 INSERT INTO `user` (`id`, `email`, `password`, `user_type`, `block`) VALUES
 (2, 'rownok2001@gmail.com', '1234', 2, 'no'),
-(3, 'mali191072@bscse.uiu.ac.bd', '1234', 1, 'no');
+(4, 'mahsinali4@gmail.com', '123456', 2, 'no');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `vwb`
+--
+
+CREATE TABLE `vwb` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `fatherhusband` varchar(255) NOT NULL,
+  `gram` varchar(255) NOT NULL,
+  `word` varchar(255) NOT NULL,
+  `voterid` varchar(255) NOT NULL,
+  `cokro` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `vwb`
+--
+
+INSERT INTO `vwb` (`id`, `name`, `fatherhusband`, `gram`, `word`, `voterid`, `cokro`) VALUES
+(3, 'rownok', 'dfdfdsf', 'বড়শলুয়া', '৩', '3432423424', '2023-24');
 
 -- --------------------------------------------------------
 
@@ -621,6 +694,12 @@ ALTER TABLE `boyoskovata`
   ADD UNIQUE KEY `slno` (`slno`);
 
 --
+-- Indexes for table `gram`
+--
+ALTER TABLE `gram`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `khobor`
 --
 ALTER TABLE `khobor`
@@ -644,6 +723,12 @@ ALTER TABLE `log`
 ALTER TABLE `masisuvata`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `slno` (`slno`);
+
+--
+-- Indexes for table `mouja`
+--
+ALTER TABLE `mouja`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `nagorik`
@@ -740,6 +825,12 @@ ALTER TABLE `user`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `vwb`
+--
+ALTER TABLE `vwb`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `wares`
 --
 ALTER TABLE `wares`
@@ -763,6 +854,12 @@ ALTER TABLE `boyoskovata`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
+-- AUTO_INCREMENT for table `gram`
+--
+ALTER TABLE `gram`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- AUTO_INCREMENT for table `khobor`
 --
 ALTER TABLE `khobor`
@@ -778,12 +875,18 @@ ALTER TABLE `kormokortaborgo`
 -- AUTO_INCREMENT for table `log`
 --
 ALTER TABLE `log`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=142;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=149;
 
 --
 -- AUTO_INCREMENT for table `masisuvata`
 --
 ALTER TABLE `masisuvata`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `mouja`
+--
+ALTER TABLE `mouja`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
@@ -832,7 +935,7 @@ ALTER TABLE `shikkha`
 -- AUTO_INCREMENT for table `shikkhaprotisthan`
 --
 ALTER TABLE `shikkhaprotisthan`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `subuser`
@@ -874,7 +977,13 @@ ALTER TABLE `upprotisthan`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `vwb`
+--
+ALTER TABLE `vwb`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `wares`
