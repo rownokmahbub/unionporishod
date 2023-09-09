@@ -81,6 +81,8 @@
                    
                     ?>
               <input type="hidden" name="hid" value="<?php echo $rid;?>">
+    <p class="text-2xl text-center font-semibold">৬ নং তিতুদহ ইউনিয়ন পরিষদ </p>
+    <p class="text-lg text-center font-semibold mb-5">চুয়াডাঙ্গা সদর, চুয়াডাঙ্গা</p>
 <p class='text-center font-medium text-2xl'>ওয়ারেশ সনদ যাচাই </p>
 <p class='text-center font-medium text-lg'>পরিচিতি / স্মারক নম্বরঃ <span><?= $rid ?></span></p>
 

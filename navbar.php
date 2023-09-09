@@ -121,16 +121,18 @@
                                         class="block px-4 py-2 hover:bg-primary hover:text-white ">প্রতিষ্ঠান সমূহ</a>
                                 </li>
                                 <li>
-                                    <a href="#" class="block px-4 py-2 hover:bg-primary hover:text-white ">মৌজার
+                                    <a href="mouja.php" class="block px-4 py-2 hover:bg-primary hover:text-white ">মৌজার
                                         তালিকা</a>
                                 </li>
                                 <li>
-                                    <a href="#" class="block px-4 py-2 hover:bg-primary hover:text-white ">ভিডব্লিউবি
+                                    <a href="vwb.php"
+                                        class="block px-4 py-2 hover:bg-primary hover:text-white ">ভিডব্লিউবি
                                         তালিকা</a>
                                 </li>
 
                                 <li>
-                                    <a href="#" class="block px-4 py-2 hover:bg-primary hover:text-white ">গ্রামের
+                                    <a href="gram.php"
+                                        class="block px-4 py-2 hover:bg-primary hover:text-white ">গ্রামের
                                         তালিকা </a>
                                 </li>
                             </ul>

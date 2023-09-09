@@ -38,6 +38,8 @@
 
 <body class='bg-white mb-10'>
 <div class='px-20 py-20 relative'>
+    <p class="text-2xl text-center font-semibold">৬ নং তিতুদহ ইউনিয়ন পরিষদ </p>
+    <p class="text-lg text-center font-semibold mb-5">চুয়াডাঙ্গা সদর, চুয়াডাঙ্গা</p>
     <p class="text-2xl text-center font-semibold">নাগরিক ও অনন্য সনদপত্র যাচাই</p>
 <?php
                    $rid= $result['sarok'];
