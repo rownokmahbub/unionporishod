@@ -8,7 +8,8 @@
     $sarok = $_POST['hid'];
     $name = $_POST['name'];
     $fname = $_POST['fname'];
-    $mname = $_POST['mname'];
+     $mname = $_POST['mname'];
+     $hname = $_POST['hname'];
     $gram = $_POST['gram'];
     $ward = $_POST['ward'];
     $birthno = $_POST['birthno'];
@@ -21,7 +22,7 @@
 
 
      
-       $sql = "UPDATE `nagorik` SET `sarok`='$sarok',`name`='$name',`fathername`='$fname',`mothername`='$mname',`gram`='$gram',`word`='$ward',`birthno`='$birthno',`voterid`='$voterid',`mobileno`='$mnum',`gender`='$gender',`dakghor`='$dakghor' WHERE `sarok`=$sarok";;
+       $sql = "UPDATE `nagorik` SET `sarok`='$sarok',`name`='$name',`fathername`='$fname',`mothername`='$mname',`husband`='$hname',`gram`='$gram',`word`='$ward',`birthno`='$birthno',`voterid`='$voterid',`mobileno`='$mnum',`gender`='$gender',`dakghor`='$dakghor' WHERE `sarok`=$sarok";;
        print_r(error_get_last());
   
    if(mysqli_query($con, $sql)){

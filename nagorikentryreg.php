@@ -7,7 +7,8 @@
     include './_dbconnect.php';
     $sarok = $_POST['sarok'];
     $name = $_POST['name'];
-    $fname = $_POST['fname'];
+     $fname = $_POST['fname'];
+     $hname = $_POST['hname'];
     $mname = $_POST['mname'];
     $gram = $_POST['gram'];
     $ward = $_POST['ward'];
@@ -22,7 +23,7 @@
 
 
      
-       $sql = "INSERT INTO `nagorik`(`sarok`, `name`, `fathername`, `mothername`, `gram`, `word`, `birthno`, `voterid`, `mobileno`,`gender`,`dakghor`) VALUES ('$sarok','$name','$fname','$mname','$gram','$ward','$birthno','$voterid','$mnum','$gender','$dakghor')";
+       $sql = "INSERT INTO `nagorik`(`sarok`, `name`, `fathername`, `mothername`,`husband`, `gram`, `word`, `birthno`, `voterid`, `mobileno`,`gender`,`dakghor`) VALUES ('$sarok','$name','$fname','$mname','$hname','$gram','$ward','$birthno','$voterid','$mnum','$gender','$dakghor')";
        print_r(error_get_last());
   
    if(mysqli_query($con, $sql)){

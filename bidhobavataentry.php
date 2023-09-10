@@ -61,6 +61,8 @@
                 <option value="বড়শলুয়া" class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">বড়শলুয়া</option>
                 <option value="৬২ নং আড়িয়া" class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">৬২ নং আড়িয়া</option>
                 <option value="৬৩ নং আড়িয়া" class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">৬৩ নং আড়িয়া</option>
+               <option value="হুলিয়ামারী"
+                       class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full"> হুলিয়ামারী</option>
                 <option value="চাঁদপুর" class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">চাঁদপুর</option>
                 <option value="আড়িয়ারচক" class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">আড়িয়ারচক</option>
                 <option value="নুরুল্লাপুর" class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">নুরুল্লাপুর</option>

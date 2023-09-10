@@ -4,7 +4,7 @@ include './_dbconnect.php';
     if (isset($_REQUEST['id'])) {
         $rid=$_REQUEST['id'];
         
-        $query="SELECT * FROM `nagorik` WHERE sarok=$rid";
+        $query="SELECT * FROM `nagorik` WHERE id=$rid";
         $poriciti=mysqli_query($con,$query);
         $result=mysqli_fetch_array($poriciti);
        
@@ -53,6 +53,7 @@ include './_dbconnect.php';
     $name= $result['name'];
     $fathername= $result['fathername'];
     $mothername= $result['mothername'];
+    $husband= $result['husband'];
     $gram= $result['gram'];
     $word= $result['word'];
     $birthno= $result['birthno'];
@@ -79,9 +80,14 @@ include './_dbconnect.php';
            </div>
            <div class="space-y-1">
             <span>মাতার নাম</span>
-            <input class='px-2 py-2 bg-white border border-gray-300 rounded-xl w-full focus:outline-blue-400' type="text" name="mname" placeholder='মাতার নাম' value='<?php echo $mothername ?>'  required>
+            <input class='px-2 py-2 bg-white border border-gray-300 rounded-xl w-full focus:outline-blue-400' type="text" name="mname" placeholder='মাতার নাম' value='<?php echo $husband ?>'  required>
         
            </div>
+              <div class="space-y-1">
+                  <span>স্বামীর নাম</span>
+                  <input class='px-2 py-2 bg-white border border-gray-300 rounded-xl w-full focus:outline-blue-400' type="text" name="hname" placeholder='মাতার নাম' value='<?php echo $mothername ?>'  required>
+
+              </div>
            <div class="space-y-1">
             <span>গ্রাম</span>
            
@@ -108,13 +114,13 @@ include './_dbconnect.php';
             <span>লিঙ্গ</span>
             <input class='px-2 py-2 bg-white border border-gray-300 rounded-xl w-full focus:outline-blue-400' type="text" name="gender" placeholder='লিঙ্গ' value='<?php echo $gender ?>'  required>
            </div>
-          
+              <div class="space-y-1">
+                  <span>ডাকঘর</span>
+                  <input class='px-2 py-2 bg-white border border-gray-300 rounded-xl w-full focus:outline-blue-400' type="text" name="dakghor" placeholder='মাতার নাম' value='<?php echo $dakghor ?>'  required>
+              </div>
           
           </div>
-          <div class="space-y-1">
-            <span>ডাকঘর</span>
-            <input class='px-2 py-2 bg-white border border-gray-300 rounded-xl w-full focus:outline-blue-400' type="text" name="dakghor" placeholder='মাতার নাম' value='<?php echo $dakghor ?>'  required>
-           </div>
+
          
         
 

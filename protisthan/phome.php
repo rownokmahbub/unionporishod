@@ -269,9 +269,43 @@ if ($email == null) {
                         গ্রামের তথ্য যোগ করুণ
                 </h2>
                 <form method='POST' action='./gramreg.php' class="space-y-5 flex flex-col items-start justify-start">
-                    <input
-                        class='bg-gray-50 border border-gray-300 text-sky-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5'
-                        type="text" name="name" id="" placeholder='গ্রামের নাম'>
+                    <select
+                            class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full focus:outline-blue-400"
+                            name="name">
+                        <option disabled selected value="গ্রাম"
+                                class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">গ্রাম</option>
+                        <option value="ছোটশলুয়া"
+                                class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">ছোটশলুয়া
+                        </option>
+                        <option value="হুলিয়ামারী"
+                                class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full"> হুলিয়ামারী</option>
+                        <option value="বলদিয়া"
+                                class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full"> বলদিয়া</option>
+                        <option value="বড়শলুয়া"
+                                class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">বড়শলুয়া</option>
+                        <option value="৬২ নং আড়িয়া"
+                                class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">৬২ নং আড়িয়া
+                        </option>
+                        <option value="৬৩ নং আড়িয়া"
+                                class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">৬৩ নং আড়িয়া
+                        </option>
+                        <option value="চাঁদপুর"
+                                class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">চাঁদপুর</option>
+                        <option value="আড়িয়ারচক"
+                                class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">আড়িয়ারচক
+                        </option>
+                        <option value="নুরুল্লাপুর"
+                                class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">নুরুল্লাপুর
+                        </option>
+                        <option value="গিরিশনগর"
+                                class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full"> গিরিশনগর
+                        </option>
+                        <option value="তিতুদহ"
+                                class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">তিতুদহ</option>
+
+
+
+                    </select>
                     <input
                         class='bg-gray-50 border border-gray-300 text-sky-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5'
                         type="text" name="pname" id="" placeholder='পুরুষের সংখা '>

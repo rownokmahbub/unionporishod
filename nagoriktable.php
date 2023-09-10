@@ -59,8 +59,10 @@
         <tr>
             <th data-priority="1">সারক নম্বর</th>
             <th data-priority="1">নাম</th>
-            <th data-priority="2">পিতার নাম/স্বামীর নাম</th>
+            <th data-priority="2">পিতার নাম</th>
+
             <th data-priority="2">মাতার নাম</th>
+            <th data-priority="2">স্বামীর নাম</th>
             <th data-priority="2">গ্রাম</th>
             <th data-priority="2">ওয়ার্ড</th>
             <th data-priority="2">জন্ম নিবন্ধন নাম্বার </th>
@@ -87,6 +89,7 @@
                     <td class=''><?= $row['name'] ?></td>
                     <td class=''><?= $row['fathername'] ?></td>
                     <td class=''><?= $row['mothername'] ?></td>
+                    <td class=''><?= $row['husband'] ?></td>
                     <td class=''><?= $row['gram'] ?></td>
                     <td class=''><?= $row['word'] ?></td>
                     <td class=''><?= $row['birthno'] ?></td>

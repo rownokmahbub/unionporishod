@@ -133,6 +133,8 @@ include '_dbconnect.php';
                                 class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">৬৩ নং আড়িয়া</option>
                             <option value="চাঁদপুর" class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">
                                 চাঁদপুর</option>
+                            <option value="হুলিয়ামারী"
+                                    class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full"> হুলিয়ামারী</option>
                             <option value="আড়িয়ারচক"
                                 class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">আড়িয়ারচক</option>
                             <option value="নুরুল্লাপুর"

@@ -33,7 +33,7 @@ include '_dbconnect.php';
 
 
 <body>
-    <div class="flex flex-col px-5 md:px-20  justify-center md:h-screen gap-5 items-center bg-slate-300 ">
+    <div class="flex flex-col px-5 md:px-20 py-5 md:h-screen justify-center gap-5 items-center bg-slate-300 ">
 
 
         <div class="">
@@ -80,6 +80,9 @@ include '_dbconnect.php';
                         <input
                             class='px-2 py-2 bg-white border border-gray-300 rounded-xl w-full focus:outline-blue-400'
                             type="text" name="mname" placeholder='মাতার নাম' required>
+                        <input
+                                class='px-2 py-2 bg-white border border-gray-300 rounded-xl w-full focus:outline-blue-400'
+                                type="text" name="hname" placeholder='স্বামীর নাম' required>
                         <div class="w-full">
 
                             <select
@@ -90,6 +93,8 @@ include '_dbconnect.php';
                                 <option value="ছোটশলুয়া"
                                     class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">ছোটশলুয়া
                                 </option>
+                                <option value="হুলিয়ামারী"
+                                        class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full"> হুলিয়ামারী</option>
                                 <option value="বলদিয়া"
                                     class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full"> বলদিয়া</option>
                                 <option value="বড়শলুয়া"
@@ -155,6 +160,8 @@ include '_dbconnect.php';
                             type="text" name="mnum" placeholder='মোবাইল নাম্বার' required>
 
                         <select class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full" name="gender">
+                            <option disabled selected value="লিঙ্গ"
+                                    class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">লিঙ্গ</option>
                             <option value="পুরুষ" class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">
                                 পুরুষ</option>
                             <option value="নারী" class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">
@@ -162,18 +169,19 @@ include '_dbconnect.php';
 
 
                         </select>
+                        <select class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full focus:outline-blue-400"
+                                name="dakghor">
+                            <option disabled selected value="ডাকঘর"
+                                    class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">ডাকঘর</option>
+                            <option value="তিতুদহ" class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">
+                                তিতুদহ</option>
+
+
+
+                        </select>
                     </div>
 
-                    <select class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full focus:outline-blue-400"
-                        name="dakghor">
-                        <option disabled selected value="ডাকঘর"
-                            class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">ডাকঘর</option>
-                        <option value="তিতুদহ" class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">
-                            তিতুদহ</option>
 
-
-
-                    </select>
 
 
                 </div>
