@@ -40,41 +40,66 @@ include '_dbconnect.php';
                 class='px-5 hidden md:flex py-5 mx-auto bg-purple-500 text-white justify-center rounded-2xl w-52 text-lg font-semibold'>
                 <h3 class="">মোট হোল্ডার:</h3>
                 <?php
-        $query = "SELECT COUNT(*), SUM(totaltax) FROM taxentry";
-        $result = mysqli_fetch_array(mysqli_query($con, $query));
-        $count = $result['COUNT(*)'];
-        $tax = $result['SUM(totaltax)'];
+                $query = "SELECT COUNT(*), SUM(totaltax) FROM taxentry";
+                $result = mysqli_fetch_array(mysqli_query($con, $query));
+                $count = $result['COUNT(*)'];
+                $tax = $result['SUM(totaltax)'];
 
-        echo $count;
+                echo $count;
 
 
-        ?>
+                ?>
             </section>
             <div
                 class='px-5 hidden py-5 mx-auto bg-green-500 justify-center items-center text-white rounded-2xl w-52 md:flex text-lg font-semibold'>
                 <h3 class="">মোট ট্যাক্স :</h3>
                 <?php
-        $query = "SELECT COUNT(*), SUM(totaltax) FROM taxentry";
-        $result = mysqli_fetch_array(mysqli_query($con, $query));
-        $count = $result['COUNT(*)'];
-        $tax = $result['SUM(totaltax)'];
+                $query = "SELECT COUNT(*), SUM(totaltax) FROM taxentry";
+                $result = mysqli_fetch_array(mysqli_query($con, $query));
+                $count = $result['COUNT(*)'];
+                $tax = $result['SUM(totaltax)'];
 
 
-        echo $tax;
+                echo $tax;
 
-        ?>
+                ?>
             </div>
         </div>
 
         <div class="px-10 py-10 bg-slate-100 mx-auto w-full rounded-xl">
-            <a href="./userhome.php"
-                class="text-center mb-3 font-semibold flex gap-3 items-center sticky top-0 left-0 w-full ">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M19 12H6M12 5l-7 7 7 7" />
-                </svg>
-                Back</a>
-            <div class="font-semibold text-xl mb-4 text-center">ট্যাক্স ডাটা এন্ট্রি ফরম</div>
+            <div class="flex flex-col md:flex-row gap-4 md:gap-0 justify-between items-center">
+                <a href="./userhome.php"
+                    class="text-center mb-3 font-semibold flex gap-3 items-center sticky top-0 left-0  ">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M19 12H6M12 5l-7 7 7 7" />
+                    </svg>
+                    Back</a>
+                <div class="flex flex-col md:flex-row items-center gap-3">
+                    <a href="./userhome.php"
+                        class="text-center mb-3 font-semibold flex gap-3 items-center px-4 py-2.5 rounded-full shadow-lg bg-green-600 text-white hover:bg-green-700">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M21.2 15c.7-1.2 1-2.5.7-3.9-.6-2-2.4-3.5-4.4-3.5h-1.2c-.7-3-3.2-5.2-6.2-5.6-3-.3-5.9 1.3-7.3 4-1.2 2.5-1 6.5.5 8.8m8.7-1.6V21" />
+                            <path d="M16 16l-4-4-4 4" />
+                        </svg>
+                        Import Exel</a>
+                    <a href="./userhome.php"
+                        class="text-center mb-3 font-semibold flex gap-3 items-center px-4 py-2.5 rounded-full shadow-lg bg-cyan-600 text-white hover:bg-cyan-700">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M3 15v4c0 1.1.9 2 2 2h14a2 2 0 0 0 2-2v-4M17 9l-5 5-5-5M12 12.8V2.5" />
+                        </svg>
+                        Download Exel</a>
+                </div>
+
+            </div>
+
+            <p class="font-semibold text-xl mb-4 text-center">ট্যাক্স ডাটা এন্ট্রি ফরম</p>
+
+
+
 
             <form action="taxentryreg.php" method="POST">
                 <div class="space-y-4">
@@ -95,14 +120,17 @@ include '_dbconnect.php';
                                 class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full focus:outline-blue-400"
                                 name="gram">
                                 <option disabled selected value="গ্রাম"
-                                    class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">গ্রাম</option>
+                                    class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">গ্রাম
+                                </option>
                                 <option value="ছোটশলুয়া"
                                     class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">ছোটশলুয়া
                                 </option>
                                 <option value="বলদিয়া"
-                                    class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full"> বলদিয়া</option>
+                                    class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full"> বলদিয়া
+                                </option>
                                 <option value="বড়শলুয়া"
-                                    class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">বড়শলুয়া</option>
+                                    class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">বড়শলুয়া
+                                </option>
                                 <option value="৬২ নং আড়িয়া"
                                     class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">৬২ নং আড়িয়া
                                 </option>
@@ -110,12 +138,14 @@ include '_dbconnect.php';
                                     class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">৬৩ নং আড়িয়া
                                 </option>
                                 <option value="চাঁদপুর"
-                                    class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">চাঁদপুর</option>
+                                    class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">চাঁদপুর
+                                </option>
                                 <option value="আড়িয়ারচক"
                                     class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">আড়িয়ারচক
                                 </option>
                                 <option value="হুলিয়ামারী"
-                                        class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full"> হুলিয়ামারী</option>
+                                    class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full"> হুলিয়ামারী
+                                </option>
                                 <option value="নুরুল্লাপুর"
                                     class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">নুরুল্লাপুর
                                 </option>
@@ -123,7 +153,8 @@ include '_dbconnect.php';
                                     class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full"> গিরিশনগর
                                 </option>
                                 <option value="তিতুদহ"
-                                    class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">তিতুদহ</option>
+                                    class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">তিতুদহ
+                                </option>
 
 
 

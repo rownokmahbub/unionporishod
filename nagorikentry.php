@@ -41,27 +41,48 @@ include '_dbconnect.php';
                 class='px-5 hidden md:flex py-5 mx-auto bg-green-600 text-white justify-center rounded-2xl w-52 text-lg font-semibold'>
                 <h3 class="">মোট নাগরিক সনদ : </h3>
                 <?php
-        $query = "SELECT COUNT(*), SUM(id) FROM nagorik";
-        $result = mysqli_fetch_array(mysqli_query($con, $query));
-        $count = $result['COUNT(*)'];
-        $tax = $result['SUM(id)'];
+                $query = "SELECT COUNT(*), SUM(id) FROM nagorik";
+                $result = mysqli_fetch_array(mysqli_query($con, $query));
+                $count = $result['COUNT(*)'];
+                $tax = $result['SUM(id)'];
 
-        echo $count;
+                echo $count;
 
 
-        ?>
+                ?>
             </section>
 
         </div>
 
         <div class="px-10 py-10 bg-slate-100 mx-auto w-full rounded-xl">
-            <a href="./userhome.php"
-                class="text-center mb-3 font-semibold flex gap-3 items-center sticky top-0 left-0 w-full ">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M19 12H6M12 5l-7 7 7 7" />
-                </svg>
-                Back</a>
+            <div class="flex flex-col md:flex-row gap-4 md:gap-0 justify-between items-center">
+                <a href="./userhome.php"
+                    class="text-center mb-3 font-semibold flex gap-3 items-center sticky top-0 left-0  ">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M19 12H6M12 5l-7 7 7 7" />
+                    </svg>
+                    Back</a>
+                <div class="flex flex-col md:flex-row items-center gap-3">
+                    <a href="./userhome.php"
+                        class="text-center mb-3 font-semibold flex gap-3 items-center px-4 py-2.5 rounded-full shadow-lg bg-green-600 text-white hover:bg-green-700">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M21.2 15c.7-1.2 1-2.5.7-3.9-.6-2-2.4-3.5-4.4-3.5h-1.2c-.7-3-3.2-5.2-6.2-5.6-3-.3-5.9 1.3-7.3 4-1.2 2.5-1 6.5.5 8.8m8.7-1.6V21" />
+                            <path d="M16 16l-4-4-4 4" />
+                        </svg>
+                        Import Exel</a>
+                    <a href="./userhome.php"
+                        class="text-center mb-3 font-semibold flex gap-3 items-center px-4 py-2.5 rounded-full shadow-lg bg-cyan-600 text-white hover:bg-cyan-700">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M3 15v4c0 1.1.9 2 2 2h14a2 2 0 0 0 2-2v-4M17 9l-5 5-5-5M12 12.8V2.5" />
+                        </svg>
+                        Download Exel</a>
+                </div>
+
+            </div>
             <div class="font-semibold text-xl mb-4 text-center">নাগরিক সনদ এন্ট্রি ফরম</div>
 
             <form action="nagorikentryreg.php" method="POST">
@@ -81,8 +102,8 @@ include '_dbconnect.php';
                             class='px-2 py-2 bg-white border border-gray-300 rounded-xl w-full focus:outline-blue-400'
                             type="text" name="mname" placeholder='মাতার নাম' required>
                         <input
-                                class='px-2 py-2 bg-white border border-gray-300 rounded-xl w-full focus:outline-blue-400'
-                                type="text" name="hname" placeholder='স্বামীর নাম' required>
+                            class='px-2 py-2 bg-white border border-gray-300 rounded-xl w-full focus:outline-blue-400'
+                            type="text" name="hname" placeholder='স্বামীর নাম' required>
                         <div class="w-full">
 
                             <select
@@ -94,7 +115,8 @@ include '_dbconnect.php';
                                     class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">ছোটশলুয়া
                                 </option>
                                 <option value="হুলিয়ামারী"
-                                        class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full"> হুলিয়ামারী</option>
+                                    class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full"> হুলিয়ামারী
+                                </option>
                                 <option value="বলদিয়া"
                                     class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full"> বলদিয়া</option>
                                 <option value="বড়শলুয়া"
@@ -161,7 +183,7 @@ include '_dbconnect.php';
 
                         <select class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full" name="gender">
                             <option disabled selected value="লিঙ্গ"
-                                    class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">লিঙ্গ</option>
+                                class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">লিঙ্গ</option>
                             <option value="পুরুষ" class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">
                                 পুরুষ</option>
                             <option value="নারী" class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">
@@ -169,10 +191,11 @@ include '_dbconnect.php';
 
 
                         </select>
-                        <select class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full focus:outline-blue-400"
-                                name="dakghor">
+                        <select
+                            class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full focus:outline-blue-400"
+                            name="dakghor">
                             <option disabled selected value="ডাকঘর"
-                                    class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">ডাকঘর</option>
+                                class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">ডাকঘর</option>
                             <option value="তিতুদহ" class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">
                                 তিতুদহ</option>
 
