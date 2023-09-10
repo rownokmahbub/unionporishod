@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Sep 09, 2023 at 05:28 PM
+-- Generation Time: Sep 10, 2023 at 03:58 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -91,7 +91,8 @@ CREATE TABLE `gram` (
 --
 
 INSERT INTO `gram` (`id`, `name`, `word`, `male`, `female`, `total`) VALUES
-(2, 'rownok', '২', '23', '34', '12');
+(2, 'rownok', '২', '23', '34', '12'),
+(3, 'বড়শলুয়া', '৪', '23', '34', '123');
 
 -- --------------------------------------------------------
 
@@ -183,7 +184,9 @@ INSERT INTO `log` (`id`, `email`, `activity`, `time`) VALUES
 (145, 'mahsinali4@gmail.com', 'Log Out', '2023-09-09 01:47:26'),
 (146, 'rowok2001@gmail.com', 'Log Out', '2023-09-09 03:46:24'),
 (147, 'mahsinali4@gmail.com', 'Log Out', '2023-09-09 03:47:10'),
-(148, 'rowok2001@gmail.com', 'Log Out', '2023-09-09 03:50:39');
+(148, 'rowok2001@gmail.com', 'Log Out', '2023-09-09 03:50:39'),
+(149, 'mahsinali4@gmail.com', 'Log Out', '2023-09-10 01:12:19'),
+(150, 'rowok2001@gmail.com', 'Log Out', '2023-09-10 01:48:19');
 
 -- --------------------------------------------------------
 
@@ -242,6 +245,7 @@ CREATE TABLE `nagorik` (
   `name` varchar(255) NOT NULL,
   `fathername` varchar(255) NOT NULL,
   `mothername` varchar(255) NOT NULL,
+  `husband` varchar(255) NOT NULL,
   `gram` varchar(255) NOT NULL,
   `word` varchar(255) NOT NULL,
   `birthno` varchar(255) NOT NULL,
@@ -255,10 +259,11 @@ CREATE TABLE `nagorik` (
 -- Dumping data for table `nagorik`
 --
 
-INSERT INTO `nagorik` (`id`, `sarok`, `name`, `fathername`, `mothername`, `gram`, `word`, `birthno`, `voterid`, `mobileno`, `gender`, `dakghor`) VALUES
-(3, '10002', 'rownok', 'rajjak', 'fgfgfg', 'নুরুল্লাপুর', '৫', '23324344', '34234534556', '01273483465', 'নারী', 'নুরুল্লাপুর'),
-(4, '10004', 'rownok', 'mahsin ali', 'rakha', 'বড়শলুয়া', '৩', '23324344', '34234534556', '34453432432454', 'নারী', '৬৩ নং আড়িয়া'),
-(5, '1005', 'rownok', 'mahsin ali', 'fgfgfg', '৬২ নং আড়িয়া', '৪', '23324344', '৩৩৪৫৫৩২৫৪৩', '34453432432454', 'নারী', 'তিতুদহ');
+INSERT INTO `nagorik` (`id`, `sarok`, `name`, `fathername`, `mothername`, `husband`, `gram`, `word`, `birthno`, `voterid`, `mobileno`, `gender`, `dakghor`) VALUES
+(3, '10002', 'rownok', 'rajjak', 'fgfgfg', '', 'নুরুল্লাপুর', '৫', '23324344', '34234534556', '01273483465', 'নারী', 'নুরুল্লাপুর'),
+(4, '10004', 'rownok', 'mahsin ali', 'rakha', '', 'বড়শলুয়া', '৩', '23324344', '34234534556', '34453432432454', 'নারী', '৬৩ নং আড়িয়া'),
+(5, '1005', 'rownok', 'mahsin ali', 'fgfgfg', '', '৬২ নং আড়িয়া', '৪', '23324344', '৩৩৪৫৫৩২৫৪৩', '34453432432454', 'নারী', 'তিতুদহ'),
+(6, '1006', 'rownok', 'dfdfdsf', 'fgfdg', 'amirt', 'হুলিয়ামারী', '২', '34534543', '43543545435', '02345436565', 'পুরুষ', 'তিতুদহ');
 
 -- --------------------------------------------------------
 
@@ -857,7 +862,7 @@ ALTER TABLE `boyoskovata`
 -- AUTO_INCREMENT for table `gram`
 --
 ALTER TABLE `gram`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `khobor`
@@ -875,7 +880,7 @@ ALTER TABLE `kormokortaborgo`
 -- AUTO_INCREMENT for table `log`
 --
 ALTER TABLE `log`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=149;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=151;
 
 --
 -- AUTO_INCREMENT for table `masisuvata`
@@ -893,7 +898,7 @@ ALTER TABLE `mouja`
 -- AUTO_INCREMENT for table `nagorik`
 --
 ALTER TABLE `nagorik`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `notice`
