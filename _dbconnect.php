@@ -3,8 +3,8 @@
 
 // Connect to the MySQL database
 $servername = "localhost";
-$username = "root";
-$password = "";
+$username = "admin";
+$password = "admin";
 $dbname = "up";
 
 // Create connection
