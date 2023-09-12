@@ -134,7 +134,7 @@ if (isset($_POST["import"])) {
                     </option>
 
                 </select>
-                <a onclick="downloadFile()" class="text-center  font-semibold flex gap-3 items-center px-4 py-2.5 rounded-full shadow-lg bg-cyan-600 text-white hover:bg-cyan-700">
+                <a onclick="downloadFile()" class="text-center cursor-pointer font-semibold flex gap-3 items-center px-4 py-2.5 rounded-full shadow-lg bg-cyan-600 text-white hover:bg-cyan-700">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M3 15v4c0 1.1.9 2 2 2h14a2 2 0 0 0 2-2v-4M17 9l-5 5-5-5M12 12.8V2.5" />
                     </svg>

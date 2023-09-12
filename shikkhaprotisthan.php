@@ -49,7 +49,7 @@
   ?>
     <!--hero section-->
     <div class="my-10">
-
+        <p class='text-center text-2xl mt-5 font-semibold'>শিক্ষা প্রতিষ্ঠান </p>
         <table id="myTable" class="cell-border display responsive wrap" style="width:100%">
             <thead>
                 <tr>
