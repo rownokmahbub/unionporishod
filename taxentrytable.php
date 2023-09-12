@@ -69,10 +69,9 @@ if ($email == null) {
 
           <th data-priority="2">গ্রাম</th>
           <th data-priority="2">ওয়ার্ড</th>
-          <th data-priority="2">বাসার ধরন </th>
-          <th data-priority="2">রুম সংখ্য</th>
+
           <th data-priority="2">কর</th>
-          <th data-priority="2">ভোটার আইডি</th>
+
 
 
 
@@ -96,10 +95,9 @@ if ($email == null) {
             <td class=''><?= $row['fatherhusband'] ?></td>
             <td class=''><?= $row['gram'] ?></td>
             <td class=''><?= $row['ward'] ?></td>
-            <td class=''><?= $row['housetype'] ?></td>
-            <td class=''><?= $row['roomno'] ?></td>
+
             <td class=''><?= $row['totaltax'] ?></td>
-            <td class=''><?= $row['voterid'] ?></td>
+
 
             <td class=''>
 

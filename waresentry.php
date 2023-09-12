@@ -46,12 +46,17 @@ include '_dbconnect.php';
 
         <div class="px-10 py-10 bg-white mx-auto w-full rounded-xl">
             <div class="flex flex-col md:flex-row gap-4 md:gap-0 justify-between items-center">
-                <a href="./userhome.php" class="text-center mb-3 font-semibold flex gap-3 items-center sticky top-0 left-0  ">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <a href="./userhome.php"
+                   class="text-center mb-3 font-semibold flex gap-3 items-center sticky top-0 left-0  ">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                         stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M19 12H6M12 5l-7 7 7 7" />
                     </svg>
                     Back</a>
-
+                <a href="./warestable.php"
+                   class="text-center mb-3 font-semibold bg-cyan-900 px-4 py-2.5 flex gap-3 items-center sticky top-0 left-0  text-white rounded-xl shadow-lg hover:bg-slate-900">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+                    Last Data</a>
 
             </div>
             <div class="font-semibold text-xl mb-4 text-center">ওয়ারেশ এন্ট্রি ফরম</div>

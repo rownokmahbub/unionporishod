@@ -11,8 +11,7 @@
     $fname = $_POST['fname'];
     $gram = $_POST['gram'];
     $ward = $_POST['ward'];
-    $housetype = $_POST['housetype'];
-    $voterid = $_POST['voterid'];
+
     $rnum = $_POST['rnum'];
     $kor = $_POST['kor'];
     
@@ -21,7 +20,7 @@
 
 
      
-       $sql = "UPDATE `taxentry` SET `holdingno`='$holdingno',`name`='$name',`fatherhusband`='$fname',`gram`='$gram',`ward`='$ward',`housetype`='$housetype',`roomno`='$rnum',`totaltax`='$kor',`voterid`='$voterid' WHERE `id`=$id";;
+       $sql = "UPDATE `taxentry` SET `holdingno`='$holdingno',`name`='$name',`fatherhusband`='$fname',`gram`='$gram',`ward`='$ward',`totaltax`='$kor' WHERE `id`=$id";;
        print_r(error_get_last());
   
    if(mysqli_query($con, $sql)){

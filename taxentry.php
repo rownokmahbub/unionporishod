@@ -82,7 +82,10 @@ include '_dbconnect.php';
                         <path d="M19 12H6M12 5l-7 7 7 7" />
                     </svg>
                     Back</a>
-
+                <a href="./taxentrytable.php"
+                   class="text-center mb-3 font-semibold bg-cyan-900 px-4 py-2.5 flex gap-3 items-center sticky top-0 left-0  text-white rounded-xl shadow-lg hover:bg-slate-900">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+                     Last Data</a>
 
             </div>
 
@@ -176,12 +179,7 @@ include '_dbconnect.php';
                             </option>
 
                         </select>
-                        <input
-                            class='px-2 py-2 bg-white border border-gray-300 rounded-xl w-full focus:outline-blue-400'
-                            type="text" name="housetype" placeholder='বাড়ির ধরন ' required>
-                        <input
-                            class='px-2 py-2 bg-white border border-gray-300 rounded-xl w-full focus:outline-blue-400'
-                            type="text" name="roomno" placeholder='রুম সংখ্যা' required>
+
                         <input
                             class='px-2 py-2 bg-white border border-gray-300 rounded-xl w-full focus:outline-blue-400'
                             type="text" name="tax" placeholder='ট্যাক্স' required>
@@ -190,8 +188,7 @@ include '_dbconnect.php';
 
                     </div>
 
-                    <input class='px-2 py-2 bg-white border border-gray-300 rounded-xl w-full focus:outline-blue-400'
-                        type="text" name="mnum" placeholder='ভোটার আইডি' required>
+
 
 
                 </div>

@@ -19,13 +19,17 @@ if ($email == null) {
 </head>
 
 <body class="md:px-10 mx-auto bg-gradient-to-r from-indigo-50 via-purple-50 to-pink-50 z-40">
-<?php
-include './navbar.php'
-?>
- <div class="bg-gradient-to-r from-indigo-50 via-purple-50 to-pink-50 z-40">
-     <p class='text-center text-2xl font-semibold'>বয়স্ক ভাতা টেবিল</p>
-     <!--hero section-->
 
+ <div class="bg-gradient-to-r from-indigo-50 via-purple-50 to-pink-50 z-40">
+     <p class='text-center text-2xl font-semibold mt-10'>বয়স্ক ভাতা টেবিল</p>
+     <!--hero section-->
+     <a href="./userhome.php"
+        class="text-center mb-3 font-semibold flex gap-3 items-center sticky top-0 left-0  ">
+         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+             <path d="M19 12H6M12 5l-7 7 7 7" />
+         </svg>
+         Back</a>
      <div class="my-10">
 
          <table id="myTable" class="cell-border display responsive wrap" style="width:100%">

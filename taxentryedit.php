@@ -63,10 +63,9 @@ if (isset($_REQUEST['id'])) {
             $fathername = $result['fatherhusband'];
             $gram = $result['gram'];
             $word = $result['ward'];
-            $housetype = $result['housetype'];
-            $roomno = $result['roomno'];
+
             $totaltax = $result['totaltax'];
-            $voterid = $result['voterid'];
+
 
             ?>
             <form action="taxentryupdate.php" method="POST">
@@ -96,14 +95,7 @@ if (isset($_REQUEST['id'])) {
 
                             <input class='px-2 py-2 bg-gradient-to-r from-indigo-50 via-purple-50 to-pink-50 z-40 border border-gray-300 rounded-xl w-full focus:outline-blue-400' type="text" name="ward" placeholder='ওয়ার্ড' value='<?php echo $word ?>' required>
                         </div>
-                        <div class="space-y-1">
-                            <span>বাসার ধরন</span>
-                            <input class='px-2 py-2 bg-gradient-to-r from-indigo-50 via-purple-50 to-pink-50 z-40 border border-gray-300 rounded-xl w-full focus:outline-blue-400' type="text" name="housetype" placeholder='জন্ম নিবন্ধন নাম্বার ' value='<?php echo $housetype ?>' required>
-                        </div>
-                        <div class="space-y-1">
-                            <span>রুম নং</span>
-                            <input class='px-2 py-2 bg-gradient-to-r from-indigo-50 via-purple-50 to-pink-50 z-40 border border-gray-300 rounded-xl w-full focus:outline-blue-400' type="text" name="rnum" placeholder='রুম নং' value='<?php echo $roomno ?>' required>
-                        </div>
+
                         <div class="space-y-1">
                             <span>কর</span>
                             <input class='px-2 py-2 bg-gradient-to-r from-indigo-50 via-purple-50 to-pink-50 z-40 border border-gray-300 rounded-xl w-full focus:outline-blue-400' type="text" name="kor" placeholder='কর' value='<?php echo $totaltax ?>' required>
@@ -111,13 +103,8 @@ if (isset($_REQUEST['id'])) {
 
 
 
-
-
                     </div>
-                    <div class="space-y-1">
-                        <span>ভোটার আইডি</span>
-                        <input class='px-2 py-2 bg-gradient-to-r from-indigo-50 via-purple-50 to-pink-50 z-40 border border-gray-300 rounded-xl w-full focus:outline-blue-400' type="text" name="voterid" placeholder='ভোটার আইডি' value='<?php echo $voterid ?>' required>
-                    </div>
+
 
 
 

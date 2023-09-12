@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Sep 10, 2023 at 03:58 AM
+-- Generation Time: Sep 12, 2023 at 03:25 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -69,7 +69,8 @@ CREATE TABLE `boyoskovata` (
 --
 
 INSERT INTO `boyoskovata` (`id`, `slno`, `name`, `fatherhusband`, `mothername`, `gram`, `word`, `voterid`, `montobbo`) VALUES
-(4, '1', 'rownok', 'mahsin ali', 'rakha', 'চাঁদপুর', '৪', '34234534556', 'fdfdf');
+(4, '2', 'rownok', 'mahsin ali', 'rakha', 'চাঁদপুর', '৪', '34234534556', 'fdfdf'),
+(7, '1', 'rownok', 'dfdfdsf', '34', 'বলদিয়া', '১', '3432423424', 'hgh');
 
 -- --------------------------------------------------------
 
@@ -186,7 +187,42 @@ INSERT INTO `log` (`id`, `email`, `activity`, `time`) VALUES
 (147, 'mahsinali4@gmail.com', 'Log Out', '2023-09-09 03:47:10'),
 (148, 'rowok2001@gmail.com', 'Log Out', '2023-09-09 03:50:39'),
 (149, 'mahsinali4@gmail.com', 'Log Out', '2023-09-10 01:12:19'),
-(150, 'rowok2001@gmail.com', 'Log Out', '2023-09-10 01:48:19');
+(150, 'rowok2001@gmail.com', 'Log Out', '2023-09-10 01:48:19'),
+(151, 'mahsinali4@gmail.com', 'Log Out', '2023-09-10 14:09:54'),
+(152, 'rowok2001@gmail.com', 'Log Out', '2023-09-10 15:12:40'),
+(153, 'mahsinali4@gmail.com', 'Log Out', '2023-09-10 15:18:16'),
+(154, 'mahsinali4@gmail.com', 'Log Out', '2023-09-10 15:18:33'),
+(155, 'rowok2001@gmail.com', 'Log Out', '2023-09-10 15:43:50'),
+(156, 'mahsinali4@gmail.com', 'Log Out', '2023-09-10 15:48:38'),
+(157, 'rowok2001@gmail.com', 'Log Out', '2023-09-10 16:18:17'),
+(158, 'mahsinali4@gmail.com', 'Log Out', '2023-09-10 16:21:44'),
+(159, 'rowok2001@gmail.com', 'Log Out', '2023-09-10 16:24:24'),
+(160, 'mahsinali4@gmail.com', 'Log Out', '2023-09-11 05:56:17'),
+(161, 'mahsinali4@gmail.com', 'Log Out', '2023-09-12 00:16:02'),
+(162, 'mahsinali4@gmail.com', 'Log Out', '2023-09-12 00:37:08'),
+(163, 'rowok2001@gmail.com', 'Log Out', '2023-09-12 01:17:39'),
+(164, 'mahsinali4@gmail.com', 'Log Out', '2023-09-12 02:04:18'),
+(165, 'rowok2001@gmail.com', 'Log Out', '2023-09-12 02:04:32'),
+(166, 'rowok2001@gmail.com', 'Log Out', '2023-09-12 02:10:37'),
+(167, 'rowok2001@gmail.com', 'Log Out', '2023-09-12 02:14:01'),
+(168, 'rowok2001@gmail.com', 'Log Out', '2023-09-12 04:26:58'),
+(169, 'rownok2001@gmail.com', 'Log Out', '2023-09-12 04:37:51'),
+(170, 'rownok2001@gmail.com', 'Log Out', '2023-09-12 05:01:50'),
+(171, 'rownok2001@gmail.com', 'Log Out', '2023-09-12 05:02:31'),
+(172, 'rownok2001@gmail.com', 'Log Out', '2023-09-12 05:39:57'),
+(173, 'rownok2001@gmail.com', 'Log Out', '2023-09-12 05:40:27'),
+(174, 'rownok2001@gmail.com', 'Log Out', '2023-09-12 06:27:01'),
+(175, 'rownok2001@gmail.com', 'Log Out', '2023-09-12 06:28:38'),
+(176, 'rownok2001@gmail.com', 'Log Out', '2023-09-12 06:41:16'),
+(177, 'rownok2001@gmail.com', 'Log Out', '2023-09-12 06:44:53'),
+(178, 'rownok2001@gmail.com', 'Log Out', '2023-09-12 06:46:42'),
+(179, 'rownok2001@gmail.com', 'Log Out', '2023-09-12 09:32:39'),
+(180, 'rownok2001@gmail.com', 'Log Out', '2023-09-12 10:16:26'),
+(181, 'rownok2001@gmail.com', 'Log Out', '2023-09-12 10:36:20'),
+(182, 'rownok2001@gmail.com', 'Log Out', '2023-09-12 12:37:06'),
+(183, 'rownok2001@gmail.com', 'Log Out', '2023-09-12 12:42:14'),
+(184, 'rownok2001@gmail.com', 'Log Out', '2023-09-12 13:03:38'),
+(185, 'rownok2001@gmail.com', 'Log Out', '2023-09-12 13:23:12');
 
 -- --------------------------------------------------------
 
@@ -260,10 +296,8 @@ CREATE TABLE `nagorik` (
 --
 
 INSERT INTO `nagorik` (`id`, `sarok`, `name`, `fathername`, `mothername`, `husband`, `gram`, `word`, `birthno`, `voterid`, `mobileno`, `gender`, `dakghor`) VALUES
-(3, '10002', 'rownok', 'rajjak', 'fgfgfg', '', 'নুরুল্লাপুর', '৫', '23324344', '34234534556', '01273483465', 'নারী', 'নুরুল্লাপুর'),
-(4, '10004', 'rownok', 'mahsin ali', 'rakha', '', 'বড়শলুয়া', '৩', '23324344', '34234534556', '34453432432454', 'নারী', '৬৩ নং আড়িয়া'),
-(5, '1005', 'rownok', 'mahsin ali', 'fgfgfg', '', '৬২ নং আড়িয়া', '৪', '23324344', '৩৩৪৫৫৩২৫৪৩', '34453432432454', 'নারী', 'তিতুদহ'),
-(6, '1006', 'rownok', 'dfdfdsf', 'fgfdg', 'amirt', 'হুলিয়ামারী', '২', '34534543', '43543545435', '02345436565', 'পুরুষ', 'তিতুদহ');
+(7, '2', 'rownok', 'mahsin', 'rakha', 'amir', 'বলদিয়া', '৩', '34534543', '3432423424', '02345436565', 'পুরুষ', 'তিতুদহ'),
+(8, '1', 'rownok', 'dfdfdsf', 'gdfgfdg', 'fgfdg', 'বলদিয়া', '৭', '34534543', '3432423424', '02345436565', 'পুরুষ', 'তিতুদহ');
 
 -- --------------------------------------------------------
 
@@ -340,7 +374,7 @@ CREATE TABLE `protibondhivata` (
 --
 
 INSERT INTO `protibondhivata` (`id`, `slno`, `name`, `fatherhusband`, `mothername`, `gram`, `word`, `voterid`, `montobbo`) VALUES
-(2, '1', 'rownok', 'ramdnbf', 'rakha', '৬২ নং আড়িয়া', '৬', '34234534556', 'fdfdf');
+(2, '2', 'rownok', 'ramdnbf', 'rakha', '৬২ নং আড়িয়া', '৬', '34234534556', 'fdfdf');
 
 -- --------------------------------------------------------
 
@@ -482,7 +516,7 @@ CREATE TABLE `tadeentry` (
 
 INSERT INTO `tadeentry` (`id`, `licence_no`, `name`, `father_husband`, `mother_name`, `word`, `bplace`, `tradename`, `babshardhoron`, `kor`, `voterid`, `mobileno`, `upozela`, `zela`) VALUES
 (2, '1001', 'rownok', 'mahsin ali', 'rakha', '১', 'chuadanga', 'chuadangar', 'dokan', '443', '3423432454', '34453432432454', 'chuadangar', 'chuadanga '),
-(4, '1006', 'rownok', 'mahsin ali', 'rakha', '৫', '৬২ নং আড়িয়া', 'chuadanga', 'dokan', '443', '3423432454', '01273483465', 'chuadanga ', 'chuadanga ');
+(4, '1005', 'rownok', 'mahsin ali', 'rakha', '৫', '৬২ নং আড়িয়া', 'chuadanga', 'dokan', '443', '3423432454', '01273483465', 'chuadanga ', 'chuadanga ');
 
 -- --------------------------------------------------------
 
@@ -497,18 +531,16 @@ CREATE TABLE `taxentry` (
   `fatherhusband` varchar(255) NOT NULL,
   `gram` varchar(255) NOT NULL,
   `ward` varchar(255) NOT NULL,
-  `housetype` varchar(255) NOT NULL,
-  `roomno` varchar(255) NOT NULL,
-  `totaltax` varchar(255) NOT NULL,
-  `voterid` varchar(255) NOT NULL
+  `totaltax` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Dumping data for table `taxentry`
 --
 
-INSERT INTO `taxentry` (`id`, `holdingno`, `name`, `fatherhusband`, `gram`, `ward`, `housetype`, `roomno`, `totaltax`, `voterid`) VALUES
-(5, '1002', 'rabeya', 'kamal', '৬২ নং আড়িয়া', '৪', 'paka', '2', '644', '34453432432454');
+INSERT INTO `taxentry` (`id`, `holdingno`, `name`, `fatherhusband`, `gram`, `ward`, `totaltax`) VALUES
+(6, '1003', 'dhdfgdsgf', 'DFGDF', 'বড়শলুয়া', '২', '2323'),
+(7, '1004', 'rownok', 'DFGDF', 'চাঁদপুর', '৬', '45');
 
 -- --------------------------------------------------------
 
@@ -678,7 +710,7 @@ CREATE TABLE `wares` (
 --
 
 INSERT INTO `wares` (`id`, `sarok`, `name`, `fathername`, `mothername`, `gram`, `word`, `deathno`, `voterid`, `mobileno`, `aname`, `w1`, `w2`, `w3`, `w4`, `w5`, `w6`, `w7`, `w8`, `w9`, `w10`, `w11`, `w12`, `w13`, `w14`, `w15`, `r1`, `r2`, `r3`, `r4`, `r5`, `r6`, `r7`, `r8`, `r9`, `r10`, `r11`, `r12`, `r13`, `r14`, `r15`) VALUES
-(2, '10001', 'rownok', 'mahsin ali', 'rakha', '৬২ নং আড়িয়া', '৩', '23324344', '৩৩৪৫৫৩২৫৪৩', '34453432432454', 'রাহমান ', 'রাব্বু ', 'রাবিয়ের ', 'এইচ ', '', '', '', '', '', '', '', '', '', '', '', '', 'পিতা ', 'কন্যা ', 'ইফজেএফ ', '', '', '', '', '', '', '', '', '', '', '', '');
+(2, '1', 'rownok', 'mahsin ali', 'rakha', '৬২ নং আড়িয়া', '৩', '23324344', '৩৩৪৫৫৩২৫৪৩', '34453432432454', 'রাহমান ', 'রাব্বু ', 'রাবিয়ের ', 'এইচ ', '', '', '', '', '', '', '', '', '', '', '', '', 'পিতা ', 'কন্যা ', 'ইফজেএফ ', '', '', '', '', '', '', '', '', '', '', '', '');
 
 --
 -- Indexes for dumped tables
@@ -856,7 +888,7 @@ ALTER TABLE `bidhobavata`
 -- AUTO_INCREMENT for table `boyoskovata`
 --
 ALTER TABLE `boyoskovata`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `gram`
@@ -880,7 +912,7 @@ ALTER TABLE `kormokortaborgo`
 -- AUTO_INCREMENT for table `log`
 --
 ALTER TABLE `log`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=151;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=186;
 
 --
 -- AUTO_INCREMENT for table `masisuvata`
@@ -898,7 +930,7 @@ ALTER TABLE `mouja`
 -- AUTO_INCREMENT for table `nagorik`
 --
 ALTER TABLE `nagorik`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `notice`
@@ -958,7 +990,7 @@ ALTER TABLE `tadeentry`
 -- AUTO_INCREMENT for table `taxentry`
 --
 ALTER TABLE `taxentry`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `uniondetails`
