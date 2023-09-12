@@ -24,16 +24,16 @@ include '_dbconnect.php';
     <title> ট্যাক্স ডাটা এন্ট্রি </title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-    tailwind.config = {
-        theme: {
+        tailwind.config = {
+            theme: {
 
-            extend: {
-                colors: {
-                    clifford: '#da373d',
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
                 }
             }
         }
-    }
     </script>
 </head>
 
@@ -44,8 +44,7 @@ include '_dbconnect.php';
 
 
         <div class="">
-            <section
-                class='px-5 hidden md:flex py-5 mx-auto bg-green-600 text-white justify-center rounded-2xl w-52 text-lg font-semibold'>
+            <section class='px-5 hidden md:flex py-5 mx-auto bg-green-600 text-white justify-center rounded-2xl w-52 text-lg font-semibold'>
                 <h3 class="">মোট নাগরিক সনদ : </h3>
                 <?php
                 $query = "SELECT COUNT(*), SUM(id) FROM nagorik";
@@ -61,12 +60,10 @@ include '_dbconnect.php';
 
         </div>
 
-        <div class="px-10 py-10 bg-slate-100 mx-auto w-full rounded-xl">
+        <div class="px-10 py-10 bg-white mx-auto w-full rounded-xl">
             <div class="flex flex-col md:flex-row gap-4 md:gap-0 justify-between items-center">
-                <a href="./userhome.php"
-                    class="text-center mb-3 font-semibold flex gap-3 items-center sticky top-0 left-0  ">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                        stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <a href="./userhome.php" class="text-center mb-3 font-semibold flex gap-3 items-center sticky top-0 left-0  ">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M19 12H6M12 5l-7 7 7 7" />
                     </svg>
                     Back</a>
@@ -79,57 +76,33 @@ include '_dbconnect.php';
                 <div class="space-y-4">
                     <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-5">
 
-                        <input
-                            class='px-2 py-2 bg-white border border-gray-300 rounded-xl w-full focus:outline-blue-400'
-                            type="text" name="sarok" placeholder='সারক নম্বর' required>
-                        <input
-                            class='px-2 py-2 bg-white border border-gray-300 rounded-xl w-full focus:outline-blue-400'
-                            type="text" name="name" placeholder='নাম' required>
-                        <input
-                            class='px-2 py-2 bg-white border border-gray-300 rounded-xl w-full focus:outline-blue-400'
-                            type="text" name="fname" placeholder='পিতার নাম' required>
-                        <input
-                            class='px-2 py-2 bg-white border border-gray-300 rounded-xl w-full focus:outline-blue-400'
-                            type="text" name="mname" placeholder='মাতার নাম' required>
-                        <input
-                            class='px-2 py-2 bg-white border border-gray-300 rounded-xl w-full focus:outline-blue-400'
-                            type="text" name="hname" placeholder='স্বামীর নাম' required>
+                        <input class='px-2 py-2 bg-gradient-to-r from-indigo-50 via-purple-50 to-pink-50 z-40 border border-gray-300 rounded-xl w-full focus:outline-blue-400' type="text" name="sarok" placeholder='সারক নম্বর' required>
+                        <input class='px-2 py-2 bg-gradient-to-r from-indigo-50 via-purple-50 to-pink-50 z-40 border border-gray-300 rounded-xl w-full focus:outline-blue-400' type="text" name="name" placeholder='নাম' required>
+                        <input class='px-2 py-2 bg-gradient-to-r from-indigo-50 via-purple-50 to-pink-50 z-40 border border-gray-300 rounded-xl w-full focus:outline-blue-400' type="text" name="fname" placeholder='পিতার নাম' required>
+                        <input class='px-2 py-2 bg-gradient-to-r from-indigo-50 via-purple-50 to-pink-50 z-40 border border-gray-300 rounded-xl w-full focus:outline-blue-400' type="text" name="mname" placeholder='মাতার নাম' required>
+                        <input class='px-2 py-2 bg-gradient-to-r from-indigo-50 via-purple-50 to-pink-50 z-40 border border-gray-300 rounded-xl w-full focus:outline-blue-400' type="text" name="hname" placeholder='স্বামীর নাম' required>
                         <div class="w-full">
 
-                            <select
-                                class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full focus:outline-blue-400"
-                                name="gram">
-                                <option disabled selected value="গ্রাম"
-                                    class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">গ্রাম</option>
-                                <option value="ছোটশলুয়া"
-                                    class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">ছোটশলুয়া
+                            <select class="px-2 py-2 bg-gradient-to-r from-indigo-50 via-purple-50 to-pink-50 z-40 border border-gray-300 rounded-xl w-full focus:outline-blue-400" name="gram">
+                                <option disabled selected value="গ্রাম" class="px-2 py-2 bg-gradient-to-r from-indigo-50 via-purple-50 to-pink-50 z-40 border border-gray-300 rounded-xl w-full">গ্রাম</option>
+                                <option value="ছোটশলুয়া" class="px-2 py-2 bg-gradient-to-r from-indigo-50 via-purple-50 to-pink-50 z-40 border border-gray-300 rounded-xl w-full">ছোটশলুয়া
                                 </option>
-                                <option value="হুলিয়ামারী"
-                                    class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full"> হুলিয়ামারী
+                                <option value="হুলিয়ামারী" class="px-2 py-2 bg-gradient-to-r from-indigo-50 via-purple-50 to-pink-50 z-40 border border-gray-300 rounded-xl w-full"> হুলিয়ামারী
                                 </option>
-                                <option value="বলদিয়া"
-                                    class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full"> বলদিয়া</option>
-                                <option value="বড়শলুয়া"
-                                    class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">বড়শলুয়া</option>
-                                <option value="৬২ নং আড়িয়া"
-                                    class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">৬২ নং আড়িয়া
+                                <option value="বলদিয়া" class="px-2 py-2 bg-gradient-to-r from-indigo-50 via-purple-50 to-pink-50 z-40 border border-gray-300 rounded-xl w-full"> বলদিয়া</option>
+                                <option value="বড়শলুয়া" class="px-2 py-2 bg-gradient-to-r from-indigo-50 via-purple-50 to-pink-50 z-40 border border-gray-300 rounded-xl w-full">বড়শলুয়া</option>
+                                <option value="৬২ নং আড়িয়া" class="px-2 py-2 bg-gradient-to-r from-indigo-50 via-purple-50 to-pink-50 z-40 border border-gray-300 rounded-xl w-full">৬২ নং আড়িয়া
                                 </option>
-                                <option value="৬৩ নং আড়িয়া"
-                                    class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">৬৩ নং আড়িয়া
+                                <option value="৬৩ নং আড়িয়া" class="px-2 py-2 bg-gradient-to-r from-indigo-50 via-purple-50 to-pink-50 z-40 border border-gray-300 rounded-xl w-full">৬৩ নং আড়িয়া
                                 </option>
-                                <option value="চাঁদপুর"
-                                    class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">চাঁদপুর</option>
-                                <option value="আড়িয়ারচক"
-                                    class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">আড়িয়ারচক
+                                <option value="চাঁদপুর" class="px-2 py-2 bg-gradient-to-r from-indigo-50 via-purple-50 to-pink-50 z-40 border border-gray-300 rounded-xl w-full">চাঁদপুর</option>
+                                <option value="আড়িয়ারচক" class="px-2 py-2 bg-gradient-to-r from-indigo-50 via-purple-50 to-pink-50 z-40 border border-gray-300 rounded-xl w-full">আড়িয়ারচক
                                 </option>
-                                <option value="নুরুল্লাপুর"
-                                    class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">নুরুল্লাপুর
+                                <option value="নুরুল্লাপুর" class="px-2 py-2 bg-gradient-to-r from-indigo-50 via-purple-50 to-pink-50 z-40 border border-gray-300 rounded-xl w-full">নুরুল্লাপুর
                                 </option>
-                                <option value="গিরিশনগর"
-                                    class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full"> গিরিশনগর
+                                <option value="গিরিশনগর" class="px-2 py-2 bg-gradient-to-r from-indigo-50 via-purple-50 to-pink-50 z-40 border border-gray-300 rounded-xl w-full"> গিরিশনগর
                                 </option>
-                                <option value="তিতুদহ"
-                                    class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">তিতুদহ</option>
+                                <option value="তিতুদহ" class="px-2 py-2 bg-gradient-to-r from-indigo-50 via-purple-50 to-pink-50 z-40 border border-gray-300 rounded-xl w-full">তিতুদহ</option>
 
 
 
@@ -138,55 +111,44 @@ include '_dbconnect.php';
 
                         </div>
 
-                        <select class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full" name="ward">
-                            <option disabled selected value="ওয়ার্ড"
-                                class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">ওয়ার্ড</option>
-                            <option value="১" class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">১
+                        <select class="px-2 py-2 bg-gradient-to-r from-indigo-50 via-purple-50 to-pink-50 z-40 border border-gray-300 rounded-xl w-full" name="ward">
+                            <option disabled selected value="ওয়ার্ড" class="px-2 py-2 bg-gradient-to-r from-indigo-50 via-purple-50 to-pink-50 z-40 border border-gray-300 rounded-xl w-full">ওয়ার্ড</option>
+                            <option value="১" class="px-2 py-2 bg-gradient-to-r from-indigo-50 via-purple-50 to-pink-50 z-40 border border-gray-300 rounded-xl w-full">১
                             </option>
-                            <option value="২" class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">২
+                            <option value="২" class="px-2 py-2 bg-gradient-to-r from-indigo-50 via-purple-50 to-pink-50 z-40 border border-gray-300 rounded-xl w-full">২
                             </option>
-                            <option value="৩" class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">৩
+                            <option value="৩" class="px-2 py-2 bg-gradient-to-r from-indigo-50 via-purple-50 to-pink-50 z-40 border border-gray-300 rounded-xl w-full">৩
                             </option>
-                            <option value="৪" class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">৪
+                            <option value="৪" class="px-2 py-2 bg-gradient-to-r from-indigo-50 via-purple-50 to-pink-50 z-40 border border-gray-300 rounded-xl w-full">৪
                             </option>
-                            <option value="৫" class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">৫
+                            <option value="৫" class="px-2 py-2 bg-gradient-to-r from-indigo-50 via-purple-50 to-pink-50 z-40 border border-gray-300 rounded-xl w-full">৫
                             </option>
-                            <option value="৬" class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">৬
+                            <option value="৬" class="px-2 py-2 bg-gradient-to-r from-indigo-50 via-purple-50 to-pink-50 z-40 border border-gray-300 rounded-xl w-full">৬
                             </option>
-                            <option value="৭" class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">৭
+                            <option value="৭" class="px-2 py-2 bg-gradient-to-r from-indigo-50 via-purple-50 to-pink-50 z-40 border border-gray-300 rounded-xl w-full">৭
                             </option>
-                            <option value="৮" class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">৮
+                            <option value="৮" class="px-2 py-2 bg-gradient-to-r from-indigo-50 via-purple-50 to-pink-50 z-40 border border-gray-300 rounded-xl w-full">৮
                             </option>
-                            <option value="৯" class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">৯
+                            <option value="৯" class="px-2 py-2 bg-gradient-to-r from-indigo-50 via-purple-50 to-pink-50 z-40 border border-gray-300 rounded-xl w-full">৯
                             </option>
 
                         </select>
-                        <input
-                            class='px-2 py-2 bg-white border border-gray-300 rounded-xl w-full focus:outline-blue-400'
-                            type="text" name="birthno" placeholder='জন্ম নিবন্ধন নাম্বার ' required>
-                        <input
-                            class='px-2 py-2 bg-white border border-gray-300 rounded-xl w-full focus:outline-blue-400'
-                            type="text" name="voterid" placeholder='ভোটার আইডি' required>
-                        <input
-                            class='px-2 py-2 bg-white border border-gray-300 rounded-xl w-full focus:outline-blue-400'
-                            type="text" name="mnum" placeholder='মোবাইল নাম্বার' required>
+                        <input class='px-2 py-2 bg-gradient-to-r from-indigo-50 via-purple-50 to-pink-50 z-40 border border-gray-300 rounded-xl w-full focus:outline-blue-400' type="text" name="birthno" placeholder='জন্ম নিবন্ধন নাম্বার ' required>
+                        <input class='px-2 py-2 bg-gradient-to-r from-indigo-50 via-purple-50 to-pink-50 z-40 border border-gray-300 rounded-xl w-full focus:outline-blue-400' type="text" name="voterid" placeholder='ভোটার আইডি' required>
+                        <input class='px-2 py-2 bg-gradient-to-r from-indigo-50 via-purple-50 to-pink-50 z-40 border border-gray-300 rounded-xl w-full focus:outline-blue-400' type="text" name="mnum" placeholder='মোবাইল নাম্বার' required>
 
-                        <select class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full" name="gender">
-                            <option disabled selected value="লিঙ্গ"
-                                class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">লিঙ্গ</option>
-                            <option value="পুরুষ" class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">
+                        <select class="px-2 py-2 bg-gradient-to-r from-indigo-50 via-purple-50 to-pink-50 z-40 border border-gray-300 rounded-xl w-full" name="gender">
+                            <option disabled selected value="লিঙ্গ" class="px-2 py-2 bg-gradient-to-r from-indigo-50 via-purple-50 to-pink-50 z-40 border border-gray-300 rounded-xl w-full">লিঙ্গ</option>
+                            <option value="পুরুষ" class="px-2 py-2 bg-gradient-to-r from-indigo-50 via-purple-50 to-pink-50 z-40 border border-gray-300 rounded-xl w-full">
                                 পুরুষ</option>
-                            <option value="নারী" class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">
+                            <option value="নারী" class="px-2 py-2 bg-gradient-to-r from-indigo-50 via-purple-50 to-pink-50 z-40 border border-gray-300 rounded-xl w-full">
                                 নারী</option>
 
 
                         </select>
-                        <select
-                            class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full focus:outline-blue-400"
-                            name="dakghor">
-                            <option disabled selected value="ডাকঘর"
-                                class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">ডাকঘর</option>
-                            <option value="তিতুদহ" class="px-2 py-2 bg-white border border-gray-300 rounded-xl w-full">
+                        <select class="px-2 py-2 bg-gradient-to-r from-indigo-50 via-purple-50 to-pink-50 z-40 border border-gray-300 rounded-xl w-full focus:outline-blue-400" name="dakghor">
+                            <option disabled selected value="ডাকঘর" class="px-2 py-2 bg-gradient-to-r from-indigo-50 via-purple-50 to-pink-50 z-40 border border-gray-300 rounded-xl w-full">ডাকঘর</option>
+                            <option value="তিতুদহ" class="px-2 py-2 bg-gradient-to-r from-indigo-50 via-purple-50 to-pink-50 z-40 border border-gray-300 rounded-xl w-full">
                                 তিতুদহ</option>
 
 

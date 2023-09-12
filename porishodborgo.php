@@ -33,7 +33,7 @@
   </script>
  
 </head>
-<body class="md:px-32 mx-auto bg-gradient-to-r from-teal-50 to-sky-50">
+<body class="md:px-32 mx-auto bg-gradient-to-r from-indigo-50 via-purple-50 to-pink-50">
 	<!-- Navbar goes here -->
   <?php
 include './navbar.php'

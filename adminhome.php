@@ -23,44 +23,94 @@ if ($email == null) {
 </head>
 
 <body class="md:px-32 mx-auto bg-gradient-to-r from-indigo-50 via-purple-50 to-pink-50">
-    <div class="flex flex-col md:flex-row px-5 justify-between md:h-screen items-center">
+    <div class="flex flex-col  px-5 justify-center md:h-screen w-full lg:max-w-screen-sm mx-auto items-center">
+        <img class='max-w-xl' src="Assets/adminhome.png" alt="admin home">
         <div class="space-y-2">
-            <p class='text-4xl font-semibold leading-snug'>অ্যাডমিন ড্যাশবোর্ড এ আপনাকে স্বাগতম</p>
+            <p class='text-4xl font-semibold leading-snug text-center mb-10'>অ্যাডমিন ড্যাশবোর্ড এ আপনাকে স্বাগতম</p>
 
-            <form action="logout.php">
-
-                <a href='createuser.php'
-                    class='px-4 py-2.5 cursor-pointer rounded-full text-white font-semibold text-base bg-sky-800 hover:bg-sky-600  duration-300 transition'>
-                    Create User</a>
-                <input type="button"
-                    class="px-4 py-2 cursor-pointer rounded-full text-white font-semibold text-base bg-sky-800 hover:bg-sky-600  duration-300 transition"
-                    value="User Log" onclick="log();">
-                <script>
-                function log() {
-                    location.assign('userlog.php');
-                }
-                </script>
-                <a href='./gallery/ghome.php'
-                    class='px-4 py-2 cursor-pointer rounded-full text-white font-semibold text-base bg-sky-800 hover:bg-sky-600  duration-300 transition'>Gallery</a>
-                <div class="flex items-center gap-1 mt-3">
-                    <a href='home/home.php'
-                        class='px-4 py-2 cursor-pointer rounded-full text-white font-semibold text-base bg-sky-800 hover:bg-sky-600  duration-300 transition'>HomePage</a>
-
-                    <a href='./protisthan/phome.php'
-                        class='px-4 py-2 cursor-pointer rounded-full text-white font-semibold text-base bg-sky-800 hover:bg-sky-600  duration-300 transition'>Protisthan</a>
-                    <a href='./fileuploaddownload.php'
-                        class='px-4 py-2 cursor-pointer rounded-full text-white font-semibold text-base bg-sky-800 hover:bg-sky-600  duration-300 transition'>File
-                        Import
-                        Export
-                    </a>
+            <form action="logout.php" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-5">
+                <div>
+                    <div class="relative inline-flex  group w-full">
+                        <div
+                                class="absolute transitiona-all duration-1000 opacity-70 -inset-px bg-gradient-to-r from-purple-400 via-emerald-200 to-purple-400 rounded-full blur-xl group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt">
+                        </div>
+                        <a href="createuser.php" title="Get quote now"
+                           class="relative inline-flex items-center justify-center px-8 py-2 text-lg font-medium text-white transition-all duration-200 bg-gradient-to-r from-cyan-900 to-blue-900 rounded-full shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
+                           role="button">Create User
+                        </a>
+                    </div>
                 </div>
-                <br><br>
-                <button
-                    class="focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-full duration-300 text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900"
-                    type='submit'>Log Out</button>
+
+
+<!--                <input type="button"-->
+<!--                    class="px-4 py-2 cursor-pointer rounded-full text-white font-semibold text-base bg-sky-800 hover:bg-sky-600  duration-300 transition"-->
+<!--                    value="User Log" onclick="log();">-->
+<!--                <script>-->
+<!--                function log() {-->
+<!--                    location.assign('userlog.php');-->
+<!--                }-->
+<!--                </script>-->
+
+                <div>
+                    <div class="relative inline-flex  group w-full">
+                        <div
+                                class="absolute transitiona-all duration-1000 opacity-70 -inset-px bg-gradient-to-r from-purple-400 via-emerald-200 to-purple-400 rounded-full blur-xl group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt">
+                        </div>
+                        <a href="./gallery/ghome.php" title="Get quote now"
+                           class="relative inline-flex items-center justify-center px-8 py-2 text-lg font-medium text-white transition-all duration-200 bg-gradient-to-r from-cyan-900 to-blue-900 rounded-full shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
+                           role="button">Gallery Page
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <div class="relative inline-flex w-full group">
+                        <div
+                                class="absolute transitiona-all duration-1000 opacity-70 -inset-px bg-gradient-to-r from-purple-400 via-emerald-200 to-purple-400 rounded-full blur-xl group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt">
+                        </div>
+                        <a href="home/home.php" title="Get quote now"
+                           class="relative inline-flex items-center justify-center px-8 py-2 text-lg font-medium text-white transition-all duration-200 bg-gradient-to-r from-cyan-900 to-blue-900 rounded-full shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
+                           role="button">Home Page
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <div class="relative inline-flex  group">
+                        <div
+                                class="absolute transitiona-all duration-1000 opacity-70 -inset-px bg-gradient-to-r from-purple-400 via-emerald-200 to-purple-400 rounded-full blur-xl group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt">
+                        </div>
+                        <a href="./protisthan/phome.php" title="Get quote now"
+                           class="relative inline-flex items-center justify-center px-8 py-2 text-lg font-medium text-white transition-all duration-200 bg-gradient-to-r from-cyan-900 to-blue-900 rounded-full shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
+                           role="button">Protisthan
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <div class="relative inline-flex w-full group">
+                        <div
+                                class="absolute transitiona-all duration-1000 opacity-70 -inset-px bg-gradient-to-r from-purple-400 via-emerald-200 to-purple-400 rounded-full blur-xl group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt">
+                        </div>
+                        <a href="./fileuploaddownload.php" title="Get quote now"
+                           class="relative inline-flex items-center justify-center px-8 py-2 text-lg font-medium text-white transition-all duration-200 bg-gradient-to-r from-cyan-900 to-blue-900 rounded-full shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
+                           role="button">Import Export
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <div class="relative inline-flex w-full group">
+                        <div
+                                class="absolute transitiona-all duration-1000 opacity-70 -inset-px bg-gradient-to-r from-red-400 via-red-200 to-red-400 rounded-full blur-xl group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt">
+                        </div>
+                        <button type="submit" title="Get quote now"
+                           class="relative inline-flex items-center justify-center px-8 py-2 text-lg font-medium text-white transition-all duration-200 bg-gradient-to-r from-pink-700 to-red-700 rounded-full shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
+                           role="button">Logout Now
+                        </button>
+                    </div>
+                </div>
+
+
             </form>
         </div>
-        <img class='max-w-xl' src="Assets/adminhome.png" alt="admin home">
+
     </div>
 
 

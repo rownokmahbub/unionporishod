@@ -15,39 +15,37 @@
 
 
     <script>
-    tailwind.config = {
-        theme: {
-            colors: {
-                primary: '#075985',
-                secondary: '#0284c7',
-            },
-            extend: {
-                animation: {
-                    marquee: 'marquee 35s linear infinite',
+        tailwind.config = {
+            theme: {
+                colors: {
+                    primary: '#075985',
+                    secondary: '#0284c7',
                 },
-                keyframes: {
-                    marquee: {
-                        '0%': {
-                            transform: 'translateY(0%)'
-                        },
-                        '100%': {
-                            transform: 'translateY(-100%)'
-                        },
-                    }
-                },
+                extend: {
+                    animation: {
+                        marquee: 'marquee 35s linear infinite',
+                    },
+                    keyframes: {
+                        marquee: {
+                            '0%': {
+                                transform: 'translateY(0%)'
+                            },
+                            '100%': {
+                                transform: 'translateY(-100%)'
+                            },
+                        }
+                    },
+                }
             }
         }
-    }
     </script>
 
 </head>
 
-<body class="md:px-10 mx-auto bg-gradient-to-r from-teal-50 to-sky-50">
+<body class="md:px-10 mx-auto bg-gradient-to-r from-indigo-50 via-purple-50 to-pink-50 z-40">
     <!-- Navbar goes here -->
-    <a href="./index.php"
-        class="text-center mb-3 font-semibold flex gap-3 mt-10 items-center sticky top-0 left-0 w-full ">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000000"
-            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <a href="./index.php" class="text-center mb-3 font-semibold flex gap-3 mt-10 items-center sticky top-0 left-0 w-full ">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M19 12H6M12 5l-7 7 7 7" />
         </svg>
         Back</a>
@@ -77,37 +75,37 @@
             <tbody>
 
                 <?php
-        include './_dbconnect.php';
-        $query = "SELECT * FROM `tadeentry`";
-        $poriciti = mysqli_query($con, $query);
+                include './_dbconnect.php';
+                $query = "SELECT * FROM `tadeentry`";
+                $poriciti = mysqli_query($con, $query);
 
-        while ($row = mysqli_fetch_assoc($poriciti)) {
-          $id = $row['id'];
-        ?>
-                <tr class="flex flex-col flex-no wrap sm:table-row mb-2 sm:mb-0">
+                while ($row = mysqli_fetch_assoc($poriciti)) {
+                    $id = $row['id'];
+                ?>
+                    <tr class="flex flex-col flex-no wrap sm:table-row mb-2 sm:mb-0">
 
-                    <td class=''><?= $row['licence_no'] ?></td>
-                    <td class=''><?= $row['name'] ?></td>
-                    <td class=''><?= $row['father_husband'] ?></td>
-                    <td class=''><?= $row['mother_name'] ?></td>
-                    <td class=''><?= $row['word'] ?></td>
-                    <td class=''><?= $row['bplace'] ?></td>
-                    <td class=''><?= $row['tradename'] ?></td>
-                    <td class=''><?= $row['babshardhoron'] ?></td>
-                    <td class=''><?= $row['kor'] ?></td>
-                    <td class=''><?= $row['voterid'] ?></td>
-                    <td class=''><?= $row['mobileno'] ?></td>
-                    <td class=''><?= $row['upozela'] ?></td>
-                    <td class=''><?= $row['zela'] ?></td>
+                        <td class=''><?= $row['licence_no'] ?></td>
+                        <td class=''><?= $row['name'] ?></td>
+                        <td class=''><?= $row['father_husband'] ?></td>
+                        <td class=''><?= $row['mother_name'] ?></td>
+                        <td class=''><?= $row['word'] ?></td>
+                        <td class=''><?= $row['bplace'] ?></td>
+                        <td class=''><?= $row['tradename'] ?></td>
+                        <td class=''><?= $row['babshardhoron'] ?></td>
+                        <td class=''><?= $row['kor'] ?></td>
+                        <td class=''><?= $row['voterid'] ?></td>
+                        <td class=''><?= $row['mobileno'] ?></td>
+                        <td class=''><?= $row['upozela'] ?></td>
+                        <td class=''><?= $row['zela'] ?></td>
 
 
 
-                </tr>
+                    </tr>
                 <?php
-        }
+                }
 
 
-        ?>
+                ?>
 
             </tbody>
         </table>
@@ -116,21 +114,21 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.6/flowbite.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
     <script>
-    $(document).ready(function() {
-        $('#myTable').DataTable();
-    });
-    $('#myTable').DataTable({
-        responsive: true,
-        columnDefs: [{
-                responsivePriority: 1,
-                targets: 0
-            },
-            {
-                responsivePriority: 2,
-                targets: -1
-            }
-        ]
-    });
+        $(document).ready(function() {
+            $('#myTable').DataTable();
+        });
+        $('#myTable').DataTable({
+            responsive: true,
+            columnDefs: [{
+                    responsivePriority: 1,
+                    targets: 0
+                },
+                {
+                    responsivePriority: 2,
+                    targets: -1
+                }
+            ]
+        });
     </script>
     <script src="style.js"></script>
     <script src="https://cdn.datatables.net/1.13.5/js/jquery.dataTables.js"></script>

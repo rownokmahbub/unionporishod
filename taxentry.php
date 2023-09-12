@@ -73,7 +73,7 @@ include '_dbconnect.php';
             </div>
         </div>
 
-        <div class="px-10 py-10 bg-slate-100 mx-auto w-full rounded-xl">
+        <div class="px-10 py-10 bg-white mx-auto w-full rounded-xl">
             <div class="flex flex-col md:flex-row gap-4 md:gap-0 justify-between items-center">
                 <a href="./userhome.php"
                     class="text-center mb-3 font-semibold flex gap-3 items-center sticky top-0 left-0  ">

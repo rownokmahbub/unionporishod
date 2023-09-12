@@ -68,11 +68,11 @@ $mullo = mysqli_query($con, $sebarmullo)
     </style>
 </head>
 
-<body class="md:px-32 mx-auto bg-gradient-to-r from-indigo-50 via-purple-50 to-pink-50">
+<body class="md:px-32 mx-auto bg-gradient-to-r from-indigo-50 via-purple-50 to-pink-50 z-50">
     <!-- Navbar goes here -->
     <?php
-  include './navbar.php'
-  ?>
+    include './navbar.php'
+    ?>
     <!--hero section-->
 
     <div id="default-carousel" class="relative w-full mt-2 rounded-lg overflow-hidden" data-carousel="slide">
@@ -119,7 +119,7 @@ $mullo = mysqli_query($con, $sebarmullo)
             class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
             data-carousel-prev>
             <span
-                class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white  z-40/30 dark:bg-gray-800/30 group-hover:bg-white  z-40/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
                 <svg aria-hidden="true" class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none"
                     stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
@@ -131,7 +131,7 @@ $mullo = mysqli_query($con, $sebarmullo)
             class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
             data-carousel-next>
             <span
-                class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white  z-40/30 dark:bg-gray-800/30 group-hover:bg-white  z-40/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
                 <svg aria-hidden="true" class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none"
                     stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
@@ -148,24 +148,23 @@ $mullo = mysqli_query($con, $sebarmullo)
         <p class=" flex  justify-center items-center text-justify text-gray-600">
 
             <?php
-      $count = mysqli_num_rows($poriciti);
-      if ($count > 0) {
-        while ($row = mysqli_fetch_assoc($poriciti)) {
-          echo "{$row['poriciti']}";
-          
-        }
-      } else {
-        echo "আপনার কোনো ডাটা নাই !";
-      }
+            $count = mysqli_num_rows($poriciti);
+            if ($count > 0) {
+                while ($row = mysqli_fetch_assoc($poriciti)) {
+                    echo "{$row['poriciti']}";
+                }
+            } else {
+                echo "আপনার কোনো ডাটা নাই !";
+            }
 
-      ?>
+            ?>
 
         </p>
 
     </div>
 
     <!-- notice  -->
-    <div class="bg-white rounded-xl px-5 py-5 drop-shadow-lg my-10">
+    <div class="bg-white  z-40 rounded-xl px-5 py-5 drop-shadow-lg my-10">
         <div class="flex gap-5">
             <div class="space-y-3">
                 <p class="text-xl font-semibold">খবর</p>
@@ -176,17 +175,17 @@ $mullo = mysqli_query($con, $sebarmullo)
                     <marquee class="mx-4 text-xl h-20" onMouseOver="this.stop()" onMouseOut="this.start()"
                         direction="up" scrollamount="1">
                         <?php
-            $count = mysqli_num_rows($news);
-            if ($count > 0) {
-              while ($row = mysqli_fetch_assoc($news)) {
-                echo "{$row['khobor']}";
-                echo '<br>';
-              }
-            } else {
-              echo "আপনার কোনো খবর  নাই !";
-            }
+                        $count = mysqli_num_rows($news);
+                        if ($count > 0) {
+                            while ($row = mysqli_fetch_assoc($news)) {
+                                echo "{$row['khobor']}";
+                                echo '<br>';
+                            }
+                        } else {
+                            echo "আপনার কোনো খবর  নাই !";
+                        }
 
-            ?>
+                        ?>
 
                     </marquee>
 
@@ -195,7 +194,7 @@ $mullo = mysqli_query($con, $sebarmullo)
             </div>
         </div>
     </div>
-    <div class="bg-white rounded-xl px-5 py-5 drop-shadow-lg my-10">
+    <div class="bg-white  z-40 rounded-xl px-5 py-5 drop-shadow-lg my-10">
         <div class="flex gap-5">
             <div class="space-y-3">
                 <p class="text-xl font-semibold">নোটিশ</p>
@@ -204,17 +203,17 @@ $mullo = mysqli_query($con, $sebarmullo)
             <div class="flex flex-col gap-5">
                 <p>
                     <?php
-          $count = mysqli_num_rows($notice);
-          if ($count > 0) {
-            while ($row = mysqli_fetch_assoc($notice)) {
-              echo "{$row['notice']}";
-              echo '<br>';
-            }
-          } else {
-            echo "আপনার কোনো ডাটা নাই !";
-          }
+                    $count = mysqli_num_rows($notice);
+                    if ($count > 0) {
+                        while ($row = mysqli_fetch_assoc($notice)) {
+                            echo "{$row['notice']}";
+                            echo '<br>';
+                        }
+                    } else {
+                        echo "আপনার কোনো ডাটা নাই !";
+                    }
 
-          ?>
+                    ?>
                 </p>
 
             </div>
@@ -222,39 +221,39 @@ $mullo = mysqli_query($con, $sebarmullo)
     </div>
     <!-- seba somuho -->
     <div class="my-10 grid grid-cols-1 md:grid-cols-2 gap-10">
-        <div class="flex flex-col gap-3 border-t-4 border-primary rounded-xl bg-white drop-shadow-xl px-5 py-5">
+        <div class="flex flex-col gap-3 border-t-4 border-primary rounded-xl bg-white  z-20 drop-shadow-xl px-5 py-5">
             <p class="text-2xl font-semibold text-center">সেবা পাওয়ার শর্ত সমূহ</p>
             <p class="text-gray-600">
                 <?php
-        $count = mysqli_num_rows($sorto);
-        if ($count > 0) {
-          while ($row = mysqli_fetch_assoc($sorto)) {
+                $count = mysqli_num_rows($sorto);
+                if ($count > 0) {
+                    while ($row = mysqli_fetch_assoc($sorto)) {
 
-            echo "{$row['sorto']}";
-            echo '<br>';
-          }
-        } else {
-          echo "আপনার কোনো ডাটা নাই !";
-        }
+                        echo "{$row['sorto']}";
+                        echo '<br>';
+                    }
+                } else {
+                    echo "আপনার কোনো ডাটা নাই !";
+                }
 
-        ?>
+                ?>
             </p>
         </div>
-        <div class="flex flex-col gap-3 border-t-4 border-primary rounded-xl bg-white drop-shadow-xl px-5 py-5">
+        <div class="flex flex-col gap-3 border-t-4 border-primary rounded-xl bg-white  z-20 drop-shadow-xl px-5 py-5">
             <p class="text-2xl font-semibold text-center">সেবা মূল্য সমূহ</p>
             <?php
-      $count = mysqli_num_rows($mullo);
-      if ($count > 0) {
-        while ($row = mysqli_fetch_assoc($mullo)) {
+            $count = mysqli_num_rows($mullo);
+            if ($count > 0) {
+                while ($row = mysqli_fetch_assoc($mullo)) {
 
-          echo "{$row['mullo']}";
-          echo '<br>';
-        }
-      } else {
-        echo "আপনার কোনো ডাটা নাই !";
-      }
+                    echo "{$row['mullo']}";
+                    echo '<br>';
+                }
+            } else {
+                echo "আপনার কোনো ডাটা নাই !";
+            }
 
-      ?>
+            ?>
         </div>
     </div>
 
@@ -279,12 +278,12 @@ $mullo = mysqli_query($con, $sebarmullo)
             <tbody>
                 <?php
 
-        $query = "SELECT * FROM `shikkha`";
-        $poriciti = mysqli_query($con, $query);
+                $query = "SELECT * FROM `shikkha`";
+                $poriciti = mysqli_query($con, $query);
 
-        while ($row = mysqli_fetch_assoc($poriciti)) {
-          $id = $row['id'];
-        ?>
+                while ($row = mysqli_fetch_assoc($poriciti)) {
+                    $id = $row['id'];
+                ?>
                 <tr class="">
 
                     <td class=''><?= $row['college'] ?></td>
@@ -299,10 +298,10 @@ $mullo = mysqli_query($con, $sebarmullo)
 
                 </tr>
                 <?php
-        }
+                }
 
 
-        ?>
+                ?>
 
 
             <tbody>
@@ -331,12 +330,12 @@ $mullo = mysqli_query($con, $sebarmullo)
             <tbody>
                 <?php
 
-        $query = "SELECT * FROM `uniondetails`";
-        $poriciti = mysqli_query($con, $query);
+                $query = "SELECT * FROM `uniondetails`";
+                $poriciti = mysqli_query($con, $query);
 
-        while ($row = mysqli_fetch_assoc($poriciti)) {
-          $id = $row['id'];
-        ?>
+                while ($row = mysqli_fetch_assoc($poriciti)) {
+                    $id = $row['id'];
+                ?>
                 <tr class="">
 
                     <td class=''><?= $row['dakghor'] ?></td>
@@ -355,10 +354,10 @@ $mullo = mysqli_query($con, $sebarmullo)
 
                 </tr>
                 <?php
-        }
+                }
 
 
-        ?>
+                ?>
 
 
 
