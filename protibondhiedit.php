@@ -1,3 +1,12 @@
+
+<?php
+session_start();
+$email = $_SESSION['email'];
+if ($email == null) {
+    header('Location:index.php');
+}
+?>
+
 <?php
 include './_dbconnect.php';
 
