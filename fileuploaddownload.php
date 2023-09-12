@@ -1,5 +1,10 @@
 <?php
 session_start();
+mb_internal_encoding('UTF-8');
+
+iconv_set_encoding("internal_encoding", "UTF-8");
+
+header('Content-Type: text/html; charset=UTF-8');
 $email = $_SESSION['email'];
 if ($email == null) {
     header('Location:index.php');
@@ -13,28 +18,6 @@ if (isset($_POST["import"])) {
     $fileName = $_FILES["file"]["tmp_name"];
     $tableName = $_POST['tableName'];
     if ($_FILES["file"]["size"] > 0) {
-
-        //        $file = fopen($fileName, "r");
-        //        $find_header=0;
-        //        while (($column = fgetcsv($file, 10000, ",")) !== FALSE) {
-        //            $find_header++; //update counter
-        //            //this ensures we skip the header
-        //            if( $find_header > 1 ) {
-        //                //the column variable corresponds with the ones in your csv file
-        //                $sqlInsert = "INSERT into users (userName,firstName,lastName)
-        //                   values ('" . $column[0] . "','" . $column[1] . "','" . $column[2] . "')";
-        //                $result = mysqli_query($conn, $sqlInsert);
-        //
-        //                if (!empty($result)) {
-        //                    $type = "success";
-        //                    $message = "CSV Data Imported into the Database";
-        //                } else {
-        //                    $type = "error";
-        //                    $message = "Problem in Importing CSV Data";
-        //                }
-        //            }
-        //        }
-        //        fclose($file);
         // Read and process the CSV file
         if (($handle = fopen($fileName, "r")) !== FALSE) {
             $header = fgetcsv($handle, 1000, ",");
@@ -46,8 +29,8 @@ if (isset($_POST["import"])) {
             while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
                 $values = "'" . implode("','", array_slice($data, 1)) . "'";
                 $insert_query = "INSERT INTO $tableName ($column_names) VALUES ($values)";
-                //                echo $insert_query;
-                //                echo "=======";
+//                                echo $insert_query;
+//                                echo "=======";
                 if (!mysqli_query($con, $insert_query)) {
                     echo "Error inserting data: ";
                 }
