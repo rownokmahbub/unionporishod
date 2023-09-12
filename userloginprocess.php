@@ -1,37 +1,85 @@
-
-
 <?php
- session_start();
- if($_SERVER["REQUEST_METHOD"] == "POST"){
-    include './_dbconnect.php';
-  
-    if(
-        isset($_POST['email']) &&
-        isset($_POST['password'])  &&
-        !empty($_POST['email']) &&
-        !empty($_POST['password'])
-    )
 
-    $email = $_POST['email'];
-           
-    $password =  $_POST['password'];
+session_start();
 
-       // We are going to insert the data into our sampleDB table
-      
-       $sql = "SELECT id FROM subuser WHERE email = '$email' and password = '$password'";
-       echo $sql;
-   // Check if the query is successful
-   if(mysqli_query($con, $sql)){
-    $_SESSION['email'] = $email;
-    header("Location:userhome.php");
-          
-   } else{
-       echo "ERROR: Hush! Sorry $sql. "
-           . mysqli_error($con);
-   }
+include "./_dbconnect.php";
 
-   
-   mysqli_close($con);
- }
+if (isset($_POST['email']) && isset($_POST['password'])) {
 
-?>
+    function validate($data){
+
+        $data = trim($data);
+
+        $data = stripslashes($data);
+
+        $data = htmlspecialchars($data);
+
+        return $data;
+
+    }
+
+    $email = validate($_POST['email']);
+
+    $pass = validate($_POST['password']);
+
+    if (empty($email)) {
+
+        header("Location: subuser.php?error=User Name is required");
+
+        exit();
+
+    }else if(empty($pass)){
+
+        header("Location: subuser.php?error=Password is required");
+
+        exit();
+
+    }else{
+
+        $sql = "SELECT * FROM subuser WHERE email='$email' AND password='$pass'";
+
+        $result = mysqli_query($con, $sql);
+
+        if (mysqli_num_rows($result) === 1) {
+
+            $row = mysqli_fetch_assoc($result);
+
+            if ($row['email'] === $email && $row['password'] === $pass) {
+
+                echo "Logged in!";
+
+                $_SESSION['email'] = $row['email'];
+
+
+
+                $_SESSION['id'] = $row['id'];
+
+                header("Location: userhome.php");
+
+                exit();
+
+            }else{
+
+                header("Location: subuser.php?error=Incorect User name or password");
+
+                exit();
+
+            }
+
+        }else{
+
+            header("Location: subuser.php?error=Incorect User name or password");
+
+            exit();
+
+        }
+
+    }
+
+}else{
+
+    header("Location: index.php");
+
+    exit();
+
+}
