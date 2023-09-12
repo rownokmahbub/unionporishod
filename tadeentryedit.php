@@ -49,7 +49,8 @@ include './_dbconnect.php';
         Back</a>
     <div class="font-semibold text-xl mb-4 text-center">ট্যাক্স এডিট ফরম</div>
     <?php
-    $rid= $result['licence_no'];
+    $rid= $result['id'];
+    $licence= $result['licence_no'];
     $name= $result['name'];
     $fathername= $result['father_husband'];
     $mothername= $result['mother_name'];
@@ -70,8 +71,8 @@ include './_dbconnect.php';
         <div class="space-y-4">
           <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-5">
            <div class="space-y-1">
-            <span>হোল্ডিং নম্বর</span>
-           <input class='px-2 py-2 bg-white border border-gray-300 rounded-xl w-full focus:outline-blue-400' type="text" name="holdingno" placeholder='হোল্ডিং নম্বর' value='<?php echo $rid ?>'  required>
+            <span>লাইসেন্স নম্বর</span>
+           <input class='px-2 py-2 bg-white border border-gray-300 rounded-xl w-full focus:outline-blue-400' type="text" name="licenceno" placeholder='হোল্ডিং নম্বর' value='<?php echo $licence ?>'  required>
            </div>
            <div class="space-y-1">
             <span>নাম</span>

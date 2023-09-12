@@ -86,9 +86,13 @@
 <p class='text-center font-medium text-2xl'>ওয়ারেশ সনদ যাচাই </p>
 <p class='text-center font-medium text-lg'>পরিচিতি / স্মারক নম্বরঃ <span><?= $rid ?></span></p>
 
-
+    <p>বরাবর, </p>
+    <p>চেয়ারম্যান,  </p>
+    <p>৬নং তিতুদহ ইউনিয়ন পরিষদ,   </p>
+    <p> চুয়াডাঙ্গা সদর, চুয়াডাঙ্গা |</p>
 <div class='flex justify-between items-center my-5'>
         <div class="space-y-1">
+
         <p class=''> নাম : <span><?= $name ?></span> </p>
             <p class=''>পিতার নাম : <span><?= $fathername ?></span> </p>
             <p class=''>মাতর নাম : <span><?= $mothername ?></span> </p>

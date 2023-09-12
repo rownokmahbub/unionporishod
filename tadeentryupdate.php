@@ -5,7 +5,8 @@
    
    
     include './_dbconnect.php';
-    $licence = $_POST['hid'];
+     $id = $_POST['hid'];
+    $licence = $_POST['licenceno'];
     $name = $_POST['name'];
     $fname = $_POST['fname'];
     $mname = $_POST['mname'];
@@ -24,7 +25,7 @@
 
 
      
-       $sql = "UPDATE `tadeentry` SET `licence_no`='$licence',`name`='$name',`father_husband`='$fname',`mother_name`='$mname',`word`='$ward',`bplace`='$bplace',`tradename`='$tradename',`babshardhoron`='$bdhoron',`kor`='$kor',`voterid`='$vid',`mobileno`='$mnum',`upozela`='$upozela',`zela`='$zela' WHERE `licence_no`=$licence";;
+       $sql = "UPDATE `tadeentry` SET `licence_no`='$licence',`name`='$name',`father_husband`='$fname',`mother_name`='$mname',`word`='$ward',`bplace`='$bplace',`tradename`='$tradename',`babshardhoron`='$bdhoron',`kor`='$kor',`voterid`='$vid',`mobileno`='$mnum',`upozela`='$upozela',`zela`='$zela' WHERE `id`=$id";;
        print_r(error_get_last());
   
    if(mysqli_query($con, $sql)){

@@ -49,7 +49,8 @@ include './_dbconnect.php';
         Back</a>
     <div class="font-semibold text-xl mb-4 text-center">নাগরিক এডিট ফরম</div>
     <?php
-    $rid= $result['sarok'];
+    $rid= $result['id'];
+    $sarok= $result['sarok'];
     $name= $result['name'];
     $fathername= $result['fathername'];
     $mothername= $result['mothername'];
@@ -68,7 +69,7 @@ include './_dbconnect.php';
           <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-5">
            <div class="space-y-1">
             <span>সারক নম্বর</span>
-           <input class='px-2 py-2 bg-white border border-gray-300 rounded-xl w-full focus:outline-blue-400' type="text" name="sarok" placeholder='সারক নম্বর' value='<?php echo $rid ?>'  required>
+           <input class='px-2 py-2 bg-white border border-gray-300 rounded-xl w-full focus:outline-blue-400' type="text" name="sarok" placeholder='সারক নম্বর' value='<?php echo $sarok ?>'  required>
            </div>
            <div class="space-y-1">
             <span>নাম</span>
@@ -80,12 +81,12 @@ include './_dbconnect.php';
            </div>
            <div class="space-y-1">
             <span>মাতার নাম</span>
-            <input class='px-2 py-2 bg-white border border-gray-300 rounded-xl w-full focus:outline-blue-400' type="text" name="mname" placeholder='মাতার নাম' value='<?php echo $husband ?>'  required>
+            <input class='px-2 py-2 bg-white border border-gray-300 rounded-xl w-full focus:outline-blue-400' type="text" name="mname" placeholder='মাতার নাম' value='<?php echo $mothername ?>'  required>
         
            </div>
               <div class="space-y-1">
                   <span>স্বামীর নাম</span>
-                  <input class='px-2 py-2 bg-white border border-gray-300 rounded-xl w-full focus:outline-blue-400' type="text" name="hname" placeholder='মাতার নাম' value='<?php echo $mothername ?>'  required>
+                  <input class='px-2 py-2 bg-white border border-gray-300 rounded-xl w-full focus:outline-blue-400' type="text" name="hname" placeholder='মাতার নাম' value='<?php echo $husband ?>'  required>
 
               </div>
            <div class="space-y-1">

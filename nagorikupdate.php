@@ -5,7 +5,8 @@
    
    
     include './_dbconnect.php';
-    $sarok = $_POST['hid'];
+     $id = $_POST['hid'];
+     $sarok = $_POST['sarok'];
     $name = $_POST['name'];
     $fname = $_POST['fname'];
      $mname = $_POST['mname'];
@@ -22,7 +23,7 @@
 
 
      
-       $sql = "UPDATE `nagorik` SET `sarok`='$sarok',`name`='$name',`fathername`='$fname',`mothername`='$mname',`husband`='$hname',`gram`='$gram',`word`='$ward',`birthno`='$birthno',`voterid`='$voterid',`mobileno`='$mnum',`gender`='$gender',`dakghor`='$dakghor' WHERE `sarok`=$sarok";;
+       $sql = "UPDATE `nagorik` SET `sarok`='$sarok',`name`='$name',`fathername`='$fname',`mothername`='$mname',`husband`='$hname',`gram`='$gram',`word`='$ward',`birthno`='$birthno',`voterid`='$voterid',`mobileno`='$mnum',`gender`='$gender',`dakghor`='$dakghor' WHERE `id`=$id";;
        print_r(error_get_last());
   
    if(mysqli_query($con, $sql)){
