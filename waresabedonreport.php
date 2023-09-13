@@ -43,6 +43,7 @@ if (isset($_REQUEST['id'])) {
         $name = $result['name'];
         $fathername = $result['fathername'];
         $mothername = $result['mothername'];
+        $husband = $result['husband'];
         $gram = $result['gram'];
         $word = $result['word'];
         $birthno = $result['deathno'];
@@ -97,13 +98,15 @@ if (isset($_REQUEST['id'])) {
                 <p class=''> নাম : <span><?= $name ?></span> </p>
                 <p class=''>পিতার নাম : <span><?= $fathername ?></span> </p>
                 <p class=''>মাতর নাম : <span><?= $mothername ?></span> </p>
-                <p class=''>গ্রাম : <span><?= $gram ?></span> </p>
+                <p class=''>স্বামীর নাম : <span><?= $husband ?></span> </p>
+
 
             </div>
             <div class="space-y-1">
                 <p class=''>ওয়ার্ড নম্বর :<span><?= $word ?></span> </p>
                 <p class=''>জন্ম নিবন্ধন নাম্বার : <span><?= $birthno ?></span> </p>
                 <p class=''>ভোটার আইডি : <span><?= $voterid ?></span> </p>
+                <p class=''>গ্রাম : <span><?= $gram ?></span> </p>
             </div>
         </div>
         <table class='w-full table border border-black rounded-lg'>

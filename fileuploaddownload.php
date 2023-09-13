@@ -70,12 +70,12 @@ if (isset($_POST["import"])) {
 
 
 
-<body>
-    <div class="flex flex-col px-5 md:px-20 max-w-screen-lg mx-auto  md:h-screen justify-center  gap-5 items-center  ">
+<body class="bg-gradient-to-r from-indigo-50 via-purple-50 to-pink-50">
+    <div class="flex flex-col px-5 md:px-20 max-w-screen-lg mx-auto md:h-screen justify-center  gap-5 items-center  ">
 
 
 
-        <div class="px-10 py-10 bg-white mx-auto w-full rounded-xl">
+        <div class="px-10 py-10 shadow-lg mx-auto w-full rounded-xl bg-zinc-50">
             <div class="flex flex-col md:flex-row gap-4 md:gap-0 justify-between items-center">
                 <a href="./adminhome.php" class="text-center mb-3 font-semibold flex gap-3 items-center sticky top-0 left-0  ">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -117,11 +117,11 @@ if (isset($_POST["import"])) {
                     </option>
 
                 </select>
-                <a onclick="downloadFile()" class="text-center cursor-pointer font-semibold flex gap-3 items-center px-4 py-2.5 rounded-full shadow-lg bg-cyan-600 text-white hover:bg-cyan-700">
+                <a onclick="downloadFile()" class="text-center cursor-pointer font-semibold flex gap-3 items-center px-4 py-2.5 rounded-xl shadow-lg bg-cyan-600 text-white hover:bg-cyan-700">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M3 15v4c0 1.1.9 2 2 2h14a2 2 0 0 0 2-2v-4M17 9l-5 5-5-5M12 12.8V2.5" />
                     </svg>
-                    Download Exel</a>
+                    Download CSV </a>
             </div>
             <form action="" method="post" enctype="multipart/form-data">
                 <div class="flex flex-col md:flex-row items-center justify-start gap-4 mt-10">
@@ -156,12 +156,12 @@ if (isset($_POST["import"])) {
                         </option>
                     </select>
                     <input class='px-2 py-2 bg-gradient-to-r from-indigo-50 via-purple-50 to-pink-50 z-40 border border-gray-300 rounded-xl focus:outline-blue-400 w-full md:w-96' name="file" type="file" id="file" required>
-                    <button name="import" type="submit" class="text-center font-semibold flex gap-3 items-center px-4 py-2.5 rounded-full shadow-lg bg-green-600 text-white hover:bg-green-700">
+                    <button name="import" type="submit" class="text-center font-semibold flex gap-3 items-center px-4 py-2.5 rounded-xl shadow-lg bg-green-600 text-white hover:bg-green-700">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M21.2 15c.7-1.2 1-2.5.7-3.9-.6-2-2.4-3.5-4.4-3.5h-1.2c-.7-3-3.2-5.2-6.2-5.6-3-.3-5.9 1.3-7.3 4-1.2 2.5-1 6.5.5 8.8m8.7-1.6V21" />
                             <path d="M16 16l-4-4-4 4" />
                         </svg>
-                        Import Exel</button>
+                        Import CSV</button>
                 </div>
             </form>
 

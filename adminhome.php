@@ -23,7 +23,7 @@ if ($email == null) {
 </head>
 
 <body class="md:px-32 mx-auto bg-gradient-to-r from-indigo-50 via-purple-50 to-pink-50">
-    <div class="flex flex-col  px-5 justify-center md:h-screen w-full lg:max-w-screen-sm mx-auto items-center">
+    <div class="flex flex-col  px-5 justify-center md:h-screen md:py-20 w-full lg:max-w-screen-sm mx-auto items-center">
         <img class='max-w-xl' src="Assets/adminhome.png" alt="admin home">
         <div class="space-y-2">
             <p class='text-4xl font-semibold leading-snug text-center mb-10'>অ্যাডমিন ড্যাশবোর্ড এ আপনাকে স্বাগতম</p>
