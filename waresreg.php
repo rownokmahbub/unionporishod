@@ -1,5 +1,11 @@
 
 <?php
+ob_start();
+
+// code
+
+
+session_start();
  if($_SERVER["REQUEST_METHOD"] == "POST"){
 
    
@@ -15,7 +21,8 @@
     $birthno = $_POST['birthno'];
     $voterid = $_POST['voterid'];
     $mnum = $_POST['mnum'];
-    $aname = $_POST['aname'];
+     $aname = $_POST['aname'];
+     $date = $_POST['date'];
     $w1 = $_POST['w1'];
     $w2 = $_POST['w2'];
     $w3 = $_POST['w3'];
@@ -52,7 +59,7 @@
 
 
      
-       $sql = "INSERT INTO `wares`(`sarok`, `name`, `fathername`, `mothername`,`husband`, `gram`, `word`, `deathno`, `voterid`, `mobileno`, `aname`, `w1`, `w2`, `w3`, `w4`, `w5`, `w6`, `w7`, `w8`, `w9`, `w10`, `w11`, `w12`, `w13`, `w14`, `w15`, `r1`, `r2`, `r3`, `r4`, `r5`, `r6`, `r7`, `r8`, `r9`, `r10`, `r11`, `r12`, `r13`, `r14`, `r15`) VALUES ('$sarok','$name','$fname','$mname','$husband','$gram','$ward','$birthno','$voterid','$mnum','$aname','$w1','$w2','$w3','$w4','$w5','$w6','$w7','$w8','$w9','$w10','$w11','$w12','$w13','$w14','$w15','$r1','$r2','$r3','$r4','$r5','$r6','$r7','$r8','$r9','$r10','$r11','$r12','$r13','$r14','$r15')";
+       $sql = "INSERT INTO `wares`(`sarok`, `name`, `fathername`, `mothername`,`husband`, `gram`, `word`, `deathno`, `voterid`, `mobileno`, `aname`,  `date`,`w1`, `w2`, `w3`, `w4`, `w5`, `w6`, `w7`, `w8`, `w9`, `w10`, `w11`, `w12`, `w13`, `w14`, `w15`, `r1`, `r2`, `r3`, `r4`, `r5`, `r6`, `r7`, `r8`, `r9`, `r10`, `r11`, `r12`, `r13`, `r14`, `r15`) VALUES ('$sarok','$name','$fname','$mname','$husband','$gram','$ward','$birthno','$voterid','$mnum','$aname','$date','$w1','$w2','$w3','$w4','$w5','$w6','$w7','$w8','$w9','$w10','$w11','$w12','$w13','$w14','$w15','$r1','$r2','$r3','$r4','$r5','$r6','$r7','$r8','$r9','$r10','$r11','$r12','$r13','$r14','$r15')";
        print_r(error_get_last());
   
    if(mysqli_query($con, $sql)){
@@ -68,5 +75,5 @@
    // Close conection
    mysqli_close($con);
  }
-
+ob_end_flush();
 ?>

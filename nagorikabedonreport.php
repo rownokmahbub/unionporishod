@@ -43,16 +43,21 @@ if (isset($_REQUEST['id'])) {
         $name = $result['name'];
         $fathername = $result['fathername'];
         $mothername = $result['mothername'];
+        $husband = $result['husband'];
         $gram = $result['gram'];
         $word = $result['word'];
         $birthno = $result['birthno'];
         $voterid = $result['voterid'];
         $mobileno = $result['mobileno'];
+        $date = $result['date'];
 
         ?>
         <input type="hidden" name="hid" value="<?php echo $rid; ?>">
         <p class='text-center font-medium text-2xl'>নাগরিক সনদ পত্র আবেদন ফরম</p>
-        <p class='text-center font-medium text-lg'>পরিচিতি / স্মারক নম্বরঃ <span><?= $rid ?></span></p>
+        <div class="flex justify-between items-center">
+            <p class='text-center  text-lg'> স্মারক নম্বরঃ <span><?= $rid ?></span></p>
+            <p class='text-center  text-lg'> তারিখ : <span><?= $date ?></span></p>
+        </div>
         <p>বরাবর,</p>
         <p class="ml-10 my-2">চেয়ারম্যান, <br>
             ৬নং তিতুদহ ইউনিয়ন পরিষদ, <br>
@@ -68,6 +73,7 @@ if (isset($_REQUEST['id'])) {
                     <p class='border border-black px-4 py-2'>নাম</p>
                     <p class='border border-black px-4 py-2'>পিতার নাম</p>
                     <p class='border border-black px-4 py-2'>মাতর নাম</p>
+                    <p class='border border-black px-4 py-2'>স্বামীর নাম</p>
                     <p class='border border-black px-4 py-2'>গ্রাম</p>
                     <p class='border border-black px-4 py-2'>ওয়ার্ড নম্বর</p>
                     <p class='border border-black px-4 py-2'>জন্ম নিবন্ধন নাম্বার </p>
@@ -80,6 +86,7 @@ if (isset($_REQUEST['id'])) {
                     <p class='border border-black px-4 py-2'><span><?= $name ?></span></p>
                     <p class='border border-black px-4 py-2'><span><?= $fathername ?></span></p>
                     <p class='border border-black px-4 py-2'><span><?= $mothername ?></span></p>
+                    <p class='border border-black px-4 py-2'><span><?= $husband ?></span></p>
                     <p class='border border-black px-4 py-2'><span><?= $gram ?></span></p>
                     <p class='border border-black px-4 py-2'><span><?= $word ?></span></p>
                     <p class='border border-black px-4 py-2'><span><?= $birthno ?></span></p>

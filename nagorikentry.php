@@ -43,22 +43,7 @@ include '_dbconnect.php';
     <div class="flex flex-col px-5 md:px-20 py-5 md:h-screen justify-center gap-5 items-center bg-slate-300 ">
 
 
-        <div class="">
-            <section class='px-5 hidden md:flex py-5 mx-auto bg-green-600 text-white justify-center rounded-2xl w-52 text-lg font-semibold'>
-                <h3 class="">মোট নাগরিক সনদ : </h3>
-                <?php
-                $query = "SELECT COUNT(*), SUM(id) FROM nagorik";
-                $result = mysqli_fetch_array(mysqli_query($con, $query));
-                $count = $result['COUNT(*)'];
-                $tax = $result['SUM(id)'];
 
-                echo $count;
-
-
-                ?>
-            </section>
-
-        </div>
 
         <div class="px-10 py-10 bg-white mx-auto w-full rounded-xl">
             <div class="flex flex-col md:flex-row gap-4 md:gap-0 justify-between items-center">
@@ -138,9 +123,9 @@ include '_dbconnect.php';
                             </option>
 
                         </select>
-                        <input class='px-2 py-2 bg-gradient-to-r from-indigo-50 via-purple-50 to-pink-50 z-40 border border-gray-300 rounded-xl w-full focus:outline-blue-400' type="text" name="birthno" placeholder='জন্ম নিবন্ধন নাম্বার ' required>
-                        <input class='px-2 py-2 bg-gradient-to-r from-indigo-50 via-purple-50 to-pink-50 z-40 border border-gray-300 rounded-xl w-full focus:outline-blue-400' type="text" name="voterid" placeholder='ভোটার আইডি' required>
-                        <input class='px-2 py-2 bg-gradient-to-r from-indigo-50 via-purple-50 to-pink-50 z-40 border border-gray-300 rounded-xl w-full focus:outline-blue-400' type="text" name="mnum" placeholder='মোবাইল নাম্বার' required>
+                        <input class='px-2 py-2 bg-gradient-to-r from-indigo-50 via-purple-50 to-pink-50 z-40 border border-gray-300 rounded-xl w-full focus:outline-blue-400' type="text" name="birthno" placeholder='জন্ম নিবন্ধন নাম্বার ' >
+                        <input class='px-2 py-2 bg-gradient-to-r from-indigo-50 via-purple-50 to-pink-50 z-40 border border-gray-300 rounded-xl w-full focus:outline-blue-400' type="text" name="voterid" placeholder='ভোটার আইডি' >
+                        <input class='px-2 py-2 bg-gradient-to-r from-indigo-50 via-purple-50 to-pink-50 z-40 border border-gray-300 rounded-xl w-full focus:outline-blue-400' type="text" name="mnum" placeholder='মোবাইল নাম্বার' >
 
                         <select class="px-2 py-2 bg-gradient-to-r from-indigo-50 via-purple-50 to-pink-50 z-40 border border-gray-300 rounded-xl w-full" name="gender">
                             <option disabled selected value="লিঙ্গ" class="px-2 py-2 bg-gradient-to-r from-indigo-50 via-purple-50 to-pink-50 z-40 border border-gray-300 rounded-xl w-full">লিঙ্গ</option>
@@ -159,9 +144,10 @@ include '_dbconnect.php';
 
 
                         </select>
+
                     </div>
 
-
+                    <input class='px-2 py-2 bg-gradient-to-r from-indigo-50 via-purple-50 to-pink-50 z-40 border border-gray-300 rounded-xl w-full focus:outline-blue-400' type="date" name="date" placeholder='তারিখ' required>
 
 
                 </div>

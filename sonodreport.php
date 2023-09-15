@@ -38,14 +38,13 @@ if (isset($_REQUEST['id'])) {
 
 <body class='bg-gradient-to-r from-indigo-50 via-purple-50 to-pink-50 z-40 mb-10'>
     <div class='px-20 py-20 relative'>
-        <p class="text-2xl text-center font-semibold">৬ নং তিতুদহ ইউনিয়ন পরিষদ </p>
-        <p class="text-lg text-center font-semibold mb-5">চুয়াডাঙ্গা সদর, চুয়াডাঙ্গা</p>
-        <p class="text-2xl text-center font-semibold">নাগরিক ও অনন্য সনদপত্র যাচাই</p>
+
         <?php
         $rid = $result['sarok'];
         $name = $result['name'];
         $fathername = $result['fathername'];
         $mothername = $result['mothername'];
+        $husband = $result['husband'];
         $gram = $result['gram'];
         $word = $result['word'];
         $birthno = $result['birthno'];
@@ -53,17 +52,24 @@ if (isset($_REQUEST['id'])) {
         $dakghor = $result['dakghor'];
         $voterid = $result['voterid'];
         $mobileno = $result['mobileno'];
+        $date = $result['date'];
 
         ?>
         <input type="hidden" name="hid" value="<?php echo $rid; ?>">
 
         <div class="flex justify-between items-center">
             <p class=''>স্মারক নম্বর : <span><?= $rid ?></span></p>
+            <p class=''>তারিখ : <span><?= $date ?></span> <br>
+                <?php
+                echo "ইস্যু তারিখ : " . date("Y/m/d") . "<br>";
+                ?>
+            </p>
 
-            <p class=''>তারিখ : ১২/০৩/২৩</p>
+
         </div>
         <div class="flex justify-between items-start">
             <p>লিঙ্গ : <span><?= $gender ?></span> </p>
+
             <p class=''>ওয়ার্ড নম্বর : <span><?= $word ?></span></p>
         </div>
         <div class="flex justify-between items-start">
@@ -71,9 +77,9 @@ if (isset($_REQUEST['id'])) {
             <p>ভোটার আইডি : <span><?= $voterid ?></span> </p>
         </div>
 
-        <p class="my-2">এই মর্মে নাগরিক সনদ পত্র প্রদান করা যাচ্ছে যে ,</p>
-        <div class="flex justify-between items-start">
-            <p>নাম : <span><?= $name ?></span> </p>
+
+        <div class="flex justify-between items-start mt-4">
+            <p class="">এই মর্মে নাগরিক সনদ পত্র প্রদান করা যাচ্ছে যে , <span><?= $name ?></span></p>
             <p>জাতীয়তা : বাংলাদেশী </p>
         </div>
         <div class="flex justify-between items-start">
@@ -82,6 +88,10 @@ if (isset($_REQUEST['id'])) {
         </div>
         <div class="flex justify-between items-start">
             <p>মাতার নাম : <span><?= $mothername ?></span> </p>
+            <p>জাতীয়তা : বাংলাদেশী </p>
+        </div>
+        <div class="flex justify-between items-start">
+            <p>স্বামীর নাম : <span><?= $husband ?></span> </p>
             <p>জাতীয়তা : বাংলাদেশী </p>
         </div>
         <div class="flex justify-between items-start">

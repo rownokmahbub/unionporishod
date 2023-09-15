@@ -73,7 +73,8 @@ if ($email == null) {
           <th data-priority="2">জন্ম নিবন্ধন নাম্বার </th>
           <th data-priority="2">ভোটার আইডি</th>
           <th data-priority="1">মোবাইল নাম্বার</th>
-          <th data-priority="1">আবেদনকারী নাম </th>
+            <th data-priority="1">আবেদনকারী নাম </th>
+            <th data-priority="1">তারিখ </th>
           <th data-priority="1">ওয়ারেশ ১</th>
           <th data-priority="1">সম্পর্ক </th>
           <th data-priority="1">ওয়ারেশ ২</th>
@@ -130,7 +131,8 @@ if ($email == null) {
             <td class=''><?= $row['deathno'] ?></td>
             <td class=''><?= $row['voterid'] ?></td>
             <td class=''><?= $row['mobileno'] ?></td>
-            <td class=''><?= $row['aname'] ?></td>
+              <td class=''><?= $row['aname'] ?></td>
+              <td class=''><?= $row['date'] ?></td>
             <td class=''><?= $row['w1'] ?></td>
             <td class=''><?= $row['r1'] ?></td>
             <td class=''><?= $row['w2'] ?></td>
@@ -164,7 +166,7 @@ if ($email == null) {
             <td class=''>
 
               <div class="flex gap-3 justify-center items-center w-full">
-                <a href="waresabedonreport.php?id=<?php echo $id; ?>" class='px-3 py-2 cursor-pointer rounded-xl text-white text-sm  bg-purple-700 hover:bg-purple-600  duration-300 transition flex items-center gap-1'>
+                <a href="waresreport.php?id=<?php echo $id; ?>" class='px-3 py-2 cursor-pointer rounded-xl text-white text-sm  bg-purple-700 hover:bg-purple-600  duration-300 transition flex items-center gap-1'>
                   <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fefefe" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <polyline points="6 9 6 2 18 2 18 9"></polyline>
                     <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>

@@ -71,6 +71,7 @@ if (isset($_REQUEST['id'])) {
             $voterid = $result['voterid'];
             $upozela = $result['upozela'];
             $zela = $result['zela'];
+            $date = $result['date'];
 
             ?>
             <form action="tadeentryupdate.php" method="POST">
@@ -132,14 +133,18 @@ if (isset($_REQUEST['id'])) {
                             <input class='px-2 py-2 bg-gradient-to-r from-indigo-50 via-purple-50 to-pink-50 z-40 border border-gray-300 rounded-xl w-full focus:outline-blue-400' type="text" name="upozela" placeholder='উপজেলা' value='<?php echo $upozela ?>' required>
                         </div>
 
-
+                        <div class="space-y-1">
+                            <span>জেলা</span>
+                            <input class='px-2 py-2 bg-gradient-to-r from-indigo-50 via-purple-50 to-pink-50 z-40 border border-gray-300 rounded-xl w-full focus:outline-blue-400' type="text" name="zela" placeholder='জেলা' value='<?php echo $zela ?>' required>
+                        </div>
+                        <div class="space-y-1">
+                            <span>তারিখ</span>
+                            <input class='px-2 py-2 bg-gradient-to-r from-indigo-50 via-purple-50 to-pink-50 z-40 border border-gray-300 rounded-xl w-full focus:outline-blue-400' type="text" name="zela" placeholder='জেলা' value='<?php echo $date ?>' required>
+                        </div>
 
                     </div>
 
-                    <div class="space-y-1">
-                        <span>জেলা</span>
-                        <input class='px-2 py-2 bg-gradient-to-r from-indigo-50 via-purple-50 to-pink-50 z-40 border border-gray-300 rounded-xl w-full focus:outline-blue-400' type="text" name="zela" placeholder='জেলা' value='<?php echo $zela ?>' required>
-                    </div>
+
 
 
                 </div>

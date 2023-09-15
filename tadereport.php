@@ -51,27 +51,32 @@ if (isset($_REQUEST['id'])) {
         $zela = $result['zela'];
         $voterid = $result['voterid'];
         $mobileno = $result['mobileno'];
+        $date = $result['date'];
 
         ?>
         <input type="hidden" name="hid" value="<?php echo $rid; ?>">
         <p class='text-center font-medium text-2xl'>ট্রেডলাইসেন্স সনদ পত্র আবেদন ফরম</p>
-        <p class='text-center font-medium text-lg'>পরিচিতি / স্মারক নম্বরঃ <span><?= $rid ?></span></p>
+        <div class="flex justify-between items-center">
+            <p class='text-center  text-lg'> লাইসেন্স নম্বরঃ <span><?= $rid ?></span></p>
+            <p class='text-center  text-lg'> তারিখ : <span><?= $date ?></span></p>
+        </div>
+
         <p>বরাবর,</p>
         <p class="ml-10 my-2">চেয়ারম্যান, <br>
             ৬নং তিতুদহ ইউনিয়ন পরিষদ, <br>
             চুয়াডাঙ্গা সদর,চুয়াডাঙ্গা।
         </p>
-        <p>বিষয়ঃ নাগরিক সনদ পত্র প্রদান প্রসঙ্গে।</p>
+        <p>বিষয়ঃ ট্রেডলাইসেন্স সনদ পত্র প্রদান প্রসঙ্গে।</p>
         <p class='my-2'>জনাব,</p>
-        <p class="ml-10 my-2">যথাবিহিত সম্মান প্রদর্শন পূর্বক বিনীত নিবেদন এই যে, আমি আপনার ইউনিয়নের একজন স্থায়ী বাসিন্দা। আমার একটি নাগরিক সনদ পত্র প্রয়োজন।</p>
+        <p class="ml-10 my-2">যথাবিহিত সম্মান প্রদর্শন পূর্বক বিনীত নিবেদন এই যে, আমি আপনার ইউনিয়নের একজন স্থায়ী বাবসায়ী । আমার একটি ট্রেডলাইসেন্স সনদ পত্র প্রয়োজন।</p>
         <div class="flex flex-col justify-center items-center">
             <div class='flex justify-between w-full my-10'>
                 <div class='w-full text-center font-medium border border-black'>
 
                     <p class='border border-black px-4 py-2'>প্রতিষ্ঠানের নাম</p>
-                    <p class='border border-black px-4 py-2'>নাম</p>
+                    <p class='border border-black px-4 py-2'>প্রোপাইটার </p>
                     <p class='border border-black px-4 py-2'>ব্যাবসার ধরন</p>
-                    <p class='border border-black px-4 py-2'>পিতার নাম</p>
+                    <p class='border border-black px-4 py-2'>পিতার/স্বামীর  নাম</p>
                     <p class='border border-black px-4 py-2'>মাতর নাম</p>
                     <p class='border border-black px-4 py-2'>বাবসার স্থান</p>
                     <p class='border border-black px-4 py-2'>ওয়ার্ড নম্বর</p>

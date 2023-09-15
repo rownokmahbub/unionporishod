@@ -56,17 +56,7 @@
         <tr>
           <th data-priority="1">লাইসেন্স নম্বর</th>
           <th data-priority="1">নাম</th>
-          <th data-priority="2">পিতার নাম/স্বামীর নাম</th>
-          <th data-priority="2">মাতার নাম</th>
-          <th data-priority="2">ওয়ার্ড</th>
-          <th data-priority="2">জন্মস্থান </th>
-          <th data-priority="2">মেসার্স</th>
-          <th data-priority="2">ব্যবসা ধরন</th>
-          <th data-priority="2">কর</th>
-          <th data-priority="2">ভোটার আইডি</th>
-          <th data-priority="2">মোবাইল নাম্বার</th>
-          <th data-priority="2">উপজেলা</th>
-          <th data-priority="2">জেলা</th>
+
           <th data-priority="2">অ্যাকশন</th>
         </tr>
       </thead>
@@ -84,17 +74,7 @@
 
             <td class=''><?= $row['licence_no'] ?></td>
             <td class=''><?= $row['name'] ?></td>
-            <td class=''><?= $row['father_husband'] ?></td>
-            <td class=''><?= $row['mother_name'] ?></td>
-            <td class=''><?= $row['word'] ?></td>
-            <td class=''><?= $row['bplace'] ?></td>
-            <td class=''><?= $row['tradename'] ?></td>
-            <td class=''><?= $row['babshardhoron'] ?></td>
-            <td class=''><?= $row['kor'] ?></td>
-            <td class=''><?= $row['voterid'] ?></td>
-            <td class=''><?= $row['mobileno'] ?></td>
-            <td class=''><?= $row['upozela'] ?></td>
-            <td class=''><?= $row['zela'] ?></td>
+
 
             <td class=''>
 

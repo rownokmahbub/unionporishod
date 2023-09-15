@@ -1,5 +1,11 @@
 
 <?php
+ob_start();
+
+// code
+
+
+session_start();
  if($_SERVER["REQUEST_METHOD"] == "POST"){
 
    
@@ -17,13 +23,14 @@
     $voterid = $_POST['voterid'];
     $mnum = $_POST['mnum'];
     $gender = $_POST['gender'];
-    $dakghor = $_POST['dakghor'];
-           
+     $dakghor = $_POST['dakghor'];
+     $date = $_POST['date'];
+
    
 
 
      
-       $sql = "UPDATE `nagorik` SET `sarok`='$sarok',`name`='$name',`fathername`='$fname',`mothername`='$mname',`husband`='$hname',`gram`='$gram',`word`='$ward',`birthno`='$birthno',`voterid`='$voterid',`mobileno`='$mnum',`gender`='$gender',`dakghor`='$dakghor' WHERE `id`=$id";;
+       $sql = "UPDATE `nagorik` SET `sarok`='$sarok',`name`='$name',`fathername`='$fname',`mothername`='$mname',`husband`='$hname',`gram`='$gram',`word`='$ward',`birthno`='$birthno',`voterid`='$voterid',`mobileno`='$mnum',`gender`='$gender',`dakghor`='$dakghor',`date`='$date' WHERE `id`=$id";;
        print_r(error_get_last());
   
    if(mysqli_query($con, $sql)){
@@ -39,5 +46,5 @@
    // Close conection
    mysqli_close($con);
  }
-
+ob_end_flush();
 ?>

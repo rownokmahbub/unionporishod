@@ -17,13 +17,14 @@
     $vid = $_POST['vid'];
     $mnum = $_POST['mnum'];
     $upozela = $_POST['upozela'];
-    $zela = $_POST['zela'];
-           
+     $zela = $_POST['zela'];
+     $date = $_POST['date'];
+
    
 
 
      
-       $sql = "INSERT INTO  `tadeentry`(`licence_no`, `name`, `father_husband`, `mother_name`, `word`, `bplace`, `tradename`, `babshardhoron`, `kor`, `voterid`, `mobileno`, `upozela`, `zela`)  VALUES ('$licence','$name','$fname','$mname','$ward','$bplace','$tradename','$bdhoron','$kor','$vid','$mnum','$upozela','$zela')";
+       $sql = "INSERT INTO  `tadeentry`(`licence_no`, `name`, `father_husband`, `mother_name`, `word`, `bplace`, `tradename`, `babshardhoron`, `kor`, `voterid`, `mobileno`, `upozela`, `zela`, `date`)  VALUES ('$licence','$name','$fname','$mname','$ward','$bplace','$tradename','$bdhoron','$kor','$vid','$mnum','$upozela','$zela','$date')";
        print_r(error_get_last());
   
    if(mysqli_query($con, $sql)){

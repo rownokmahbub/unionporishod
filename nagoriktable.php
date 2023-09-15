@@ -75,7 +75,8 @@ if ($email == null) {
           <th data-priority="2">ভোটার আইডি</th>
           <th data-priority="2">মোবাইল নাম্বার</th>
           <th data-priority="2">লিঙ্গ</th>
-          <th data-priority="2">ডাকঘর</th>
+            <th data-priority="2">ডাকঘর</th>
+            <th data-priority="2">তারিখ</th>
           <th data-priority="2">অ্যাকশন</th>
         </tr>
       </thead>
@@ -102,7 +103,8 @@ if ($email == null) {
             <td class=''><?= $row['voterid'] ?></td>
             <td class=''><?= $row['mobileno'] ?></td>
             <td class=''><?= $row['gender'] ?></td>
-            <td class=''><?= $row['dakghor'] ?></td>
+              <td class=''><?= $row['dakghor'] ?></td>
+              <td class=''><?= $row['date'] ?></td>
             <td class=''>
 
               <div class="flex gap-3 justify-center items-center w-full">

@@ -69,6 +69,7 @@ if (isset($_REQUEST['id'])) {
             $mobileno = $result['mobileno'];
             $gender = $result['gender'];
             $dakghor = $result['dakghor'];
+            $date = $result['date'];
             ?>
             <form action="nagorikupdate.php" method="POST">
                 <input type="hidden" name="hid" value="<?php echo $rid; ?>">
@@ -125,6 +126,10 @@ if (isset($_REQUEST['id'])) {
                         <div class="space-y-1">
                             <span>ডাকঘর</span>
                             <input class='px-2 py-2 bg-gradient-to-r from-indigo-50 via-purple-50 to-pink-50 z-40 border border-gray-300 rounded-xl w-full focus:outline-blue-400' type="text" name="dakghor" placeholder='মাতার নাম' value='<?php echo $dakghor ?>' required>
+                        </div>
+                        <div class="space-y-1">
+                            <span>তারিখ</span>
+                            <input class='px-2 py-2 bg-gradient-to-r from-indigo-50 via-purple-50 to-pink-50 z-40 border border-gray-300 rounded-xl w-full focus:outline-blue-400' type="text" name="date" placeholder='তারিখ' value='<?php echo $date ?>' required>
                         </div>
 
                     </div>

@@ -38,11 +38,10 @@ if (isset($_REQUEST['id'])) {
 
 <body class='bg-gradient-to-r from-indigo-50 via-purple-50 to-pink-50 z-40 mb-10'>
     <div class='px-20 py-20 relative'>
-        <p class="text-2xl text-center font-semibold">৬ নং তিতুদহ ইউনিয়ন পরিষদ </p>
-        <p class="text-lg text-center font-semibold mb-5">চুয়াডাঙ্গা সদর, চুয়াডাঙ্গা</p>
-        <p class="text-2xl text-center font-semibold">ট্রেডলাইসেন্স সনদ যাচাই</p>
+
         <?php
-        $rid = $result['licence_no'];
+        $rid = $result['id'];
+        $licenceno = $result['licence_no'];
         $name = $result['name'];
         $fathername = $result['father_husband'];
         $mothername = $result['mother_name'];
@@ -54,13 +53,22 @@ if (isset($_REQUEST['id'])) {
         $zela = $result['zela'];
         $voterid = $result['voterid'];
         $mobileno = $result['mobileno'];
+        $date = $result['date'];
 
         ?>
         <input type="hidden" name="hid" value="<?php echo $rid; ?>">
 
         <div class="flex justify-between items-center">
-            <p class=''>লাইসেন্স নম্বর : <span><?= $rid ?></span></p>
+            <p class=''>লাইসেন্স নম্বর : <span><?= $licenceno ?></span></p>
+
+            <p>তারিখ : <span><?= $date  ?></span> </p>
+        </div>
+        <div class="flex justify-between items-center">
             <p>ভোটার আইডি : <span><?= $voterid ?></span> </p>
+            <?php
+            echo "ইস্যু তারিখ : " . date("Y/m/d") . "<br>";
+            ?>
+
 
         </div>
         <div class="flex justify-between items-start">
@@ -74,7 +82,7 @@ if (isset($_REQUEST['id'])) {
             <p>জাতীয়তা : বাংলাদেশী </p>
         </div>
         <div class="flex justify-between items-start">
-            <p>পিতার নাম : <span><?= $fathername ?></span> </p>
+            <p>পিতার/স্বামীর নাম : <span><?= $fathername ?></span> </p>
             <p>জাতীয়তা : বাংলাদেশী </p>
         </div>
         <div class="flex justify-between items-start">

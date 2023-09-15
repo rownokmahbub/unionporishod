@@ -53,45 +53,7 @@
         <tr>
           <th data-priority="1">সারক নম্বর</th>
           <th data-priority="1">নাম</th>
-          <th data-priority="2">পিতার নাম</th>
-            <th data-priority="2">মাতার নাম</th>
-            <th data-priority="2">স্বামীর নাম</th>
-          <th data-priority="2">গ্রাম</th>
-          <th data-priority="2">ওয়ার্ড</th>
-          <th data-priority="2">জন্ম নিবন্ধন নাম্বার </th>
-          <th data-priority="2">ভোটার আইডি</th>
-          <th data-priority="1">মোবাইল নাম্বার</th>
-          <th data-priority="1">আবেদনকারী নাম </th>
-          <th data-priority="1">ওয়ারেশ ১</th>
-          <th data-priority="1">সম্পর্ক </th>
-          <th data-priority="1">ওয়ারেশ ২</th>
-          <th data-priority="1">সম্পর্ক </th>
-          <th data-priority="1">ওয়ারেশ ৩</th>
-          <th data-priority="1">সম্পর্ক </th>
-          <th data-priority="1">ওয়ারেশ ৪</th>
-          <th data-priority="1">সম্পর্ক </th>
-          <th data-priority="1">ওয়ারেশ ৫</th>
-          <th data-priority="1">সম্পর্ক </th>
-          <th data-priority="1">ওয়ারেশ ৬</th>
-          <th data-priority="1">সম্পর্ক </th>
-          <th data-priority="1">ওয়ারেশ ৭</th>
-          <th data-priority="1">সম্পর্ক </th>
-          <th data-priority="1">ওয়ারেশ ৮</th>
-          <th data-priority="1">সম্পর্ক </th>
-          <th data-priority="1">ওয়ারেশ ৯</th>
-          <th data-priority="1">সম্পর্ক </th>
-          <th data-priority="1">ওয়ারেশ ১০</th>
-          <th data-priority="1">সম্পর্ক </th>
-          <th data-priority="1">ওয়ারেশ ১১</th>
-          <th data-priority="1">সম্পর্ক </th>
-          <th data-priority="1">ওয়ারেশ ১২</th>
-          <th data-priority="1">সম্পর্ক </th>
-          <th data-priority="1">ওয়ারেশ ১৩</th>
-          <th data-priority="1">সম্পর্ক </th>
-          <th data-priority="1">ওয়ারেশ ১৪</th>
-          <th data-priority="1">সম্পর্ক </th>
-          <th data-priority="1">ওয়ারেশ ১৫</th>
-          <th data-priority="1">সম্পর্ক </th>
+
           <th data-priority="1">অ্যাকশন </th>
 
         </tr>
@@ -110,45 +72,7 @@
 
             <td class=''><?= $row['sarok'] ?></td>
             <td class=''><?= $row['name'] ?></td>
-            <td class=''><?= $row['fathername'] ?></td>
-              <td class=''><?= $row['mothername'] ?></td>
-              <td class=''><?= $row['husband'] ?></td>
-            <td class=''><?= $row['gram'] ?></td>
-            <td class=''><?= $row['word'] ?></td>
-            <td class=''><?= $row['deathno'] ?></td>
-            <td class=''><?= $row['voterid'] ?></td>
-            <td class=''><?= $row['mobileno'] ?></td>
-            <td class=''><?= $row['aname'] ?></td>
-            <td class=''><?= $row['w1'] ?></td>
-            <td class=''><?= $row['r1'] ?></td>
-            <td class=''><?= $row['w2'] ?></td>
-            <td class=''><?= $row['r2'] ?></td>
-            <td class=''><?= $row['w3'] ?></td>
-            <td class=''><?= $row['r3'] ?></td>
-            <td class=''><?= $row['w4'] ?></td>
-            <td class=''><?= $row['r4'] ?></td>
-            <td class=''><?= $row['w5'] ?></td>
-            <td class=''><?= $row['r5'] ?></td>
-            <td class=''><?= $row['w6'] ?></td>
-            <td class=''><?= $row['r6'] ?></td>
-            <td class=''><?= $row['w7'] ?></td>
-            <td class=''><?= $row['r7'] ?></td>
-            <td class=''><?= $row['w8'] ?></td>
-            <td class=''><?= $row['r8'] ?></td>
-            <td class=''><?= $row['w9'] ?></td>
-            <td class=''><?= $row['r9'] ?></td>
-            <td class=''><?= $row['w10'] ?></td>
-            <td class=''><?= $row['r10'] ?></td>
-            <td class=''><?= $row['w11'] ?></td>
-            <td class=''><?= $row['r11'] ?></td>
-            <td class=''><?= $row['w12'] ?></td>
-            <td class=''><?= $row['r12'] ?></td>
-            <td class=''><?= $row['w13'] ?></td>
-            <td class=''><?= $row['r13'] ?></td>
-            <td class=''><?= $row['w14'] ?></td>
-            <td class=''><?= $row['r14'] ?></td>
-            <td class=''><?= $row['w15'] ?></td>
-            <td class=''><?= $row['r15'] ?></td>
+
             <td class=''>
 
               <div class="flex gap-3 justify-center items-center w-full"><a href="waresreport.php?id=<?php echo $id; ?>" class='px-3 py-2 cursor-pointer rounded-xl text-white text-sm  bg-blue-800 hover:bg-blue-600  duration-300 transition flex items-center gap-1'>
